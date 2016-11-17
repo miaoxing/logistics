@@ -1,0 +1,37 @@
+.trace-container {
+  padding: 20px;
+}
+
+.trace-timeline {
+  margin-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #ccc;
+}
+
+.trace-item {
+  position: relative;
+  padding: 15px 10px;
+  border-bottom: 1px dotted #e8e5e5;
+}
+
+.trace-icon {
+  position: absolute;
+  top: 42%;
+  left: -15px;
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.trace-item span {
+  display: block;
+  font-size: 14px;
+}
+
+.trace-empty {
+  padding-top: 6em;
+  padding-bottom: 6em;
+  text-align: center;
+}

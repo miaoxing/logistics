@@ -1,0 +1,23 @@
+{
+  "name": "miaoxing/logistics",
+  "description": "Miaoxing Logistics Plugin",
+  "keywords": [
+    "miaoxing", "logistics"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/app": "dev-master@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\Logistics\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Logistics\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
