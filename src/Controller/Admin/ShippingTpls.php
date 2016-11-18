@@ -152,9 +152,9 @@ class ShippingTpls extends \miaoxing\plugin\BaseController
             ->asc('id')
             ->fetchAll(['parentId' => 0]);
 
-        $ids = array_column($provinces, 'id');
+        $ids = wei()->coll->column($provinces, 'id');
         $ids = array_map('intval', $ids);
-        $provinces = array_column($provinces, 'name', 'id');
+        $provinces = wei()->coll->column($provinces, 'name', 'id');
 
         // 2. 找出所有的城市
         $dbCities = wei()->appDb('areas')
