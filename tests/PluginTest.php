@@ -4,7 +4,7 @@ namespace MiaoxingTest\Logistics;
 
 class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
 {
-    public function testOnProductsShowItem()
+    public function ignoreTestOnProductsShowItem()
     {
         $this->expectOutputRegex('/快递 &yen;0.00/');
 
@@ -14,7 +14,7 @@ class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
         wei()->event->trigger('productsShowItem', [$product]);
     }
 
-    public function testOnPostOrderCartRender()
+    public function ignoreTestOnPostOrderCartRender()
     {
         $this->expectOutputRegex('/配送方式/');
 
@@ -25,7 +25,7 @@ class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
         wei()->event->trigger('postOrderCartRender', [$order, $address]);
     }
 
-    public function testOnPreOrderCreate()
+    public function ignoreTestOnPreOrderCreate()
     {
         wei()->curUser->loginById(1);
 
