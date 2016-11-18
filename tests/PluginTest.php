@@ -78,8 +78,6 @@ class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $rowData = [[]];
         $outputData = [[]];
 
-        print_r(wei()->plugin->getEvents(true));
-
         wei()->event->trigger('renderOrder', [$order, $cart, &$rowData, &$outputData]);
 
         $this->assertContains('物流', $outputData[0]);
