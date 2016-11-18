@@ -29,11 +29,15 @@
           <select class="js-logistics-id form-control" name="logisticsId" id="logisticsId">
             <option value="0" selected>请选择物流公司</option>
             <?php foreach (wei()->logistics->getNames() as $id => $name) : ?>
-              <?php if($req['logisticsName'] && $req['logisticsName'] == $name) { ?>
+              <?php if ($req['logisticsName'] && $req['logisticsName'] == $name) {
+    ?>
                 <option value="<?= $id ?>" selected><?= $name ?></option>
-              <?php } else { ?>
+              <?php 
+} else {
+    ?>
                 <option value="<?= $id ?>"><?= $name ?></option>
-              <?php } ?>
+              <?php 
+} ?>
             <?php endforeach ?>
           </select>
         </div>

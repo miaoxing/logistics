@@ -19,13 +19,13 @@ class ShippingTpls extends \miaoxing\plugin\BaseController
      * @todo 实现后台无权限action
      */
     protected $guestPages = [
-        'admin/ShippingTpls/regions'
+        'admin/ShippingTpls/regions',
     ];
 
     public function indexAction($req)
     {
         switch ($req['_format']) {
-            case 'json' :
+            case 'json':
                 $shippingTpls = wei()->shippingTpl()->curApp();
 
                 $shippingTpls
@@ -80,8 +80,8 @@ class ShippingTpls extends \miaoxing\plugin\BaseController
                 'name' => [],
                 'freeShipping' => [
                     'in' => [
-                        'array' => [0, 1]
-                    ]
+                        'array' => [0, 1],
+                    ],
                 ],
                 'logisticsIds' => [
                     'type' => 'array',
@@ -89,33 +89,33 @@ class ShippingTpls extends \miaoxing\plugin\BaseController
                         'rules' => [
                             'in' => [
                                 'strict' => true,
-                                'array' => $logisticsIds
-                            ]
-                        ]
-                    ]
+                                'array' => $logisticsIds,
+                            ],
+                        ],
+                    ],
                 ],
                 'useLogisticsIds' => [
                     'type' => 'array',
                     'all' => [
                         'rules' => [
                             'in' => [
-                                'array' => $useLogisticsIds
-                            ]
-                        ]
-                    ]
+                                'array' => $useLogisticsIds,
+                            ],
+                        ],
+                    ],
                 ],
                 'rules' => [
                     'required' => !$req['freeShipping'],
-                    'type' => 'array'
-                ]
+                    'type' => 'array',
+                ],
             ],
             'names' => [
                 'name' => '模板名称',
                 'freeShipping' => '是否包邮',
                 'logisticsIds' => '物流服务商',
                 'useLogisticsIds' => '物流服务商运费模板',
-                'rules' => '运费规则'
-            ]
+                'rules' => '运费规则',
+            ],
         ]);
         if (!$validator->isValid()) {
             return $this->err($validator->getJoinedMessage());
@@ -169,34 +169,34 @@ class ShippingTpls extends \miaoxing\plugin\BaseController
         // 3. 定义区域数据
         $areas = [[
             'name' => '华东',
-            'provinces' => ['上海市', '江苏省', '浙江省', '安徽省', '江西省']
+            'provinces' => ['上海市', '江苏省', '浙江省', '安徽省', '江西省'],
         ], [
             'name' => '华北',
-            'provinces' => ['北京市', '天津市', '山西省', '山东省', '河北省', '内蒙古自治区']
+            'provinces' => ['北京市', '天津市', '山西省', '山东省', '河北省', '内蒙古自治区'],
         ], [
             'name' => '华中',
-            'provinces' => ['湖南省', '湖北省', '河南省']
+            'provinces' => ['湖南省', '湖北省', '河南省'],
         ], [
             'name' => '华南',
-            'provinces' => ['广东省', '广西壮族自治区', '福建省', '海南省']
+            'provinces' => ['广东省', '广西壮族自治区', '福建省', '海南省'],
         ], [
             'name' => '东北',
-            'provinces' => ['辽宁省', '吉林省', '黑龙江省']
+            'provinces' => ['辽宁省', '吉林省', '黑龙江省'],
         ], [
             'name' => '西北',
-            'provinces' => ['陕西省', '新疆维吾尔自治区', '甘肃省', '宁夏回族自治区', '青海省']
+            'provinces' => ['陕西省', '新疆维吾尔自治区', '甘肃省', '宁夏回族自治区', '青海省'],
         ], [
             'name' => '西南',
-            'provinces' => ['重庆市', '云南省', '贵州省', '西藏自治区', '四川省']
+            'provinces' => ['重庆市', '云南省', '贵州省', '西藏自治区', '四川省'],
         ], [
             'name' => '港澳台',
-            'provinces' => ['香港特别行政区', '澳门特别行政区', '台湾省']
+            'provinces' => ['香港特别行政区', '澳门特别行政区', '台湾省'],
         ]];
 
         return $this->suc([
             'areas' => $areas,
             'provinces' => $provinces,
-            'cities' => $cities
+            'cities' => $cities,
         ]);
     }
 }

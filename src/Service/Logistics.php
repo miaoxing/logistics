@@ -18,7 +18,7 @@ class Logistics extends \miaoxing\plugin\BaseModel
      * {@inheritdoc}
      */
     protected $providers = [
-        'db' => 'app.db'
+        'db' => 'app.db',
     ];
 
     /**
@@ -42,9 +42,11 @@ class Logistics extends \miaoxing\plugin\BaseModel
                 foreach ($logistics as $row) {
                     $names[$row['id']] = $row['name'];
                 }
+
                 return $names;
             });
         }
+
         return $this->names;
     }
 
@@ -57,6 +59,7 @@ class Logistics extends \miaoxing\plugin\BaseModel
     public function getName($id)
     {
         $names = $this->getNames();
+
         return isset($names[$id]) ? $names[$id] : $names[1];
     }
 
@@ -70,7 +73,8 @@ class Logistics extends \miaoxing\plugin\BaseModel
     {
         $names = $this->getNames();
         $key = array_search($name, $names);
-        return $key?:false;
+
+        return $key ?: false;
     }
 
     /**
@@ -91,8 +95,9 @@ class Logistics extends \miaoxing\plugin\BaseModel
         if ($this['kuaidi100Id']) {
             $url = $this->url->append('http://m.kuaidi100.com/index_all.html', [
                 'type' => $this['kuaidi100Id'],
-                'postid' => $logisticsNo
+                'postid' => $logisticsNo,
             ]);
+
             return $this->postGetTraces(['code' => 1, 'message' => '获取成功', 'next' => $url]);
         }
 
@@ -109,6 +114,7 @@ class Logistics extends \miaoxing\plugin\BaseModel
     protected function postGetTraces($ret)
     {
         $this->event->trigger('postLogisticsGetTraces', [&$ret]);
+
         return $ret;
     }
 }

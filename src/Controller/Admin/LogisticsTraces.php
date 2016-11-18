@@ -15,40 +15,42 @@ class LogisticsTraces extends \miaoxing\plugin\BaseController
     public function indexAction($req)
     {
         $headerTitle = '物流跟踪';
+
         return get_defined_vars();
     }
 
     public function showAction($req)
     {
-        if(!$req['id']) {
+        if (!$req['id']) {
             return $this->err('缺少ID');
         }
 
-        $logisticsId = explode('_', $req['id'])[0]?: $req['logisticsId'];
-        $logisticsNo = explode('_', $req['id'])[1]?: $req['logisticsNo'];
+        $logisticsId = explode('_', $req['id'])[0] ?: $req['logisticsId'];
+        $logisticsNo = explode('_', $req['id'])[1] ?: $req['logisticsNo'];
 
         $logistics = wei()->logistics()->findOneById($logisticsId);
         $traces = $logistics->getTraces($logisticsNo);
         if (isset($traces['next'])) {
             $ret = [
                 'data' => [
-                    'url' => $traces['next']
+                    'url' => $traces['next'],
                 ],
                 'code' => 1,
-                'message' => '操作成功'
+                'message' => '操作成功',
             ];
         } else {
             $ret = [
                 'data' => [
                     'logistics' => $logistics->toArray() + [
-                            'no' => $logisticsNo
+                            'no' => $logisticsNo,
                         ],
-                    'traces' => $traces['traces']
+                    'traces' => $traces['traces'],
                 ],
                 'code' => 1,
-                'message' => '操作成功'
+                'message' => '操作成功',
             ];
         }
+
         return $this->ret($ret);
     }
 }

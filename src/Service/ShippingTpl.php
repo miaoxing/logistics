@@ -2,9 +2,7 @@
 
 namespace Miaoxing\Logistics\Service;
 
-use Miaoxing\Address\Service\Address;
 use plugins\cart\services\Cart;
-use Miaoxing\Logistics\Service\ShippingTplRule;
 
 class ShippingTpl extends \miaoxing\plugin\BaseModel
 {

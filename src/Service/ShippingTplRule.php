@@ -8,11 +8,11 @@ class ShippingTplRule extends \miaoxing\plugin\BaseModel
 
     protected $data = [
         'areas' => [],
-        'areaNames' => []
+        'areaNames' => [],
     ];
 
     protected $providers = [
-        'db' => 'app.db'
+        'db' => 'app.db',
     ];
 
     public function afterFind()
@@ -25,8 +25,8 @@ class ShippingTplRule extends \miaoxing\plugin\BaseModel
     public function beforeSave()
     {
         parent::beforeSave();
-        $this['areas'] = implode(',', (array)$this['areas']);
-        $this['areaNames'] = implode(',', (array)$this['areaNames']);
+        $this['areas'] = implode(',', (array) $this['areas']);
+        $this['areaNames'] = implode(',', (array) $this['areaNames']);
     }
 
     public function afterSave()
