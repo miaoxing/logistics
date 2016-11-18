@@ -70,4 +70,18 @@ class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
 
         $this->assertRetErr($ret, -8, '配送方式不存在,请重新选择');
     }
+
+    public function testOnRenderOrder()
+    {
+        $order = [];
+        $cart = [];
+        $rowData = [[]];
+        $outputData = [[]];
+
+        wei()->event->trigger('renderOrder', [$order, $cart, &$rowData, &$outputData]);
+
+        $this->assertContains('物流', $outputData[0]);
+        $this->assertContains('用户指定物流', $outputData[0]);
+        $this->assertContains('运单号', $outputData[0]);
+    }
 }
