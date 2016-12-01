@@ -1,4 +1,6 @@
-define(['template'], function () {
+define(['template'], function (template) {
+  var DELAY_SLOW = 5000;
+
   var ShippingTpls = function () {
     this.$el = $('body');
 
@@ -35,7 +37,7 @@ define(['template'], function () {
   };
 
   ShippingTpls.prototype.renderForm = function () {
-    var self = this;
+    var that = this;
 
     this.$el.find('.js-shipping-tpl-form')
       .loadJSON(this.data)
@@ -56,10 +58,10 @@ define(['template'], function () {
 
     // 切换包邮
     this.$el.find('input[name="freeShipping"]').click(function () {
-      if ($(this).val() == '1') {
-        self.$el.find('.js-rules-form-group').hide();
+      if ($(this).val() === '1') {
+        that.$el.find('.js-rules-form-group').hide();
       } else {
-        self.$el.find('.js-rules-form-group').show();
+        that.$el.find('.js-rules-form-group').show();
       }
     }).filter(':checked').click();
 
@@ -76,31 +78,31 @@ define(['template'], function () {
 
   // 渲染物流服务商列表
   ShippingTpls.prototype.renderLogisticsList = function () {
-    var self = this;
+    var that = this;
 
     // 将物流公司的编号作为索引
     var logisticsRules = {};
     this.data.rules.forEach(function (rule) {
-      if (typeof logisticsRules[rule.logisticsId] == 'undefined') {
+      if (typeof logisticsRules[rule.logisticsId] === 'undefined') {
         logisticsRules[rule.logisticsId] = [];
       }
       logisticsRules[rule.logisticsId].push(rule);
     });
 
     // 启用默认规则
-    if (this.data.rules.length == 0) {
+    if (this.data.rules.length === 0) {
       logisticsRules[1] = [];
     }
 
     // 逐个物流公司渲染
     $.each(logisticsRules, function (logisticsId, rules) {
-      self.renderLogistics(rules, logisticsId);
+      that.renderLogistics(rules, logisticsId);
     });
 
     // 点击添加物流服务商
     this.$el.find('.js-logistics-add').click(function () {
-      var logistics = $.extend({}, self.logistics);
-      self.$el.find('.js-logistics-use').each(function () {
+      var logistics = $.extend({}, that.logistics);
+      that.$el.find('.js-logistics-use').each(function () {
         delete logistics[$(this).data('logistics-id')];
       });
 
@@ -108,24 +110,24 @@ define(['template'], function () {
       $.each(logistics, function (value, name) {
         options += '<option value="' + value + '">' + name + '</option>';
       });
-      self.$el.find('.js-logistics-select').html(options);
-      self.$el.find('.js-logistics-modal').modal('show');
+      that.$el.find('.js-logistics-select').html(options);
+      that.$el.find('.js-logistics-modal').modal('show');
     });
 
     // 点击确定,添加物流服务商
     this.$el.find('.js-logistics-confirm').click(function () {
-      self.renderLogistics([], self.$el.find('.js-logistics-select').val());
-      self.$el.find('.js-logistics-modal').modal('hide');
+      that.renderLogistics([], that.$el.find('.js-logistics-select').val());
+      that.$el.find('.js-logistics-modal').modal('hide');
     });
   };
 
   // 渲染物流服务商
   ShippingTpls.prototype.renderLogistics = function (rules, logisticsId) {
-    var self = this;
+    var that = this;
 
     var $logisticsLists = this.$el.find('.js-logistics-lists');
 
-    var useLogisticsId = typeof this.data['useLogisticsIds'][logisticsId] == 'undefined' ?
+    var useLogisticsId = typeof this.data['useLogisticsIds'][logisticsId] === 'undefined' ?
       ShippingTpls.DEFAULT_RULE : this.data['useLogisticsIds'][logisticsId];
 
     var $logisticsItem = $(this.logisticsTpl({
@@ -139,12 +141,15 @@ define(['template'], function () {
     // 渲染运费规则
     var $ruleLists = $logisticsItem.find('.js-rule-list');
 
-    if (rules.length == 0) {
-      rules.push({isDefault: '1', logisticsId: logisticsId});
+    if (rules.length === 0) {
+      rules.push({
+        isDefault: '1',
+        logisticsId: logisticsId
+      });
     }
 
     rules.forEach(function (rule) {
-      self.renderRule(rule, $ruleLists);
+      that.renderRule(rule, $ruleLists);
     });
 
     $logisticsLists.append($logisticsItem);
@@ -159,11 +164,11 @@ define(['template'], function () {
       // 检查该物流是否被其他物流使用
       var err = false;
       var id = $logisticsItem.find('.js-logistics-id').val();
-      self.$el.find('.js-logistics-use').each(function () {
-        if ($(this).val() == id) {
+      that.$el.find('.js-logistics-use').each(function () {
+        if ($(this).val() === id) {
           err = true;
           var dataId = $(this).data('logistics-id');
-          $.err('该物流已被"' + self.logistics[dataId] + '"使用,不能删除', 5000);
+          $.err('该物流已被"' + that.logistics[dataId] + '"使用,不能删除', DELAY_SLOW);
         }
       });
 
@@ -178,38 +183,40 @@ define(['template'], function () {
 
     // 点击添加规则
     $logisticsItem.on('click', '.js-rule-add', function () {
-      self.renderRule({logisticsId: logisticsId}, $ruleLists);
+      that.renderRule({logisticsId: logisticsId}, $ruleLists);
     });
 
     // 弹出"使用xx运费规则"之前,构造运费规则列表
     $useDropdown.on('show.bs.dropdown', function () {
       var ids = [];
-      self.$el.find('.js-logistics-use').each(function () {
-        if ($(this).val() == ShippingTpls.CUSTOM_RULE) {
+      var intLogisticsId = parseInt(logisticsId, 10);
+      that.$el.find('.js-logistics-use').each(function () {
+        if (parseInt($(this).val(), 10) === ShippingTpls.CUSTOM_RULE) {
           var dataId = $(this).data('logistics-id');
           // 不显示自己
-          if (dataId != logisticsId) {
+          if (dataId !== intLogisticsId) {
             ids.push(dataId);
           }
         }
       });
 
-      var lists = self.logisticsUseTpl({
+      var lists = that.logisticsUseTpl({
         ids: ids,
-        logistics: self.logistics
+        logistics: that.logistics
       });
       $(this).find('.dropdown-menu').html(lists);
     });
 
     // 选择使用"XX"运费规则时,更新文案和表单的值
     $useDropdown.on('click', '.dropdown-menu a', function () {
-      var val = $(this).data('val');
+      var val = parseInt($(this).data('val'), 10);
+      var useVal = parseInt($use.val(), 10);
 
       // 如果使用自定义运费规则,检查是否被其他物流使用
-      if (val != ShippingTpls.CUSTOM_RULE && $use.val() == ShippingTpls.CUSTOM_RULE) {
-        var useId = self.getUseId($logisticsItem.find('.js-logistics-id').val());
+      if (val !== ShippingTpls.CUSTOM_RULE && useVal === ShippingTpls.CUSTOM_RULE) {
+        var useId = that.getUseId($logisticsItem.find('.js-logistics-id').val());
         if (useId) {
-          $.err('该物流已被"' + self.logistics[useId] + '"使用,不能更改');
+          $.err('该物流已被"' + that.logistics[useId] + '"使用,不能更改');
           return;
         }
       }
@@ -220,7 +227,7 @@ define(['template'], function () {
 
     // 如果选择的是"使用自定义运费规则",显示规则列表
     $use.change(function () {
-      if ($(this).val() == 0) {
+      if ($(this).val() === '0') {
         $rules.removeClass('hide');
       } else {
         $rules.addClass('hide');
@@ -235,10 +242,11 @@ define(['template'], function () {
   ShippingTpls.prototype.getUseId = function (logisticsId) {
     var id = null;
     this.$el.find('.js-logistics-use').each(function () {
-      if ($(this).val() == logisticsId) {
+      if ($(this).val() === logisticsId) {
         id = $(this).data('logistics-id');
         return false;
       }
+      return true;
     });
     return id;
   };
@@ -261,7 +269,7 @@ define(['template'], function () {
   };
 
   ShippingTpls.prototype.renderArea = function () {
-    var self = this;
+    var that = this;
 
     this.$el.find('.js-area-list').html(template.render('areaTpl', this.region));
 
@@ -273,7 +281,7 @@ define(['template'], function () {
       $areaItem.find('input:checkbox').prop('checked', $this.prop('checked'));
 
       $areaItem.find('.js-province-item').each(function () {
-        self.updateCityNum($(this));
+        that.updateCityNum($(this));
       });
     });
 
@@ -284,8 +292,8 @@ define(['template'], function () {
 
       $provinceItem.find('input:checkbox').prop('checked', $this.prop('checked'));
 
-      self.updateCityNum($provinceItem);
-      self.updateAreaCheckStatus(this);
+      that.updateCityNum($provinceItem);
+      that.updateAreaCheckStatus(this);
     });
 
     // 显示城市浮层
@@ -294,22 +302,22 @@ define(['template'], function () {
     });
 
     // 关闭城市浮层
-    self.$el.on('click', '.js-city-hide', function () {
+    that.$el.on('click', '.js-city-hide', function () {
       $(this).closest('.js-province-item').removeClass('city-open');
     });
 
     // 点击城市
     this.$el.on('click', '.js-city-input', function () {
-      self.updateCityNum($(this).closest('.js-province-item'));
-      self.updateAreaCheckStatus(this);
+      that.updateCityNum($(this).closest('.js-province-item'));
+      that.updateAreaCheckStatus(this);
     });
 
     // 打开"选择地区"
-    var $modal = self.$el.find('.js-area-modal');
+    var $modal = that.$el.find('.js-area-modal');
     this.$el.on('click', '.js-areas-edit', function () {
-      self.editingRule = $(this).parent();
+      that.editingRule = $(this).parent();
 
-      var areas = self.editingRule.find('.js-rule-areas').val().split(',');
+      var areas = that.editingRule.find('.js-rule-areas').val().split(',');
 
       // 重置表单数据
       $modal.find('input:checkbox').prop('checked', false);
@@ -324,12 +332,12 @@ define(['template'], function () {
 
     // "选择地区"点击确定
     this.$el.find('.js-area-ok').click(function () {
-      var data = self.getAreaData();
+      var data = that.getAreaData();
       var name = data.areaNames.join('、');
 
-      self.editingRule.find('.js-rule-areas').val(data.areas.join(','));
-      self.editingRule.find('.js-rule-area-names').val(data.areaNames.join(','));
-      self.editingRule.find('.js-rule-area-name').html(name);
+      that.editingRule.find('.js-rule-areas').val(data.areas.join(','));
+      that.editingRule.find('.js-rule-area-names').val(data.areaNames.join(','));
+      that.editingRule.find('.js-rule-area-name').html(name);
 
       $modal.modal('hide');
     });
@@ -347,7 +355,7 @@ define(['template'], function () {
       var area = $(this).find('.js-area-input');
 
       // 选中了某个片区
-      if (area.prop('checked') == true) {
+      if (area.prop('checked') === true) {
         data.areaNames.push(area.data('name'));
         $(this).find('.js-city-input').each(function () {
           data.areas.push(this.value);
@@ -357,7 +365,7 @@ define(['template'], function () {
         $(this).find('.js-province-item').each(function () {
           var province = $(this).find('.js-province-input');
 
-          if (province.prop('checked') == true) {
+          if (province.prop('checked') === true) {
             data.areaNames.push(province.data('name'));
             $(this).find('.js-city-input').each(function () {
               data.areas.push(this.value);
@@ -389,15 +397,15 @@ define(['template'], function () {
     }
 
     var provinceCheckbox = $provinceItem.find('.js-province-input');
-    provinceCheckbox.prop('checked', checkedCheckboxes.length == checkboxes.length);
+    provinceCheckbox.prop('checked', checkedCheckboxes.length === checkboxes.length);
   };
 
   // 更新片区的选中状态
   ShippingTpls.prototype.updateAreaCheckStatus = function (checkbox) {
     var areaItem = $(checkbox).closest('.js-area-item');
     var checkboxes = areaItem.find('.js-province-input');
-    areaItem.find('.js-area-input').prop('checked', checkboxes.length == checkboxes.filter(':checked').length);
+    areaItem.find('.js-area-input').prop('checked', checkboxes.length === checkboxes.filter(':checked').length);
   };
 
-  return new ShippingTpls;
+  return new ShippingTpls();
 });
