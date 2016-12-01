@@ -12,15 +12,18 @@
   </dd>
 </dl>
 
-<div class="js-shipping-fee-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="js-shipping-fee-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="shipping-fee-modal-label"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header border-bottom">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">配送方式</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="shipping-fee-modal-label">配送方式</h4>
       </div>
       <div class="modal-body">
-        <table class="table table table-condensed" style="  margin-bottom: 0;">
+        <table class="table table table-condensed m-b-0">
           <thead>
           <tr>
             <th>物流服务</th>

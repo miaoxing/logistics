@@ -1,13 +1,18 @@
 <?php
 
 namespace plugins\logistics\docs {
+
+    use Miaoxing\Logistics\Service\Logistics;
+    use Miaoxing\Logistics\Service\ShippingTpl;
+    use Miaoxing\Logistics\Service\ShippingTplRule;
+
     /**
-     * @property    \Miaoxing\Logistics\Service\Logistics $logistics 物流服务商
-     * @method      \Miaoxing\Logistics\Service\Logistics|\Miaoxing\Logistics\Service\Logistics[] logistics()
+     * @property    Logistics $logistics 物流服务商
+     * @method      Logistics|Logistics[] logistics()
      *
-     * @property    \Miaoxing\Logistics\Service\ShippingTpl $shippingTpl 运费模板
-     * @method      \Miaoxing\Logistics\Service\ShippingTpl|\Miaoxing\Logistics\Service\ShippingTpl[] shippingTpl()
-     * @method      \Miaoxing\Logistics\Service\ShippingTplRule|\Miaoxing\Logistics\Service\ShippingTplRule[] shippingTplRule() 运费模板规则
+     * @property    ShippingTpl $shippingTpl 运费模板
+     * @method      ShippingTpl|ShippingTpl[] shippingTpl()
+     * @method      ShippingTplRule|ShippingTplRule[] shippingTplRule() 运费模板规则
      */
     class AutoComplete
     {
@@ -15,6 +20,7 @@ namespace plugins\logistics\docs {
 }
 
 namespace {
+
     /**
      * @return \plugins\logistics\docs\AutoComplete
      */

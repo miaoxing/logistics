@@ -19,8 +19,8 @@
         <tr>
           <th>模板名称</th>
           <th>是否包邮</th>
-          <th style="width: 180px">最后更改时间</th>
-          <th style="width: 120px">操作</th>
+          <th class="t-10">最后更改时间</th>
+          <th class="t-6">操作</th>
         </tr>
         </thead>
         <tbody>
@@ -39,7 +39,8 @@
     <a href="<%= $.url('admin/shipping-tpls/%s/edit', id) %>" title="编辑">
       <i class="fa fa-edit bigger-130"></i>
     </a>
-    <a class="text-danger delete-record" href="javascript:;" data-href="<%= $.url('admin/shipping-tpls/destroy', {id: id}) %>" title="删除">
+    <a class="text-danger delete-record" href="javascript:;"
+      data-href="<%= $.url('admin/shipping-tpls/destroy', {id: id}) %>" title="删除">
       <i class="fa fa-trash-o bigger-130"></i>
     </a>
   </div>

@@ -12,7 +12,8 @@
 <div class="row">
   <div class="col-xs-12">
     <!-- PAGE detail BEGINS -->
-    <form class="js-shipping-tpl-form form-horizontal" method="post" role="form" action="<?= $url('admin/shipping-tpls/' . $shippingTpl->getFormAction()) ?>">
+    <form class="js-shipping-tpl-form form-horizontal" method="post" role="form"
+      action="<?= $url('admin/shipping-tpls/' . $shippingTpl->getFormAction()) ?>">
       <div class="form-group">
         <label class="col-lg-2 control-label" for="name">
           <span class="text-warning">*</span>
@@ -20,7 +21,8 @@
         </label>
 
         <div class="col-lg-4">
-          <input type="text" class="form-control" name="name" id="name" data-rule-required="true" placeholder="如:低于一公斤物品,首件10元,续件1元">
+          <input type="text" class="form-control" name="name" id="name" data-rule-required="true"
+            placeholder="如:低于一公斤物品,首件10元,续件1元">
         </div>
       </div>
 
@@ -81,12 +83,15 @@
 <!-- /.row -->
 
 <!-- Modal -->
-<div class="modal fade js-logistics-modal" tabindex="-1" role="dialog" aria-labelledby="logisticsModalLabel" aria-hidden="true">
+<div class="modal fade js-logistics-modal" tabindex="-1" role="dialog" aria-labelledby="logistics-modal-label"
+  aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="logisticsModalLabel">选择物流服务</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="logistics-modal-label">选择物流服务</h4>
       </div>
       <div class="modal-body">
         <form class="form">
@@ -129,7 +134,8 @@
     <span class="logistics-name"><%= logistics[logisticsId] %></span>
 
     <input type="hidden" value="<%= logisticsId %>" name="logisticsIds[]" class="js-logistics-id">
-    <input type="hidden" value="<%= useLogisticsId %>" name="useLogisticsIds[<%= logisticsId %>]" class="js-logistics-use" data-logistics-id="<%= logisticsId %>">
+    <input type="hidden" value="<%= useLogisticsId %>" name="useLogisticsIds[<%= logisticsId %>]"
+      class="js-logistics-use" data-logistics-id="<%= logisticsId %>">
 
     <% if (logisticsId != 1 ) { %>
       <div class="btn-group js-logistics-use-dropdown">
@@ -195,15 +201,18 @@
         <a href="javascript:;" class="js-areas-edit pull-right">编辑</a>
         <div class="js-rule-area-name rule-area-name"><%= areaNames.join('、') || '请选择地区' %></div>
       <% } %>
-      <input class="js-rule-area-names" type="hidden" value="<%= areaNames.join(',') %>" name="rules[<%= index %>][areaNames]">
+      <input class="js-rule-area-names" type="hidden" value="<%= areaNames.join(',') %>"
+        name="rules[<%= index %>][areaNames]">
       <input class="js-rule-areas" type="hidden" value="<%= areas.join(',') %>" name="rules[<%= index %>][areas]">
       <input class="logistics-id" type="hidden" value="<%= logisticsId %>" name="rules[<%= index %>][logisticsId]">
     </td>
     <td>
-      <input type="text" value="<%= startFee %>" name="rules[<%= index %>][startFee]" class="rule-fee js-fee" data-rule-number="true" data-rule-min="0" data-rule-required="true">
+      <input type="text" value="<%= startFee %>" name="rules[<%= index %>][startFee]" class="rule-fee js-fee"
+        data-rule-number="true" data-rule-min="0" data-rule-required="true">
     </td>
     <td>
-      <input type="text" value="<%= plusFee %>" name="rules[<%= index %>][plusFee]" class="rule-fee js-fee" data-rule-number="true" data-rule-min="0" data-rule-required="true">
+      <input type="text" value="<%= plusFee %>" name="rules[<%= index %>][plusFee]" class="rule-fee js-fee"
+        data-rule-number="true" data-rule-min="0" data-rule-required="true">
     </td>
     <td>
       <% if (isDefault == '1') { %>
@@ -225,7 +234,8 @@
     <div class="area-name">
       <div class="checkbox-inline">
         <label>
-          <input class="js-area-input" type="checkbox" value="<%= areas[i].name %>" data-name="<%= areas[i].name %>"> <%= areas[i].name %>
+          <input class="js-area-input" type="checkbox" value="<%= areas[i].name %>" data-name="<%= areas[i].name %>">
+          <%= areas[i].name %>
         </label>
       </div>
     </div>
@@ -235,7 +245,8 @@
         <div class="province-name">
           <div class="checkbox-inline">
             <label>
-              <input class="js-province-input" type="checkbox" value="<%= provinceId %>" data-name="<%= areas[i].provinces[provinceId] %>">
+              <input class="js-province-input" type="checkbox" value="<%= provinceId %>"
+                data-name="<%= areas[i].provinces[provinceId] %>">
               <%= areas[i].provinces[provinceId] %><span class="js-city-num city-num text-danger smaller-75"></span>
             </label>
           </div>
@@ -248,7 +259,8 @@
           <% for (var cityId in cities[areas[i].provinces[provinceId]]) { %>
           <div class="checkbox-inline">
             <label>
-              <input class="js-city-input" type="checkbox" value="<%= cityId %>" data-name="<%= cities[areas[i].provinces[provinceId]][cityId] %>">
+              <input class="js-city-input" type="checkbox" value="<%= cityId %>"
+                data-name="<%= cities[areas[i].provinces[provinceId]][cityId] %>">
               <%= cities[areas[i].provinces[provinceId]][cityId] %>
             </label>
           </div>

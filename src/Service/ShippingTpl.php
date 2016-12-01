@@ -295,7 +295,9 @@ class ShippingTpl extends \miaoxing\plugin\BaseModel
             $rule = $config['rule'];
 
             //  按“取最大首费，最小增费”作为首费来计算
-            if ($rule['startFee'] > $startFee || ($rule['startFee'] == $startFee && $rule['plusFee'] < $bestRule['plusFee'])) {
+            if ($rule['startFee'] > $startFee
+                || ($rule['startFee'] == $startFee && $rule['plusFee'] < $bestRule['plusFee'])
+            ) {
                 $startFee = $rule['startFee'];
                 $bestRule = $rule;
             }

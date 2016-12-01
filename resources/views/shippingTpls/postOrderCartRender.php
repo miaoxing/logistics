@@ -5,10 +5,10 @@
 </script>
 
 <li class="js-group-user-logistics-id list-item order-form-group has-feedback list-over-fix display-none">
-  <label for="userLogisticsId">配送方式</label>
+  <label for="user-logistics-id">配送方式</label>
 
   <div class="order-form-col text-right">
-    <select id="userLogisticsId" name="userLogisticsId" class="order-form-select js-user-logistics-id">
+    <select id="user-logistics-id" name="userLogisticsId" class="order-form-select js-user-logistics-id">
     </select>
     <div class="order-form-select-fake js-user-logistics-name">
     </div>
