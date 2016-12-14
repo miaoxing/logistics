@@ -70,7 +70,7 @@
           </button>
 
           &nbsp; &nbsp; &nbsp;
-          <a class="btn" href="<?= $url('admin/shipping-tpls') ?>">
+          <a class="btn btn-default" href="<?= $url('admin/shipping-tpls') ?>">
             <i class="fa fa-undo"></i>
             返回列表
           </a>
