@@ -11,7 +11,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
      */
     public function up()
     {
-        $this->scheme->table('logistics')
+        $this->schema->table('logistics')
             ->tableComment('系统自带的快递服务商')
             ->smallInt('id')
             ->string('kuaidi100Id', 32)
@@ -36,7 +36,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
             ['id' => 13, 'kuaidi100Id' => 'jd', 'name' => '京东'],
         ]);
 
-        $this->scheme->table('shippingTpls')
+        $this->schema->table('shippingTpls')
             ->id()
             ->int('appId')
             ->string('logisticsIds', 64)->comment('支持的物流服务编号')
@@ -50,7 +50,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
             ->int('deleteUser')
             ->exec();
 
-        $this->scheme->table('shippingTplRules')
+        $this->schema->table('shippingTplRules')
             ->id()
             ->int('shippingTplId')
             ->smallInt('logisticsId')->defaults(1)->comment('对应物流服务商编号')
@@ -70,8 +70,8 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
      */
     public function down()
     {
-        $this->scheme->dropIfExists('logistics');
-        $this->scheme->dropIfExists('shippingTpls');
-        $this->scheme->dropIfExists('shippingTplRules');
+        $this->schema->dropIfExists('logistics');
+        $this->schema->dropIfExists('shippingTpls');
+        $this->schema->dropIfExists('shippingTplRules');
     }
 }
