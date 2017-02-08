@@ -15,11 +15,8 @@ class ShippingTpls extends \miaoxing\plugin\BaseController
         'destroy' => '删除',
     ];
 
-    /**
-     * @todo 实现后台无权限action
-     */
-    protected $guestPages = [
-        'admin/ShippingTpls/regions',
+    protected $adminGuestPages = [
+        'admin/shippingTpls/regions',
     ];
 
     public function indexAction($req)
