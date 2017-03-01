@@ -4,7 +4,7 @@ namespace Miaoxing\Logistics;
 
 use Miaoxing\Address\Service\Address;
 use plugins\mall\services\Order;
-use plugins\product\services\Product;
+use Miaoxing\Product\Service\Product;
 use Wei\RetTrait;
 
 class Plugin extends \miaoxing\plugin\BasePlugin
@@ -34,7 +34,7 @@ class Plugin extends \miaoxing\plugin\BasePlugin
     /**
      * 商品详情页,展示配送方式,运费等
      *
-     * @param Product $product
+     * @param \Miaoxing\Product\Service\Product $product
      */
     public function onProductsShowItem(Product $product)
     {
