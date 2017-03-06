@@ -18,7 +18,7 @@
 
 <?= $block('js') ?>
 <script>
-  require(['plugins/mall/assets/orders', 'jquery-form', 'comps/artTemplate/template.min'], function (orders) {
+  require(['plugins/order/js/orders', 'jquery-form', 'comps/artTemplate/template.min'], function (orders) {
     template.helper('$', $);
 
     var $form = $('.js-order-form');
