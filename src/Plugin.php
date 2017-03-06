@@ -3,7 +3,7 @@
 namespace Miaoxing\Logistics;
 
 use Miaoxing\Address\Service\Address;
-use plugins\mall\services\Order;
+use Miaoxing\Order\Service\Order;
 use Miaoxing\Product\Service\Product;
 use Wei\RetTrait;
 
