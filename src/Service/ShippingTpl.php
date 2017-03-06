@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Logistics\Service;
 
-use plugins\cart\services\Cart;
+use Miaoxing\Cart\Service\Cart;
 
 class ShippingTpl extends \miaoxing\plugin\BaseModel
 {
@@ -208,7 +208,7 @@ class ShippingTpl extends \miaoxing\plugin\BaseModel
      * ];
      * </code>
      *
-     * @param Cart|Cart[] $carts
+     * @param Cart|\Miaoxing\Cart\Service\Cart[] $carts
      * @param \Miaoxing\Address\Service\Address $address
      * @return array
      */

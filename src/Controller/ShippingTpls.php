@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Logistics\Controller;
 
-use plugins\cart\services\Cart;
+use Miaoxing\Cart\Service\Cart;
 
 class ShippingTpls extends \miaoxing\plugin\BaseController
 {
