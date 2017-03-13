@@ -43,7 +43,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
             ->string('useLogisticsIds', 128)->comment('使用"xx"运费模板 0默认 -1自定义')
             ->string('name', 32)
             ->bool('freeShipping')->comment('是否包邮')
-            ->timestamps()
+            ->timestampsV1()
             ->int('createUser')
             ->int('updateUser')
             ->timestamp('deleteTime')
@@ -59,7 +59,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
             ->text('areaNames')->comment('用于后台展示的区域')
             ->decimal('startFee', 10, 2)
             ->decimal('plusFee', 10, 2)
-            ->timestamps()
+            ->timestampsV1()
             ->int('createUser')
             ->int('updateUser')
             ->exec();
