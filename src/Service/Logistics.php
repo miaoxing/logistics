@@ -54,19 +54,19 @@ class Logistics extends \miaoxing\plugin\BaseModel
      * Repo: 根据编号获取物流服务商的名称
      *
      * @param int $id
-     * @return string
+     * @return string|null
      */
     public function getName($id)
     {
         $names = $this->getNames();
 
-        return isset($names[$id]) ? $names[$id] : $names[1];
+        return isset($names[$id]) ? $names[$id] : null;
     }
 
     /**
      * Repo: 根据编号获取物流服务商的名称
      *
-     * @param int $id
+     * @param $name
      * @return string
      */
     public function getKeyByName($name)
