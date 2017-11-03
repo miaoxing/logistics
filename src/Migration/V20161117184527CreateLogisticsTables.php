@@ -34,6 +34,12 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
             ['id' => 11, 'kuaidi100Id' => 'huitongkuaidi', 'name' => '百世汇通'],
             ['id' => 12, 'kuaidi100Id' => 'ganzhongnengda', 'name' => '港中能达'],
             ['id' => 13, 'kuaidi100Id' => 'jd', 'name' => '京东'],
+            ['id' => 14, 'kuaidi100Id' => '', 'name' => '鹏程快递'],
+            ['id' => 15, 'kuaidi100Id' => '', 'name' => '定制送达'],
+            ['id' => 16, 'kuaidi100Id' => 'youshuwuliu', 'name' => '优速物流'],
+            ['id' => 17, 'kuaidi100Id' => 'zhongyuankuaidi', 'name' => '中源快递'],
+            ['id' => 18, 'kuaidi100Id' => 'tiantiankuaidi', 'name' => '天天快递'],
+            ['id' => 19, 'kuaidi100Id' => 'zhaijisong', 'name' => '宅急送'],
         ]);
 
         $this->schema->table('shippingTpls')
