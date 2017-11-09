@@ -173,6 +173,14 @@ class ShippingTpl extends \miaoxing\plugin\BaseModel
         $services = [];
         if ($this->isNew || $this['freeShipping']) {
             $services[] = $this->defaultService;
+        } elseif ($this->getRules()->length() === 1) {
+            // 只有默认规则，直接显示，不用读取城市计算
+            $rule = $this->getRules()[0];
+            $services[] = [
+                'id' => $rule['logisticsId'],
+                'name' => wei()->logistics->getName($rule['logisticsId']),
+                'fee' => $rule['startFee'],
+            ];
         } else {
             if (!$city) {
                 $ipInfo = wei()->lbs->getIpInfo();
