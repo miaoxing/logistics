@@ -3,6 +3,7 @@
 namespace Miaoxing\Logistics;
 
 use Miaoxing\Address\Service\Address;
+use Miaoxing\Logistics\Service\Logistics;
 use Miaoxing\Order\Service\Order;
 use Miaoxing\Product\Service\Product;
 use Wei\RetTrait;
@@ -38,7 +39,7 @@ class Plugin extends \miaoxing\plugin\BasePlugin
      */
     public function onProductsShowItem(Product $product)
     {
-        if ($product['virtual']) {
+        if ($product['virtual'] || $product['config']['selfPickUp']) {
             return;
         }
 
@@ -55,6 +56,10 @@ class Plugin extends \miaoxing\plugin\BasePlugin
 
     public function onPostOrderCartRender(Order $order, Address $address = null)
     {
+        if (!$order->isRequireAddress()) {
+            return;
+        }
+
         $this->view->display('logistics:shippingTpls/postOrderCartRender.php', [
             'addressId' => $address ? $address['id'] : 0,
         ]);
@@ -65,6 +70,12 @@ class Plugin extends \miaoxing\plugin\BasePlugin
      */
     public function onPreOrderCreate(Order $order, Address $address = null, $data, array $options = [])
     {
+        // 自提自动设置
+        if ($order->getCarts()->isSelfPickUp()) {
+            $order['userLogisticsId'] = Logistics::ID_SELF_PICKUP;
+            return;
+        }
+
         if (isset($options['requireAddress']) && !$options['requireAddress']) {
             return;
         }
