@@ -24,12 +24,6 @@ class Plugin extends \miaoxing\plugin\BasePlugin
             'name' => '运费模板管理',
             'sort' => 20,
         ];
-
-        $navs[] = [
-            'parentId' => 'orders-service',
-            'url' => 'admin/logistics-traces',
-            'name' => '物流跟踪',
-        ];
     }
 
     /**
