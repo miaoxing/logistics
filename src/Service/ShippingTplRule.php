@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Logistics\Service;
 
-class ShippingTplRule extends \miaoxing\plugin\BaseModel
+class ShippingTplRule extends \Miaoxing\Plugin\BaseModel
 {
     protected $table = 'shippingTplRules';
 

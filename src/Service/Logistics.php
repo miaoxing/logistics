@@ -7,7 +7,7 @@ namespace Miaoxing\Logistics\Service;
  *
  * 注: 以s结尾才是名词
  */
-class Logistics extends \miaoxing\plugin\BaseModel
+class Logistics extends \Miaoxing\Plugin\BaseModel
 {
     /**
      * 到店自提
