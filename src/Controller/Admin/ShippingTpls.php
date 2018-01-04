@@ -4,7 +4,7 @@ namespace Miaoxing\Logistics\Controller\Admin;
 
 use Miaoxing\Logistics\Service\ShippingTpl;
 
-class ShippingTpls extends \miaoxing\plugin\BaseController
+class ShippingTpls extends \Miaoxing\Plugin\BaseController
 {
     protected $controllerName = '运费模板管理';
 

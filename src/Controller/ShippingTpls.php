@@ -4,7 +4,7 @@ namespace Miaoxing\Logistics\Controller;
 
 use Miaoxing\Cart\Service\Cart;
 
-class ShippingTpls extends \miaoxing\plugin\BaseController
+class ShippingTpls extends \Miaoxing\Plugin\BaseController
 {
     public function getServicesAction($req)
     {

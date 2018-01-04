@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Logistics\Controller;
 
-class LogisticsTraces extends \miaoxing\plugin\BaseController
+class LogisticsTraces extends \Miaoxing\Plugin\BaseController
 {
     public function indexAction($req)
     {
