@@ -20,7 +20,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
             ->primary('id')
             ->exec();
 
-        $this->db->insertBatch('logistics', [
+        $this->db->batchInsert('logistics', [
             ['id' => 1, 'kuaidi100Id' => '', 'name' => '快递'],
             ['id' => 2, 'kuaidi100Id' => '', 'name' => '到店自提'],
             ['id' => 3, 'kuaidi100Id' => 'youzhengguonei', 'name' => '中国邮政'],
