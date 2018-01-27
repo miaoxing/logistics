@@ -276,7 +276,7 @@
   <% } %>
 </script>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require([
     'plugins/logistics/js/admin/shipping-tpls',

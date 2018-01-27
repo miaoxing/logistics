@@ -1,6 +1,6 @@
 <?php $view->layout() ?>
 
-<?= $block('css') ?>
+<?= $block->css() ?>
 <link rel="stylesheet" href="<?= $asset('plugins/logistics/css/traces.css') ?>">
 <?= $block->end() ?>
 
@@ -67,7 +67,7 @@
   </div>
 </script>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['template', 'bootbox', 'form'], function () {
     template.helper('$', $);

@@ -16,7 +16,7 @@
   <i class="bm-angle-right list-feedback"></i>
 </li>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['plugins/order/js/orders', 'jquery-form', 'comps/artTemplate/template.min'], function (orders) {
     template.helper('$', $);
