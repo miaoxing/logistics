@@ -93,7 +93,7 @@ class Logistics extends \Miaoxing\Plugin\BaseModel
 
         // 2. 如果支持快递100,跳转到快递100展示
         if ($this['kuaidi100Id']) {
-            $url = $this->url->append('http://m.kuaidi100.com/index_all.html', [
+            $url = $this->url->append('https://m.kuaidi100.com/index_all.html', [
                 'type' => $this['kuaidi100Id'],
                 'postid' => $logisticsNo,
             ]);
