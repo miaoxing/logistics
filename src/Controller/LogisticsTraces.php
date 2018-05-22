@@ -15,7 +15,7 @@ class LogisticsTraces extends \Miaoxing\Plugin\BaseController
             return $this->response->redirect($ret['next']);
         }
 
-        $traces = $ret['traces'];
+        $traces = isset($ret['traces']) ? $ret['traces'] : [];
         $headerTitle = '物流跟踪';
 
         return get_defined_vars();
