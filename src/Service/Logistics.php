@@ -91,7 +91,15 @@ class Logistics extends \Miaoxing\Plugin\BaseModel
             return $ret;
         }
 
-        // 2. 如果支持快递100,跳转到快递100展示
+        // 2. 尝试通过接口调用
+        if ($this['kuaidi100Id']) {
+            $ret = wei()->kuaidi100->getTraces($this['kuaidi100Id'], $logisticsNo);
+            if ($ret['code'] !== 1) {
+                return $ret;
+            }
+        }
+
+        // 3. 如果支持快递100,跳转到快递100展示
         if ($this['kuaidi100Id']) {
             $url = $this->url->append('https://m.kuaidi100.com/index_all.html', [
                 'type' => $this['kuaidi100Id'],
@@ -101,7 +109,7 @@ class Logistics extends \Miaoxing\Plugin\BaseModel
             return $this->postGetTraces(['code' => 1, 'message' => '获取成功', 'next' => $url]);
         }
 
-        // 3. 默认返回空数据
+        // 4. 默认返回空数据
         return $this->postGetTraces(['code' => 1, 'message' => '获取成功', 'traces' => []]);
     }
 

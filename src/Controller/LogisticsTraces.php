@@ -9,7 +9,9 @@ class LogisticsTraces extends \Miaoxing\Plugin\BaseController
         $logistics = wei()->logistics()->findOneById($req['logisticsId']);
 
         $ret = $logistics->getTraces($req['logisticsNo']);
-        if (isset($ret['next'])) {
+
+        // TODO 判断小程序中就不打开网页
+        if (isset($ret['next']) && !wei()->plugin->isInstalled('wxa')) {
             return $this->response->redirect($ret['next']);
         }
 
