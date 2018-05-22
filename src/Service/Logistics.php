@@ -94,7 +94,7 @@ class Logistics extends \Miaoxing\Plugin\BaseModel
         // 2. 尝试通过接口调用
         if ($this['kuaidi100Id']) {
             $ret = wei()->kuaidi100->getTraces($this['kuaidi100Id'], $logisticsNo);
-            if ($ret['code'] !== 1) {
+            if ($ret['code'] === 1) {
                 return $ret;
             }
         }
