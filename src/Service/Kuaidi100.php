@@ -22,7 +22,7 @@ class Kuaidi100 extends BaseService
         ]);
 
         if (!isset($http['message']) || $http['message'] !== 'ok') {
-            $message = isset($http['message']) ?: '请求失败';
+            $message = isset($http['message']) ? $http['message'] : '请求失败';
             $ret = $http->toRet($this->err($message));
             $this->logger->warning('快递查询失败', $ret);
             return $ret;
