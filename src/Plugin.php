@@ -36,6 +36,9 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         if ($product['virtual'] || $product['config']['selfPickUp']) {
             return;
         }
+        if (!$product['config']['requireAddress']) {
+            return;
+        }
 
         $shippingTpl = $product->getShippingTpl();
 
