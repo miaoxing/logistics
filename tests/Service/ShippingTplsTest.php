@@ -340,7 +340,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
             'quantity' => 10,
             'virtual' => 1,
             'images' => [
-                '/assets/images/car1.png',
+                'test.jpg',
             ],
             'skus' => [
                 [
