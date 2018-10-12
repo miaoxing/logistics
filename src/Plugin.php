@@ -48,7 +48,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         $services = $config['services'];
         $defaultServices = isset($services[1]) ? $services[1] : $services[0];
 
-        $this->view->display('logistics:shippingTpls/productsShowItem.php', get_defined_vars());
+        $this->view->display('@logistics/shippingTpls/productsShowItem.php', get_defined_vars());
     }
 
     public function onPostOrderCartRender(Order $order, Address $address = null)
@@ -57,7 +57,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
             return;
         }
 
-        $this->view->display('logistics:shippingTpls/postOrderCartRender.php', [
+        $this->view->display('@logistics/shippingTpls/postOrderCartRender.php', [
             'addressId' => $address ? $address['id'] : 0,
         ]);
     }
