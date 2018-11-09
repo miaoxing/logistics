@@ -231,7 +231,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseModel
             $product = $cart->getProduct();
 
             // 对虚拟商品不加入计算
-            if ($product['virtual']) {
+            if ($product['isVirtual']) {
                 --$cartNum;
                 continue;
             }

@@ -33,7 +33,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
      */
     public function onProductsShowItem(Product $product)
     {
-        if ($product['virtual'] || $product['config']['selfPickUp']) {
+        if ($product['isVirtual'] || $product['config']['selfPickUp']) {
             return;
         }
         if (!$product['config']['requireAddress']) {

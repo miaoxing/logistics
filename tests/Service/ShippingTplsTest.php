@@ -338,7 +338,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
             'name' => '测试商品',
             'price' => '100',
             'quantity' => 10,
-            'virtual' => 1,
+            'isVirtual' => 1,
             'images' => [
                 'test.jpg',
             ],
@@ -380,7 +380,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $this->assertEquals(0, $services[1]['fee']);
 
         // 改成需要地址的
-        $product['virtual'] = 0;
+        $product['isVirtual'] = 0;
         // 购物车2
         $cart2 = wei()->cart()->fromArray([
             'quantity' => 5,
