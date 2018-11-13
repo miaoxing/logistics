@@ -14,7 +14,7 @@ class LogisticsTraces extends \Miaoxing\Plugin\BaseController
 
     public function indexAction($req)
     {
-        $headerTitle = '物流跟踪';
+        $this->page->setTitle('物流跟踪');
 
         return get_defined_vars();
     }
