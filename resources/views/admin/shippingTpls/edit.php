@@ -139,7 +139,7 @@
 
     <% if (logisticsId != 1 ) { %>
       <div class="btn-group js-logistics-use-dropdown">
-        <a href="javascript:;" class="btn btn-white btn-link dropdown-toggle" data-toggle="dropdown">
+        <a href="javascript:;" class="btn btn-default btn-link dropdown-toggle" data-toggle="dropdown">
           <span class="js-logistics-use-name">
             使用<%= useLogisticsId == 0 ? '自定义' : '"' + logistics[useLogisticsId] + '"' %>运费规则
           </span>
@@ -266,7 +266,7 @@
           </div>
           <% } %>
           <div class="text-right">
-            <a class="js-city-hide btn btn-sm btn-white" href="javascript:;">关闭</a>
+            <a class="js-city-hide btn btn-sm btn-default" href="javascript:;">关闭</a>
           </div>
         </div>
       </div>
