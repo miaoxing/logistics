@@ -2,13 +2,25 @@
 
 namespace Miaoxing\Logistics\Service;
 
+use Miaoxing\Config\ConfigTrait;
+
 /**
  * 物流服务商
  *
  * 注: 以s结尾才是名词
+ *
+ * @property int defaultLogisticsId
  */
 class Logistics extends \Miaoxing\Plugin\BaseModel
 {
+    use ConfigTrait;
+
+    protected $configs = [
+        'defaultLogisticsId' => [
+            'default' => 0,
+        ],
+    ];
+
     /**
      * 到店自提
      */
