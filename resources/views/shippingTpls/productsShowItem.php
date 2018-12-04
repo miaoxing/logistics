@@ -1,4 +1,4 @@
-<dl class="product-item border-top">
+<dl>
   <dt>配送：</dt>
   <dd>
     <?php if ($city) : ?>

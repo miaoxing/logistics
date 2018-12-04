@@ -31,7 +31,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
      *
      * @param \Miaoxing\Product\Service\Product $product
      */
-    public function onProductsShowItem(Product $product)
+    public function onProductsShowItemMin(Product $product)
     {
         if ($product['isVirtual'] || $product['config']['selfPickUp']) {
             return;
