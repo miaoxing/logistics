@@ -23,7 +23,7 @@
         <h4 class="modal-title" id="shipping-fee-modal-label">配送方式</h4>
       </div>
       <div class="modal-body">
-        <table class="table table table-condensed m-b-0">
+        <table class="table table-sm m-b-0">
           <thead>
           <tr>
             <th>物流服务</th>
