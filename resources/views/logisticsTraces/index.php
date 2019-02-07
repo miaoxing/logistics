@@ -2,11 +2,6 @@
 
 <?= $block->css() ?>
 <link rel="stylesheet" href="<?= $asset('plugins/logistics/css/traces.css') ?>">
-<style>
-  .trace-icon.bg-primary {
-    background-color: <?= $setting('theme.brandPrimary') ?: '#f28c48' ?>;
-  }
-</style>
 <?= $block->end() ?>
 
 <div class="trace-container bg-light">
