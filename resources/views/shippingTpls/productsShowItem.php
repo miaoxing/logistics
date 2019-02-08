@@ -14,13 +14,13 @@
 
 <div class="js-shipping-fee-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="shipping-fee-modal-label"
   aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header border-bottom">
+        <h4 class="modal-title" id="shipping-fee-modal-label">配送方式</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="shipping-fee-modal-label">配送方式</h4>
       </div>
       <div class="modal-body">
         <table class="table table-sm m-b-0">
