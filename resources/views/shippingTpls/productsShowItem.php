@@ -16,7 +16,7 @@
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header border-bottom">
+      <div class="modal-header">
         <h4 class="modal-title" id="shipping-fee-modal-label">配送方式</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -40,7 +40,7 @@
           </tbody>
         </table>
       </div>
-      <div class="modal-footer border-top">
+      <div class="modal-footer">
         <button type="button" class="btn btn-primary hairline" data-dismiss="modal">OK</button>
       </div>
     </div>
