@@ -138,15 +138,16 @@
       class="js-logistics-use" data-logistics-id="<%= logisticsId %>">
 
     <% if (logisticsId != 1 ) { %>
-      <div class="dropdown d-inline-block js-logistics-use-dropdown">
-        <a href="javascript:;" class="btn btn-default btn-link dropdown-toggle" data-toggle="dropdown">
-          <span class="js-logistics-use-name">
-            使用<%= useLogisticsId == 0 ? '自定义' : '"' + logistics[useLogisticsId] + '"' %>运费规则
-          </span>
-          <span class="fa fa-caret-down icon-on-right"></span>
-        </a>
-        <ul class="dropdown-menu dropdown-white">
-        </ul>
+      <div class="d-inline-block">
+        <div class="dropdown js-logistics-use-dropdown">
+          <a href="javascript:;" class="btn btn-default btn-link dropdown-toggle" data-toggle="dropdown">
+            <span class="js-logistics-use-name">
+              使用<%= useLogisticsId == 0 ? '自定义' : '"' + logistics[useLogisticsId] + '"' %>运费规则
+            </span>
+          </a>
+          <div class="dropdown-menu">
+          </div>
+        </div>
       </div>
 
       <div class="action-buttons pull-right">
@@ -186,9 +187,9 @@
 
 <script id="logisticsUseTpl" type="text/html">
   <% for (var i in ids) { %>
-    <li><a href="javascript:;" data-val="<%= ids[i] %>">使用"<%= logistics[ids[i]] %>"运费规则</a></li>
+    <a class="dropdown-item" href="javascript:;" data-val="<%= ids[i] %>">使用"<%= logistics[ids[i]] %>"运费规则</a>
   <% } %>
-  <li><a href="javascript:;" data-val="0">使用自定义运费规则</a></li>
+  <a class="dropdown-item" href="javascript:;" data-val="0">使用自定义运费规则</a>
 </script>
 
 <script id="shippingRuleTpl" type="text/html">
@@ -196,7 +197,7 @@
     <td class="text-left">
       <% if (isDefault == '1') { %>
         默认
-        <input type="hidden" value="1" name="rules[<%= index %>][isDefault]" value="<%= isDefault %>">
+        <input type="hidden" name="rules[<%= index %>][isDefault]" value="<%= isDefault %>">
       <% } else { %>
         <a href="javascript:;" class="js-areas-edit pull-right">编辑</a>
         <div class="js-rule-area-name rule-area-name"><%= areaNames.join('、') || '请选择地区' %></div>
