@@ -88,10 +88,10 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
+        <h5 class="modal-title" id="logistics-modal-label">选择物流服务</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="logistics-modal-label">选择物流服务</h4>
       </div>
       <div class="modal-body">
         <form class="form">
@@ -114,7 +114,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">选择区域</h4>
+        <h5 class="modal-title">选择区域</h5>
       </div>
       <div class="modal-body">
         <ul class="js-area-list list-unstyled">
