@@ -23,7 +23,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <table class="table table-sm m-b-0">
+        <table class="table table-sm mb-0">
           <thead>
           <tr>
             <th>物流服务</th>

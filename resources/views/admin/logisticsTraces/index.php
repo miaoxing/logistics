@@ -12,7 +12,7 @@
 
 <div class="row">
   <div class="col-10 offset-1 col-sm-8 offset-sm-2">
-    <form class="js-logistics-form logistics-form clearfix m-y" method="get" role="form">
+    <form class="js-logistics-form logistics-form clearfix my-3" method="get" role="form">
 
       <div class="col-sm-3">
         <select class="js-logistics-id form-control" name="logisticsId">
