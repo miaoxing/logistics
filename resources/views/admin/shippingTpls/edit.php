@@ -151,7 +151,7 @@
       </div>
 
       <div class="action-buttons pull-right">
-        <a href="javascript:;" class="js-logistics-remove bigger-120 text-danger">
+        <a href="javascript:;" class="js-logistics-remove text-lg text-danger">
           <i class="fa fa-trash-o"></i>
         </a>
       </div>
