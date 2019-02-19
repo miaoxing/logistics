@@ -248,7 +248,7 @@
             <label>
               <input class="js-province-input" type="checkbox" value="<%= provinceId %>"
                 data-name="<%= areas[i].provinces[provinceId] %>">
-              <%= areas[i].provinces[provinceId] %><span class="js-city-num city-num text-danger smaller-75"></span>
+              <%= areas[i].provinces[provinceId] %><span class="js-city-num city-num text-danger text-xs"></span>
             </label>
           </div>
           <a href="javascript:;" class="js-city-toggle">
