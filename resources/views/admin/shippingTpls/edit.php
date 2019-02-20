@@ -284,7 +284,7 @@
     'css!plugins/logistics/css/admin/shipping-tpls',
     'form',
     'template',
-    'validator'
+    'plugins/app/js/validation'
   ], function (shippingTpls, css, region) {
     $.getJSON($.url('admin/shipping-tpls/regions.json'), function (region) {
       shippingTpls.editAction({
