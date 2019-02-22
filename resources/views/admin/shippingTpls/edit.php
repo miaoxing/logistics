@@ -283,7 +283,7 @@
     'plugins/logistics/js/admin/shipping-tpls',
     'css!plugins/logistics/css/admin/shipping-tpls',
     'form',
-    plugins/app/libs/artTemplate/template.min,
+    'plugins/app/libs/artTemplate/template.min',
     'plugins/app/js/validation'
   ], function (shippingTpls, css, region) {
     $.getJSON($.url('admin/shipping-tpls/regions.json'), function (region) {
