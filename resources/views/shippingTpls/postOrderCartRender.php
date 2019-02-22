@@ -18,7 +18,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['plugins/order/js/orders', 'jquery-form', 'plugins/app/libs/artTemplate/template.min'], function (orders) {
+  require(['plugins/order/js/orders', 'plugins/app/libs/jquery-form/jquery.form', 'plugins/app/libs/artTemplate/template.min'], function (orders) {
 
     var $form = $('.js-order-form');
     var $userLogisticsId = $('.js-user-logistics-id');
