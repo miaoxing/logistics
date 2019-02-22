@@ -1,4 +1,4 @@
-define(['template'], function (template) {
+define([plugins/app/libs/artTemplate/template.min], function (template) {
   var DELAY_SLOW = 5000;
 
   var ShippingTpls = function () {
