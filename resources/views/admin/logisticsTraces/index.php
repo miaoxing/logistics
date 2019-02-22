@@ -70,7 +70,6 @@
 <?= $block->js() ?>
 <script>
   require(['template', 'plugins/app/js/bootbox', 'form'], function () {
-    template.helper('$', $);
     $('.js-logistics-form').ajaxForm({
       url: $.url('admin/logistics-traces/' + $('.js-logistics-id').val() + "_" + $('.js-logistics-no').val()),
       dataType: 'json',
