@@ -69,7 +69,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['plugins/app/libs/artTemplate/template.min', 'plugins/app/js/bootbox', 'form'], function () {
+  require(['plugins/app/libs/artTemplate/template.min', 'plugins/app/js/bootbox', 'plugins/admin/js/form'], function () {
     $('.js-logistics-form').ajaxForm({
       url: $.url('admin/logistics-traces/' + $('.js-logistics-id').val() + "_" + $('.js-logistics-no').val()),
       dataType: 'json',

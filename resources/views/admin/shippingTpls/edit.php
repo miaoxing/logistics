@@ -282,7 +282,7 @@
   require([
     'plugins/logistics/js/admin/shipping-tpls',
     'css!plugins/logistics/css/admin/shipping-tpls',
-    'form',
+    'plugins/admin/js/form',
     'plugins/app/libs/artTemplate/template.min',
     'plugins/app/js/validation'
   ], function (shippingTpls, css, region) {
