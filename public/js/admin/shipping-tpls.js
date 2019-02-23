@@ -176,7 +176,11 @@ define(['plugins/app/libs/artTemplate/template.min'], function (template) {
         return;
       }
 
-      $.confirm('确认删除该物流?', function () {
+      $.confirm('确认删除该物流?', function (result) {
+        if (!result) {
+          return;
+        }
+
         $logisticsItem.remove();
       });
     });
@@ -262,7 +266,11 @@ define(['plugins/app/libs/artTemplate/template.min'], function (template) {
 
     // 点击删除
     $ruleItem.on('click', '.js-rule-remove', function () {
-      $.confirm('确定删除运费规则?', function () {
+      $.confirm('确定删除运费规则?', function (result) {
+        if (!result) {
+          return;
+        }
+
         $ruleItem.remove();
       });
     });
