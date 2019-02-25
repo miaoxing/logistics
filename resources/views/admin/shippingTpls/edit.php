@@ -49,7 +49,7 @@
         </label>
 
         <div class="col-lg-6">
-          <p class="form-control-static text-muted">请设置地区对应的运费，未设置的地区使用默认运费。</p>
+          <p class="form-control-plaintext text-muted">请设置地区对应的运费，未设置的地区使用默认运费。</p>
           <div class="logistics-lists js-logistics-lists">
 
           </div>
