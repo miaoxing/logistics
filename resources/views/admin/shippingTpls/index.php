@@ -2,7 +2,7 @@
 
 <!-- /.page-header -->
 <div class="page-header">
-  <div class="pull-right">
+  <div class="float-right">
     <a class="btn btn-success" href="<?= $url('admin/shipping-tpls/new') ?>">添加运费模板</a>
   </div>
   <h1>

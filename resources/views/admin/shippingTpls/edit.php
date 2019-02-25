@@ -1,7 +1,7 @@
 <?php $view->layout() ?>
 
 <div class="page-header">
-  <a class="btn btn-default pull-right" href="<?= $url('admin/shipping-tpls') ?>">返回列表</a>
+  <a class="btn btn-default float-right" href="<?= $url('admin/shipping-tpls') ?>">返回列表</a>
 
   <h1>
     运费模板管理
@@ -150,7 +150,7 @@
         </div>
       </div>
 
-      <div class="action-buttons pull-right">
+      <div class="action-buttons float-right">
         <a href="javascript:;" class="js-logistics-remove text-lg text-danger">
           <i class="fa fa-trash-o"></i>
         </a>
@@ -173,7 +173,7 @@
         <tfoot>
         <tr>
           <td colspan="4">
-            <a href="javascript:;" class="js-rule-add pull-left" data-logistics-id="<%= logistics['id'] %>">
+            <a href="javascript:;" class="js-rule-add float-left" data-logistics-id="<%= logistics['id'] %>">
               <i class="fa fa-plus"></i>
               为指定地区设置运费
             </a>
@@ -199,7 +199,7 @@
         默认
         <input type="hidden" name="rules[<%= index %>][isDefault]" value="<%= isDefault %>">
       <% } else { %>
-        <a href="javascript:;" class="js-areas-edit pull-right">编辑</a>
+        <a href="javascript:;" class="js-areas-edit float-right">编辑</a>
         <div class="js-rule-area-name rule-area-name"><%= areaNames.join('、') || '请选择地区' %></div>
       <% } %>
       <input class="js-rule-area-names" type="hidden" value="<%= areaNames.join(',') %>"
