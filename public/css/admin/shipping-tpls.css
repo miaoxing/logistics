@@ -56,10 +56,9 @@
 }
 
 .area-name {
-  margin-right: 5px;
   display: inline-block;
   width: 72px;
-  padding: 5px 0 5px 10px;
+  padding: 5px 0;
   vertical-align: top;
 }
 
@@ -92,7 +91,7 @@
   float: right;
   border: solid 1px #f7e4a5;
   z-index: 20000;
-  top: 30px;
+  top: 27px;
   left: 0;
   width: 250px;
   display: none;
@@ -125,4 +124,20 @@
 
 .city-num {
   letter-spacing: -1px;
+}
+
+/* Bs4 */
+.caret:empty::after {
+  margin-left: 0;
+}
+
+.caret::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }

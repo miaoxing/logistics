@@ -233,21 +233,21 @@
   <% for (var i in areas) { %>
   <li class="js-area-item area-item">
     <div class="area-name">
-      <div class="checkbox-inline">
-        <label>
-          <input class="js-area-input" type="checkbox" value="<%= areas[i].name %>" data-name="<%= areas[i].name %>">
-          <%= areas[i].name %>
-        </label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input js-area-input" id="area-<%= i %>" type="checkbox" value="<%= areas[i].name %>"
+          data-name="<%= areas[i].name %>">
+        <label class="form-check-label" for="area-<%= i %>"><%= areas[i].name %></label>
       </div>
     </div>
     <div class="js-province-list province-list">
       <% for (var provinceId in areas[i].provinces) { %>
       <div class="js-province-item province-item">
         <div class="province-name">
-          <div class="checkbox-inline">
-            <label>
-              <input class="js-province-input" type="checkbox" value="<%= provinceId %>"
-                data-name="<%= areas[i].provinces[provinceId] %>">
+          <div class="form-check form-check-inline mr-0">
+            <input class="js-province-input form-check-input" id="province-<%= i %>-<%= provinceId %>" type="checkbox"
+              value="<%= provinceId %>"
+              data-name="<%= areas[i].provinces[provinceId] %>">
+            <label class="form-check-label" for="province-<%= i %>-<%= provinceId %>">
               <%= areas[i].provinces[provinceId] %><span class="js-city-num city-num text-danger text-xs"></span>
             </label>
           </div>
@@ -258,13 +258,13 @@
 
         <div class="city-list">
           <% for (var cityId in cities[areas[i].provinces[provinceId]]) { %>
-          <div class="checkbox-inline">
-            <label>
-              <input class="js-city-input" type="checkbox" value="<%= cityId %>"
+            <div class="form-check form-check-inline">
+              <input class="js-city-input form-check-input" id="city-<%= cityId %>" type="checkbox" value="<%= cityId %>"
                 data-name="<%= cities[areas[i].provinces[provinceId]][cityId] %>">
-              <%= cities[areas[i].provinces[provinceId]][cityId] %>
-            </label>
-          </div>
+              <label class="form-check-label" for="city-<%= cityId %>">
+                <%= cities[areas[i].provinces[provinceId]][cityId] %>
+              </label>
+            </div>
           <% } %>
           <div class="text-right">
             <a class="js-city-hide btn btn-sm btn-default" href="javascript:;">关闭</a>
