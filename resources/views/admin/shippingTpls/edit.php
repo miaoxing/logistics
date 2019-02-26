@@ -1,7 +1,7 @@
 <?php $view->layout() ?>
 
 <div class="page-header">
-  <a class="btn btn-default float-right" href="<?= $url('admin/shipping-tpls') ?>">返回列表</a>
+  <a class="btn btn-secondary float-right" href="<?= $url('admin/shipping-tpls') ?>">返回列表</a>
 
   <h1>
     运费模板管理
@@ -70,7 +70,7 @@
           </button>
 
           &nbsp; &nbsp; &nbsp;
-          <a class="btn btn-default" href="<?= $url('admin/shipping-tpls') ?>">
+          <a class="btn btn-secondary" href="<?= $url('admin/shipping-tpls') ?>">
             <i class="fa fa-undo"></i>
             返回列表
           </a>
@@ -101,7 +101,7 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
         <button type="button" class="btn btn-primary js-logistics-confirm">确定</button>
       </div>
     </div>
@@ -123,7 +123,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="js-area-ok btn btn-primary">确定</button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
       </div>
     </div>
   </div>
@@ -140,7 +140,7 @@
     <% if (logisticsId != 1 ) { %>
       <div class="d-inline-block">
         <div class="dropdown js-logistics-use-dropdown">
-          <a href="javascript:;" class="btn btn-default btn-link dropdown-toggle" data-toggle="dropdown">
+          <a href="javascript:;" class="btn btn-secondary btn-link dropdown-toggle" data-toggle="dropdown">
             <span class="js-logistics-use-name">
               使用<%= useLogisticsId == 0 ? '自定义' : '"' + logistics[useLogisticsId] + '"' %>运费规则
             </span>
@@ -267,7 +267,7 @@
             </div>
           <% } %>
           <div class="text-right">
-            <a class="js-city-hide btn btn-sm btn-default" href="javascript:;">关闭</a>
+            <a class="js-city-hide btn btn-sm btn-secondary" href="javascript:;">关闭</a>
           </div>
         </div>
       </div>

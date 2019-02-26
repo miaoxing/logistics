@@ -34,7 +34,7 @@
 
       <div class="col-sm-1">
       <span class="input-group-append">
-        <button class="btn btn-default btn-primary" type="submit">搜索</button>
+        <button class="btn btn-secondary btn-primary" type="submit">搜索</button>
       </span>
       </div>
 
