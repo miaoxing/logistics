@@ -46,7 +46,7 @@
 </div>
 
 <script id="logistics-detail-tpl" type="text/html">
-  <div class="trace-container bg-light">
+  <div class="trace-container bg-white">
     <span class="text-muted">运单号:</span>
     <%= logistics.name %> <%= logistics.no %>
     <% if (traces.length == 0) { %>

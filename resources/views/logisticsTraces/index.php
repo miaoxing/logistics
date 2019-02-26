@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="<?= $asset('plugins/logistics/css/traces.css') ?>">
 <?= $block->end() ?>
 
-<div class="trace-container bg-light">
+<div class="trace-container bg-white">
   <span class="text-muted">运单号:</span>
   <?= $logistics['name'] ?> <?= $e($req['logisticsNo']) ?: '无' ?>
 
