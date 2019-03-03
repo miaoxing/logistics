@@ -4,7 +4,7 @@
   <% }) %>
 </script>
 
-<li class="js-group-user-logistics-id list-item order-form-group has-feedback list-over-fix display-none">
+<li class="js-group-user-logistics-id list-item order-form-group list-has-feedback list-over-fix display-none">
   <label for="user-logistics-id">配送方式</label>
 
   <div class="order-form-col text-right">
