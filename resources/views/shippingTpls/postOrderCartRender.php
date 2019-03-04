@@ -4,7 +4,7 @@
   <% }) %>
 </script>
 
-<li class="js-group-user-logistics-id list-item order-form-group list-has-feedback list-over-fix display-none">
+<li class="js-group-user-logistics-id list-item order-form-group list-has-arrow list-over-fix display-none">
   <label for="user-logistics-id">配送方式</label>
 
   <div class="order-form-col text-right">
@@ -13,7 +13,7 @@
     <div class="order-form-select-fake js-user-logistics-name">
     </div>
   </div>
-  <i class="bm-angle-right list-feedback"></i>
+  <i class="bm-angle-right list-arrow"></i>
 </li>
 
 <?= $block->js() ?>
