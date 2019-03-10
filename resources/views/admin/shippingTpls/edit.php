@@ -208,11 +208,13 @@
       <input class="logistics-id" type="hidden" value="<%= logisticsId %>" name="rules[<%= index %>][logisticsId]">
     </td>
     <td>
-      <input type="text" value="<%= startFee %>" name="rules[<%= index %>][startFee]" class="rule-fee js-fee"
+      <input type="text" value="<%= startFee %>" name="rules[<%= index %>][startFee]"
+        class="rule-fee js-fee form-control"
         data-rule-number="true" data-rule-min="0" data-rule-required="true">
     </td>
     <td>
-      <input type="text" value="<%= plusFee %>" name="rules[<%= index %>][plusFee]" class="rule-fee js-fee"
+      <input type="text" value="<%= plusFee %>" name="rules[<%= index %>][plusFee]"
+        class="rule-fee js-fee form-control"
         data-rule-number="true" data-rule-min="0" data-rule-required="true">
     </td>
     <td>
