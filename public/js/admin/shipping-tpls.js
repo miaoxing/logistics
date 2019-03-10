@@ -176,7 +176,7 @@ define(['plugins/app/libs/artTemplate/template.min'], function (template) {
         return;
       }
 
-      $.confirm('确认删除该物流?', function (result) {
+      $.confirm('确定删除该物流?', function (result) {
         if (!result) {
           return;
         }
