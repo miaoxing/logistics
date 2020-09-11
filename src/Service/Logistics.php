@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Logistics\Service;
 
-use Miaoxing\Config\ConfigTrait;
+use Miaoxing\Plugin\ConfigTrait;
 
 /**
  * 物流服务商

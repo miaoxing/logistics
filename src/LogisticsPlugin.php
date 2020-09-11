@@ -8,7 +8,7 @@ use Miaoxing\Order\Service\Order;
 use Miaoxing\Product\Service\Product;
 use Wei\RetTrait;
 
-class Plugin extends \Miaoxing\Plugin\BasePlugin
+class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
 {
     use RetTrait;
 
