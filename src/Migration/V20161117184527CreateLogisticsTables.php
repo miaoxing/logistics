@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Logistics\Migration;
 
-use Miaoxing\Plugin\BaseMigration;
+use Wei\Migration\BaseMigration;
 
 class V20161117184527CreateLogisticsTables extends BaseMigration
 {
