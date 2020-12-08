@@ -4,7 +4,7 @@ namespace Miaoxing\Logistics\Service;
 
 use Miaoxing\Cart\Service\Cart;
 
-class ShippingTpl extends \Miaoxing\Plugin\BaseModel
+class ShippingTpl extends \Miaoxing\Plugin\BaseService
 {
     const CUSTOM_RULE = 0;
 

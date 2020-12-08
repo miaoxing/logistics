@@ -11,7 +11,7 @@ use Miaoxing\Plugin\ConfigTrait;
  *
  * @property int defaultLogisticsId
  */
-class Logistics extends \Miaoxing\Plugin\BaseModel
+class Logistics extends \Miaoxing\Plugin\BaseService
 {
     use ConfigTrait;
 
