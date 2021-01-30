@@ -91,7 +91,7 @@
       },
       success: function (ret) {
         $(".js-logistics-traces").empty();
-        if (ret.code !== 1) {
+        if (ret.code !== 0) {
           $.msg(ret);
           return;
         }

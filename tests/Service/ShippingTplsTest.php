@@ -253,7 +253,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $product = wei()->product();
         $product->setOption('shippingTpl', $shippingTpl);
 
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
 
         // 购物车1
         $cart = wei()->cart()->fromArray([
@@ -289,7 +289,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $product = wei()->product();
         $product->setOption('shippingTpl', $shippingTpl);
 
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
 
         // 购物车1
         $cart = wei()->cart()->fromArray([
@@ -371,7 +371,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
             'quantity' => 5,
         ]);
         $cart->setProduct($product);
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
         $carts[] = $cart;
 
         // 地址1
@@ -386,7 +386,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
             'quantity' => 5,
         ]);
         $cart2->setProduct($product);
-        $carts2 = wei()->cart()->beColl();
+        $carts2 = wei()->cart()->multiple();
         $carts2[] = $cart2;
 
         $services = wei()->shippingTpl->getShippingServices($carts2, $address);
@@ -402,7 +402,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $product = wei()->product();
         $product->setOption('shippingTpl', $shippingTpl);
 
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
 
         // 购物车1
         $cart = wei()->cart()->fromArray([
@@ -445,7 +445,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
     public function ignoreTestGetFeesWithDiffTpl()
     {
         // 购物车coll
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
 
         // 运费模板1
         $shippingTpl = $this->getDefaultShippingTpl();
@@ -495,7 +495,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
     public function ignoreTestGetFeesWithNewTpl()
     {
         // 购物车coll
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
 
         // 运费模板1
         $shippingTpl = $this->getDefaultShippingTpl();
@@ -545,7 +545,7 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
     public function ignoreTestGetFeesWithEmptyTpl()
     {
         // 购物车coll
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
 
         // 运费模板1
         $shippingTpl = $this->getDefaultShippingTpl();

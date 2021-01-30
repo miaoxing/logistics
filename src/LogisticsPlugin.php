@@ -14,12 +14,10 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
 
     protected $name = '物流管理,包括运费模板等';
 
-    protected $adminNavId = 'products';
-
     public function onAdminNavGetNavs(&$navs, &$categories, &$subCategories)
     {
-        $navs[] = [
-            'parentId' => 'products-service',
+        $subCategories[] = [
+            'parentId' => 'setting',
             'url' => 'admin/shipping-tpls',
             'name' => '运费模板管理',
             'sort' => 20,

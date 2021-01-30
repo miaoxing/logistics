@@ -44,7 +44,7 @@ class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
         ]);
         $this->assertRetSuc($ret);
 
-        $carts = wei()->cart()->beColl();
+        $carts = wei()->cart()->multiple();
         $carts[] = $cart;
 
         $order = wei()->order();
@@ -55,7 +55,7 @@ class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
 
         // 没有选择运费模板的情况
         $ret = wei()->event->until('preOrderCreate', [$order, $address, $data]);
-        $this->assertRetErr($ret, -10, '请选择配送方式');
+        $this->assertRetErr($ret, '请选择配送方式', -10);
 
         // 选择运费服务为1
         $data = ['userLogisticsId' => 1];
@@ -68,7 +68,7 @@ class PluginTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $data = ['userLogisticsId' => 2];
         $ret = wei()->event->until('preOrderCreate', [$order, $address, $data]);
 
-        $this->assertRetErr($ret, -8, '配送方式不存在,请重新选择');
+        $this->assertRetErr($ret, '配送方式不存在,请重新选择', -8);
     }
 
     public function testOnRenderOrder()
