@@ -29,6 +29,7 @@ export default () => {
             {
               title: '顺序',
               dataIndex: 'sort',
+              sorter: true,
             },
             {
               title: '最后更改时间',
