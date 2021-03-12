@@ -4,5 +4,11 @@
   "private": true,
   "main": "index.js",
   "author": "twinh",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "emotion": "^10.0.27",
+    "@ant-design/icons": "^4.5.0"
+  }
 }
