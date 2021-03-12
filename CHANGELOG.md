@@ -1,3 +1,19 @@
+## [0.1.8](https://github.com/miaoxing/logistics/compare/v0.1.7...v0.1.8) (2021-03-12)
+
+
+### Bug Fixes
+
+* 更新前端包依赖 ([63b5f04](https://github.com/miaoxing/logistics/commit/63b5f04368cc942e364e305a30537ebe9b707163))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/app:** upgrade from `0.2.10` to `0.2.11`
+* **@miaoxing/region:** upgrade from `0.1.7` to `0.1.8`
+
 ## [0.1.7](https://github.com/miaoxing/logistics/compare/v0.1.6...v0.1.7) (2021-03-10)
 
 
