@@ -13,5 +13,16 @@ return [
                 ],
             ],
         ],
+        '/logistics-addresses' => [
+            'name' => '地址管理',
+            '/new' => [
+                'name' => '添加',
+            ],
+            '/[id]' => [
+                '/edit' => [
+                    'name' => '编辑',
+                ],
+            ],
+        ],
     ],
 ];

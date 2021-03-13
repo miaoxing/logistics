@@ -22,6 +22,13 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
             'name' => '运费模板管理',
             'sort' => 20,
         ];
+
+        $subCategories[] = [
+            'parentId' => 'setting',
+            'url' => 'admin/logistics-addresses',
+            'name' => '地址管理',
+            'sort' => 10,
+        ];
     }
 
     /**
