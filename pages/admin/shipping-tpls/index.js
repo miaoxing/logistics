@@ -24,7 +24,7 @@ export default () => {
             {
               title: '是否包邮',
               dataIndex: 'isFreeShipping',
-              render: (cell) => cell ? '是' : '否'
+              render: (cell) => cell ? '是' : '否',
             },
             {
               title: '顺序',

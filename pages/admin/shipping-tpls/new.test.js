@@ -57,7 +57,7 @@ describe(path, () => {
               startFee: 2,
               addAmount: 3,
               addFee: 4,
-            }
+            },
           ],
         },
       }))
@@ -67,7 +67,7 @@ describe(path, () => {
         data: [{
           id: 1,
           name: '默认地区',
-        }]
+        }],
       }))
       // 提交
       .mockImplementationOnce(() => promise3.resolve({

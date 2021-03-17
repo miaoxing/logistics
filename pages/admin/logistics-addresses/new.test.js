@@ -41,7 +41,7 @@ describe(path, () => {
           name: '山西省',
           shortName: '山西',
           hasChildren: true,
-        }]
+        }],
       })))
       // 读取默认数据
       .mockImplementationOnce(() => promise2.resolve(Ret.new({
@@ -62,8 +62,8 @@ describe(path, () => {
                 id: 140000,
                 name: '山西省',
                 shortName: '山西',
-              }
-            }
+              },
+            },
           },
           address: '199号',
           types: [1],
@@ -79,7 +79,7 @@ describe(path, () => {
           name: '大同市',
           shortName: '大同',
           hasChildren: true,
-        }]
+        }],
       })))
       // 读取三级地区
       .mockImplementationOnce(() => promise4.resolve(Ret.new({
@@ -90,7 +90,7 @@ describe(path, () => {
           name: '天镇县',
           parentId: 140200,
           shortName: '天镇',
-        }]
+        }],
       })))
       // 提交
       .mockImplementationOnce(() => promise5.resolve({

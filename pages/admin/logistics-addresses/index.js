@@ -6,7 +6,7 @@ import {LinkActions} from '@mxjs/actions';
 import {Tag} from 'antd';
 
 const typeNames = {
-  1: '退货'
+  1: '退货',
 };
 
 export default () => {
@@ -37,7 +37,7 @@ export default () => {
                 region?.parent?.parent?.shortName,
                 region?.parent?.shortName,
                 region?.shortName,
-                value
+                value,
               ].join(' '),
             },
             {

@@ -15,8 +15,8 @@ describe(path, () => {
     setUrl(path);
     app.page = {
       collection: path,
-      index: true
-    }
+      index: true,
+    };
   });
 
   afterEach(() => {
@@ -45,14 +45,14 @@ describe(path, () => {
                 parent: {
                   name: '山西省',
                   shortName: '山西',
-                }
-              }
+                },
+              },
             },
             address: '199号',
             types: [1],
             sort: 51,
-            updatedAt: '2020-01-01 00:00:00'
-          }
+            updatedAt: '2020-01-01 00:00:00',
+          },
         ],
       })));
 

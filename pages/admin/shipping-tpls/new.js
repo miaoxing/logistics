@@ -12,12 +12,12 @@ import {
   Table,
   Form as AntdForm,
   Input,
-  TreeSelect
+  TreeSelect,
 } from 'antd';
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
 import {Flex, Text} from 'rebass';
-import {css} from 'emotion'
+import {css} from 'emotion';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
@@ -29,10 +29,10 @@ const FeeFormItem = (props) => {
     {...props}
   >
     <Input css={{textAlign: 'center'}}/>
-  </FormItem>
+  </FormItem>;
 };
 
-const verticalAlignBaseline = css({verticalAlign: 'baseline'})
+const verticalAlignBaseline = css({verticalAlign: 'baseline'});
 
 export default () => {
   const form = useRef();
@@ -50,9 +50,9 @@ export default () => {
               return {
                 title: child.name,
                 value: child.id,
-              }
+              };
             }),
-          }
+          };
         });
         setRegions(data);
       } else {
@@ -116,7 +116,7 @@ export default () => {
               rule.serviceId = service.id;
               return rule;
             }));
-          })
+          });
           values.rules = rules;
           delete values.services;
 
@@ -163,7 +163,7 @@ export default () => {
                           form.current.setFieldsValue({
                             services: services,
                           });
-                        }
+                        };
 
                         // 删除规则
                         const deleteRule = (ruleIndex, e) => {
@@ -178,7 +178,7 @@ export default () => {
                               services: services,
                             });
                           });
-                        }
+                        };
 
                         return <Table
                           key={field.key}
@@ -210,9 +210,9 @@ export default () => {
                                       return {
                                         ...child,
                                         disabled: disabled || otherRegionIds.includes(child.value),
-                                      }
+                                      };
                                     }),
-                                  }
+                                  };
                                 });
 
                                 return (
@@ -224,7 +224,7 @@ export default () => {
                                       treeNodeFilterProp="title"
                                     />
                                   </FormItem>
-                                )
+                                );
                               },
                             },
                             {
@@ -235,15 +235,15 @@ export default () => {
                               className: verticalAlignBaseline,
                               render: (value, row, ruleIndex) => {
                                 return <Flex alignItems="baseline" justifyContent="space-between">
-                                  <FeeFormItem name={[index, 'rules', ruleIndex, "startAmount"]}/>
+                                  <FeeFormItem name={[index, 'rules', ruleIndex, 'startAmount']}/>
                                   {' '}{unit}内{' '}
-                                  <FeeFormItem name={[index, 'rules', ruleIndex, "startFee"]}/>
+                                  <FeeFormItem name={[index, 'rules', ruleIndex, 'startFee']}/>
                                   {' '}元，每增加{' '}
-                                  <FeeFormItem name={[index, 'rules', ruleIndex, "addAmount"]}/>
+                                  <FeeFormItem name={[index, 'rules', ruleIndex, 'addAmount']}/>
                                   {' '}{unit}{' '}
-                                  <FeeFormItem name={[index, 'rules', ruleIndex, "addFee"]}/>
+                                  <FeeFormItem name={[index, 'rules', ruleIndex, 'addFee']}/>
                                   {' '}元
-                                </Flex>
+                                </Flex>;
                               },
                             },
                             {
@@ -258,9 +258,9 @@ export default () => {
                                     title="删除">
                                     <DeleteOutlined/>
                                   </a>
-                                )
-                              }
-                            }
+                                );
+                              },
+                            },
                           ]}
                           bordered
                           dataSource={rules}
@@ -268,10 +268,10 @@ export default () => {
                           footer={() => {
                             return <a onClick={addRule} href="#">
                               <PlusOutlined/> 为指定地区设置运费
-                            </a>
+                            </a>;
                           }}
                           pagination={false}
-                        />
+                        />;
                       })}
 
                     </>
@@ -290,7 +290,7 @@ export default () => {
             />
             <FormItem name="id" type="hidden"/>
             <FormAction/>
-          </>
+          </>;
         }}
       </Form>
     </Page>

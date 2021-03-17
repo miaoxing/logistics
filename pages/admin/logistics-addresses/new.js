@@ -6,7 +6,7 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormAction, FormItem} from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
-import {Checkbox, Col, Row, Tag} from 'antd';
+import {Checkbox, Col, Row} from 'antd';
 import $ from 'miaoxing';
 
 export default () => {
@@ -46,7 +46,7 @@ export default () => {
               <RegionCascader parentId="中国" url={$.url('api/regions')} fieldNames={{
                 label: 'shortName',
                 value: 'id',
-                children: 'children'
+                children: 'children',
               }}/>
             </FormItem>
 
@@ -73,7 +73,7 @@ export default () => {
             <FormItem name="id" type="hidden"/>
 
             <FormAction/>
-          </>
+          </>;
         }}
       </Form>
     </Page>

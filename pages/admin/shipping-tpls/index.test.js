@@ -15,8 +15,8 @@ describe(path, () => {
     setUrl(path);
     app.page = {
       collection: path,
-      index: true
-    }
+      index: true,
+    };
   });
 
   afterEach(() => {
@@ -37,8 +37,8 @@ describe(path, () => {
             name: '测试模板',
             isFreeShipping: true,
             sort: 51,
-            updatedAt: '2020-01-01 00:00:00'
-          }
+            updatedAt: '2020-01-01 00:00:00',
+          },
         ],
       }));
 
