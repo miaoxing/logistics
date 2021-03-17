@@ -84,7 +84,7 @@ class Logistics extends \Miaoxing\Plugin\BaseService
     public function getKeyByName($name)
     {
         $names = $this->getNames();
-        $key = array_search($name, $names);
+        $key = array_search($name, $names, true);
 
         return $key ?: false;
     }
@@ -106,7 +106,7 @@ class Logistics extends \Miaoxing\Plugin\BaseService
         // 2. 尝试通过接口调用
         if ($this['kuaidi100Id']) {
             $ret = wei()->kuaidi100->getTraces($this['kuaidi100Id'], $logisticsNo);
-            if ($ret['code'] === 1) {
+            if (1 === $ret['code']) {
                 return $ret;
             }
         }

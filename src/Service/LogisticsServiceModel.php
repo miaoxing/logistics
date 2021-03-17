@@ -10,8 +10,8 @@ use Miaoxing\Plugin\Model\SoftDeleteTrait;
 
 class LogisticsServiceModel extends BaseModel
 {
-    use ModelTrait;
     use LogisticsProviderTrait;
-    use SoftDeleteTrait;
+    use ModelTrait;
     use ReqQueryTrait;
+    use SoftDeleteTrait;
 }

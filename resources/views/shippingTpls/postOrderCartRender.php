@@ -1,32 +1,36 @@
 <script type="text/html" id="logisticsServicesTpl">
-  <% $.each(services, function (i, service) { %>
+    <% $.each(services, function (i, service) { %>
     <option value="<%= service.id %>" data-fee="<%= service.fee %>"><%= service.name %> &yen;<%= service.fee %></option>
-  <% }) %>
+    <% }) %>
 </script>
 
 <li class="js-group-user-logistics-id list-item order-form-group list-has-arrow display-none">
-  <label for="user-logistics-id">配送方式</label>
+    <label for="user-logistics-id">配送方式</label>
 
-  <div class="order-form-col text-right">
-    <select id="user-logistics-id" name="userLogisticsId" class="order-form-select js-user-logistics-id">
-    </select>
-    <div class="order-form-select-fake js-user-logistics-name">
+    <div class="order-form-col text-right">
+        <select id="user-logistics-id" name="userLogisticsId" class="order-form-select js-user-logistics-id">
+        </select>
+        <div class="order-form-select-fake js-user-logistics-name">
+        </div>
     </div>
-  </div>
-  <i class="bm-angle-right list-arrow"></i>
+    <i class="bm-angle-right list-arrow"></i>
 </li>
 
-<?= $block->js() ?>
+<?php echo $block->js() ?>
 <script>
-  require(['plugins/order/js/orders', 'plugins/app/libs/jquery-form/jquery.form', 'plugins/app/libs/artTemplate/template.min'], function (orders) {
+  require([
+    'plugins/order/js/orders',
+    'plugins/app/libs/jquery-form/jquery.form',
+    'plugins/app/libs/artTemplate/template.min'
+  ], function (orders) {
 
     var $form = $('.js-order-form');
     var $userLogisticsId = $('.js-user-logistics-id');
     var $userLogisticsName = $('.js-user-logistics-name');
-    var $groupUserLogisticsId  =$('.js-group-user-logistics-id');
+    var $groupUserLogisticsId = $('.js-group-user-logistics-id');
 
     // 根据地址渲染配送方式
-    renderLogistics(<?= $addressId ?>);
+    renderLogistics(<?php echo $addressId ?>);
 
     // 选择了地址,更新配送方式
     $(document).on('address:select', function (e, picker) {
@@ -71,4 +75,4 @@
     }
   });
 </script>
-<?= $block->end() ?>
+<?php echo $block->end() ?>

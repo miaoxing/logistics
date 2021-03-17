@@ -69,6 +69,7 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
 
     /**
      * 根据指定的物流服务,计算运费
+     * @param mixed $data
      */
     public function onPreOrderCreate(Order $order, Address $address = null, $data, array $options = [])
     {
@@ -121,15 +122,15 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
      */
     public function onRenderOrder(array $order, array $cart, array &$rowData, array &$outputData)
     {
-        if (!in_array('物流', $outputData[0])) {
+        if (!in_array('物流', $outputData[0], true)) {
             $outputData[0][] = '物流';
         }
 
-        if (!in_array('用户指定物流', $outputData[0])) {
+        if (!in_array('用户指定物流', $outputData[0], true)) {
             $outputData[0][] = '用户指定物流';
         }
 
-        if (!in_array('运单号', $outputData[0])) {
+        if (!in_array('运单号', $outputData[0], true)) {
             $outputData[0][] = '运单号';
         }
 

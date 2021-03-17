@@ -14,8 +14,8 @@ use Miaoxing\Region\Service\RegionModel;
  */
 class LogisticsAddressModel extends BaseModel
 {
-    use ModelTrait;
     use LogisticsAddressTrait;
+    use ModelTrait;
     use ReqQueryTrait;
     use SoftDeleteTrait;
 

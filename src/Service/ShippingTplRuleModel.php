@@ -18,7 +18,7 @@ class ShippingTplRuleModel extends BaseModel
             'cast' => [
                 'list',
                 'type' => 'int',
-            ]
+            ],
         ],
     ];
 }

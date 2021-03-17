@@ -14,11 +14,11 @@ use Miaoxing\Plugin\Model\SoftDeleteTrait;
  */
 class ShippingTplModel extends BaseModel
 {
-    use ModelTrait;
-    use ShippingTplTrait;
     use HasAppIdTrait;
-    use SoftDeleteTrait;
+    use ModelTrait;
     use ReqQueryTrait;
+    use ShippingTplTrait;
+    use SoftDeleteTrait;
 
     const VALUATION_TYPE_BY_PIECE = 1;
 

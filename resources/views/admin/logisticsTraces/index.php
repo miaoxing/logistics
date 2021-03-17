@@ -1,8 +1,8 @@
 <?php $view->layout() ?>
 
-<?= $block->css() ?>
-<link rel="stylesheet" href="<?= $asset('plugins/logistics/css/traces.css') ?>">
-<?= $block->end() ?>
+<?php echo $block->css() ?>
+<link rel="stylesheet" href="<?php echo $asset('plugins/logistics/css/traces.css') ?>">
+<?php echo $block->end() ?>
 
 <div class="page-header">
   <h1>
@@ -17,19 +17,19 @@
       <div class="col-sm-3">
         <select class="js-logistics-id form-control" name="logisticsId">
           <option value="0" selected>请选择物流公司</option>
-          <?php foreach (wei()->logistics->getNames() as $id => $name) : ?>
-            <?php if ($req['logisticsName'] && $req['logisticsName'] == $name) : ?>
-              <option value="<?= $id ?>" selected><?= $name ?></option>
-            <?php else : ?>
-              <option value="<?= $id ?>"><?= $name ?></option>
-            <?php endif ?>
-          <?php endforeach ?>
+          <?php foreach (wei()->logistics->getNames() as $id => $name) { ?>
+            <?php if ($req['logisticsName'] && $req['logisticsName'] == $name) { ?>
+              <option value="<?php echo $id ?>" selected><?php echo $name ?></option>
+            <?php } else { ?>
+              <option value="<?php echo $id ?>"><?php echo $name ?></option>
+            <?php } ?>
+          <?php } ?>
         </select>
       </div>
 
       <div class="col-sm-6">
         <input type="tel" class="js-logistics-no form-control" name="logisticsNo" placeholder="请输入快递运单号码"
-          value="<?= $req['logisticsNo'] ?>">
+          value="<?php echo $req['logisticsNo'] ?>">
       </div>
 
       <div class="col-sm-1">
@@ -67,9 +67,13 @@
   </div>
 </script>
 
-<?= $block->js() ?>
+<?php echo $block->js() ?>
 <script>
-  require(['plugins/app/libs/artTemplate/template.min', 'plugins/app/js/bootbox', 'plugins/admin/js/form'], function () {
+  require([
+    'plugins/app/libs/artTemplate/template.min',
+    'plugins/app/js/bootbox',
+    'plugins/admin/js/form'
+  ], function () {
     $('.js-logistics-form').ajaxForm({
       url: $.url('admin/logistics-traces/' + $('.js-logistics-id').val() + "_" + $('.js-logistics-no').val()),
       dataType: 'json',
@@ -115,4 +119,4 @@
 
   });
 </script>
-<?= $block->end() ?>
+<?php echo $block->end() ?>

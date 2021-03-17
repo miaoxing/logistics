@@ -4,14 +4,14 @@ namespace MiaoxingTest\Logistics\Service;
 
 class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
 {
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
         $this->markTestSkipped('todo upgrade');
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         parent::tearDown();
 

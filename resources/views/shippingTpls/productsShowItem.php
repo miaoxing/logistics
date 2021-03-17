@@ -1,12 +1,12 @@
 <dl>
   <dt>配送：</dt>
   <dd>
-    <?php if ($city) : ?>
-      到<?= rtrim($city, '市') ?>
-    <?php endif ?>
+    <?php if ($city) { ?>
+      到<?php echo rtrim($city, '市') ?>
+    <?php } ?>
 
     <span data-toggle="modal" data-target=".js-shipping-fee-modal">
-      <?= $defaultServices['name'] ?> &yen;<?= $defaultServices['fee'] ?>
+      <?php echo $defaultServices['name'] ?> &yen;<?php echo $defaultServices['fee'] ?>
       <span class="caret"></span>
     </span>
   </dd>
@@ -31,12 +31,12 @@
           </tr>
           </thead>
           <tbody>
-          <?php foreach ($services as $service) : ?>
+          <?php foreach ($services as $service) { ?>
             <tr>
-              <td><?= $service['name'] ?></td>
-              <td><?= $service['fee'] ?></td>
+              <td><?php echo $service['name'] ?></td>
+              <td><?php echo $service['fee'] ?></td>
             </tr>
-          <?php endforeach ?>
+          <?php } ?>
           </tbody>
         </table>
       </div>

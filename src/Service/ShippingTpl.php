@@ -130,7 +130,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
         // 处理使用"xx"运费规则
         foreach ($this['logisticsIds'] as $logisticsId) {
             $useId = $this['useLogisticsIds'][$logisticsId];
-            if (isset($logisticsRules[$useId]) && isset($logisticsRules[$logisticsId])) {
+            if (isset($logisticsRules[$useId], $logisticsRules[$logisticsId])) {
                 // 清空原来的规则
                 $logisticsRules[$logisticsId] = [];
                 foreach ($logisticsRules[$useId] as $rule) {
@@ -148,7 +148,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
                 if ($rule['isDefault']) {
                     $default = $rule;
                 }
-                if (in_array($cityId, $rule['areas'])) {
+                if (in_array($cityId, $rule['areas'], true)) {
                     $matches[$logisticsId] = $rule;
                     break;
                 }
@@ -173,7 +173,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
         $services = [];
         if ($this->isNew || $this['freeShipping']) {
             $services[] = $this->defaultService;
-        } elseif ($this->getRules()->length() === 1) {
+        } elseif (1 === $this->getRules()->length()) {
             // 只有默认规则，直接显示，不用读取城市计算
             $rule = $this->getRules()[0];
             $services[] = [
@@ -247,7 +247,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
             $rules = $product->getShippingTpl()->getRulesByCity($cityId);
 
             // 对没有设置运费规则的商品不加入计算
-            if ($rules->length() == 0) {
+            if (0 == $rules->length()) {
                 --$cartNum;
                 continue;
             }
@@ -338,7 +338,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
         parent::beforeSave();
         $this['logisticsIds'] = implode(',', (array) $this['logisticsIds']);
         // key是原来的物流服务商编号,value是要使用的物流商编号
-        $this['useLogisticsIds'] = json_encode((array) $this['useLogisticsIds'], JSON_FORCE_OBJECT);
+        $this['useLogisticsIds'] = json_encode((array) $this['useLogisticsIds'], \JSON_FORCE_OBJECT);
     }
 
     public function afterSave()

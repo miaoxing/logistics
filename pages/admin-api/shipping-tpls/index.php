@@ -7,8 +7,10 @@ use Miaoxing\Services\Page\PostToPatchTrait;
 use Miaoxing\Services\Service\IndexAction;
 
 return new class extends BaseController {
-    use CollTrait, PostToPatchTrait {
+    use CollTrait;
+    use PostToPatchTrait {
         PostToPatchTrait::post insteadof CollTrait;
+
     }
 
     public function get()
