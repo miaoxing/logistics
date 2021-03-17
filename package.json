@@ -5,10 +5,30 @@
   "main": "index.js",
   "author": "twinh",
   "license": "MIT",
+  "jest": {
+    "preset": "jest-preset-miaoxing"
+  },
   "devDependencies": {
+    "@ant-design/icons": "^4.5.0",
+    "@miaoxing/dev": "^6.3.3",
+    "@mxjs/a-clink": "^0.1.4",
+    "@mxjs/a-form": "^0.2.10",
+    "@mxjs/a-page": "^0.2.4",
+    "@mxjs/a-region-cascader": "^0.1.6",
+    "@mxjs/a-table": "^0.3.7",
+    "@mxjs/actions": "^0.1.0",
+    "@mxjs/app": "^0.2.8",
+    "@mxjs/test": "^0.1.4",
+    "@testing-library/react": "^10.0.4",
+    "antd": "^4.13.1",
+    "core-js": "^3.6.5",
+    "emotion": "^10.0.27",
+    "jest-preset-miaoxing": "^0.2.2",
+    "miaoxing": "^0.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "emotion": "^10.0.27",
-    "@ant-design/icons": "^4.5.0"
+    "react-router": "^5.2.0",
+    "regenerator-runtime": "^0.13.5",
+    "typescript": "^3.8.3"
   }
 }

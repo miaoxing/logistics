@@ -3,7 +3,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
 import React from 'react';
 import {app} from '@mxjs/app';
-import $ from 'miaoxing';
+import $, {Ret} from 'miaoxing';
 import {waitFor} from '@testing-library/dom';
 import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
 
@@ -32,7 +32,7 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve({
+      .mockImplementationOnce(() => promise.resolve(Ret.new({
         code: 1,
         data: {
           name: '测试',
@@ -60,19 +60,19 @@ describe(path, () => {
             },
           ],
         },
-      }))
+      })))
       // 读取区域数据
-      .mockImplementationOnce(() => promise2.resolve({
+      .mockImplementationOnce(() => promise2.resolve(Ret.new({
         code: 1,
         data: [{
           id: 1,
           name: '默认地区',
         }],
-      }))
+      })))
       // 提交
-      .mockImplementationOnce(() => promise3.resolve({
+      .mockImplementationOnce(() => promise3.resolve(Ret.new({
         code: 1,
-      }));
+      })));
 
     const {getByLabelText} = render(<MemoryRouter>
       <Page/>
