@@ -3,7 +3,7 @@
 namespace Miaoxing\Logistics\Metadata;
 
 /**
- * @property int $id
+ * @property int|null $id
  * @property int $appId
  * @property int $shippingTplId
  * @property int $serviceId 物流服务编号

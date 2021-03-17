@@ -3,7 +3,7 @@
 namespace Miaoxing\Logistics\Metadata;
 
 /**
- * @property int $id
+ * @property int|null $id
  * @property string $kuaidi100Id 快递100的编号
  * @property string $name 名称
  * @property string $logo 图标
