@@ -13,6 +13,13 @@ class LogisticsMixin {
 }
 
 /**
+ * @property    Miaoxing\Logistics\Service\LogisticsAddressModel $logisticsAddressModel
+ * @method      Miaoxing\Logistics\Service\LogisticsAddressModel logisticsAddressModel() 返回当前对象
+ */
+class LogisticsAddressModelMixin {
+}
+
+/**
  * @property    Miaoxing\Logistics\Service\LogisticsProviderModel $logisticsProviderModel
  * @method      Miaoxing\Logistics\Service\LogisticsProviderModel logisticsProviderModel() 返回当前对象
  */
@@ -40,12 +47,6 @@ class ShippingTplModelMixin {
 }
 
 /**
- * @property    Miaoxing\Logistics\Service\ShippingTplRule $shippingTplRule
- */
-class ShippingTplRuleMixin {
-}
-
-/**
  * @property    Miaoxing\Logistics\Service\ShippingTplRuleModel $shippingTplRuleModel
  * @method      Miaoxing\Logistics\Service\ShippingTplRuleModel shippingTplRuleModel() 返回当前对象
  */
@@ -55,11 +56,11 @@ class ShippingTplRuleModelMixin {
 /**
  * @mixin Kuaidi100Mixin
  * @mixin LogisticsMixin
+ * @mixin LogisticsAddressModelMixin
  * @mixin LogisticsProviderModelMixin
  * @mixin LogisticsServiceModelMixin
  * @mixin ShippingTplMixin
  * @mixin ShippingTplModelMixin
- * @mixin ShippingTplRuleMixin
  * @mixin ShippingTplRuleModelMixin
  */
 class AutoCompletion {
@@ -78,6 +79,12 @@ $kuaidi100 = wei()->kuaidi100;
 
 /** @var Miaoxing\Logistics\Service\Logistics $logistics */
 $logistics = wei()->logistics;
+
+/** @var Miaoxing\Logistics\Service\LogisticsAddressModel $logisticsAddress */
+$logisticsAddress = wei()->logisticsAddressModel;
+
+/** @var Miaoxing\Logistics\Service\LogisticsAddressModel|Miaoxing\Logistics\Service\LogisticsAddressModel[] $logisticsAddresses */
+$logisticsAddresses = wei()->logisticsAddressModel();
 
 /** @var Miaoxing\Logistics\Service\LogisticsProviderModel $logisticsProvider */
 $logisticsProvider = wei()->logisticsProviderModel;
@@ -99,9 +106,6 @@ $shippingTpl = wei()->shippingTplModel;
 
 /** @var Miaoxing\Logistics\Service\ShippingTplModel|Miaoxing\Logistics\Service\ShippingTplModel[] $shippingTpls */
 $shippingTpls = wei()->shippingTplModel();
-
-/** @var Miaoxing\Logistics\Service\ShippingTplRule $shippingTplRule */
-$shippingTplRule = wei()->shippingTplRule;
 
 /** @var Miaoxing\Logistics\Service\ShippingTplRuleModel $shippingTplRule */
 $shippingTplRule = wei()->shippingTplRuleModel;

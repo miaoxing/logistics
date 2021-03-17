@@ -10,6 +10,961 @@ class Logistics
 {
 }
 
+class LogisticsAddressModel
+{
+    /**
+     * Set each attribute value, without checking whether the column is fillable, and save the model
+     *
+     * @param iterable $attributes
+     * @return $this
+     * @see LogisticsAddressModel::saveAttributes
+     */
+    public static function saveAttributes(iterable $attributes = []): self
+    {
+    }
+
+    /**
+     * Returns the record data as array
+     *
+     * @param array|callable $returnFields A indexed array specified the fields to return
+     * @param callable|null $prepend
+     * @return array
+     * @see LogisticsAddressModel::toArray
+     */
+    public static function toArray($returnFields = [], callable $prepend = null): array
+    {
+    }
+
+    /**
+     * Returns the success result with model data
+     *
+     * @param array $merge
+     * @return Ret
+     * @see LogisticsAddressModel::toRet
+     */
+    public static function toRet(array $merge = []): \Wei\Ret
+    {
+    }
+
+    /**
+     * Return the record table name
+     *
+     * @return string
+     * @see LogisticsAddressModel::getTable
+     */
+    public static function getTable(): string
+    {
+    }
+
+    /**
+     * Import a PHP array in this record
+     *
+     * @param iterable $array
+     * @return $this
+     * @see LogisticsAddressModel::fromArray
+     */
+    public static function fromArray(iterable $array): self
+    {
+    }
+
+    /**
+     * Save the record or data to database
+     *
+     * @param iterable $attributes
+     * @return $this
+     * @see LogisticsAddressModel::save
+     */
+    public static function save(iterable $attributes = []): self
+    {
+    }
+
+    /**
+     * Delete the current record and trigger the beforeDestroy and afterDestroy callback
+     *
+     * @param int|string $id
+     * @return $this
+     * @see LogisticsAddressModel::destroy
+     */
+    public static function destroy($id = null): self
+    {
+    }
+
+    /**
+     * Set the record field value
+     *
+     * @param string|int|null $name
+     * @param mixed $value
+     * @param bool $throwException
+     * @return $this|false
+     * @see LogisticsAddressModel::set
+     */
+    public static function set($name, $value, bool $throwException = true)
+    {
+    }
+
+    /**
+     * Executes the generated SQL and returns the found record object or false
+     *
+     * @param int|string|array|null $id
+     * @return $this|null
+     * @see LogisticsAddressModel::find
+     */
+    public static function find($id): ?self
+    {
+    }
+
+    /**
+     * Find a record by primary key, or throws 404 exception if record not found
+     *
+     * @param int|string $id
+     * @return $this
+     * @throws \Exception
+     * @see LogisticsAddressModel::findOrFail
+     */
+    public static function findOrFail($id): self
+    {
+    }
+
+    /**
+     * Find a record by primary key, or init with the specified attributes if record not found
+     *
+     * @param int|string $id
+     * @param array|object $attributes
+     * @return $this
+     * @see LogisticsAddressModel::findOrInit
+     */
+    public static function findOrInit($id = null, $attributes = []): self
+    {
+    }
+
+    /**
+     * Find a record by primary key, or save with the specified attributes if record not found
+     *
+     * @param int|string $id
+     * @param array $attributes
+     * @return $this
+     * @see LogisticsAddressModel::findOrCreate
+     */
+    public static function findOrCreate($id, $attributes = []): self
+    {
+    }
+
+    /**
+     * @param array $attributes
+     * @param array|object $data
+     * @return $this
+     * @see LogisticsAddressModel::findByOrCreate
+     */
+    public static function findByOrCreate($attributes, $data = []): self
+    {
+    }
+
+    /**
+     * Executes the generated SQL and returns the found record collection object or false
+     *
+     * @param array $ids
+     * @return $this|$this[]
+     * @phpstan-return $this
+     * @see LogisticsAddressModel::findAll
+     */
+    public static function findAll(array $ids): self
+    {
+    }
+
+    /**
+     * @param mixed $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this|null
+     * @see LogisticsAddressModel::findBy
+     */
+    public static function findBy($column, $operator = null, $value = null): ?self
+    {
+    }
+
+    /**
+     * @param mixed $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this|$this[]
+     * @phpstan-return $this
+     * @see LogisticsAddressModel::findAllBy
+     */
+    public static function findAllBy($column, $operator = null, $value = null): self
+    {
+    }
+
+    /**
+     * @param array $attributes
+     * @param array|object $data
+     * @return $this
+     * @see LogisticsAddressModel::findOrInitBy
+     */
+    public static function findOrInitBy(array $attributes, $data = []): self
+    {
+    }
+
+    /**
+     * Find a record by primary key value and throws 404 exception if record not found
+     *
+     * @param mixed $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this
+     * @throws \Exception
+     * @see LogisticsAddressModel::findByOrFail
+     */
+    public static function findByOrFail($column, $operator = null, $value = null): self
+    {
+    }
+
+    /**
+     * @param Req|null $req
+     * @return $this
+     * @throws \Exception
+     * @see LogisticsAddressModel::findFromReq
+     */
+    public static function findFromReq(\Wei\Req $req = null): self
+    {
+    }
+
+    /**
+     * Executes the generated SQL and returns the found record object or null if not found
+     *
+     * @return $this|null
+     * @see LogisticsAddressModel::first
+     */
+    public static function first(): ?self
+    {
+    }
+
+    /**
+     * @return $this|$this[]
+     * @phpstan-return $this
+     * @see LogisticsAddressModel::all
+     */
+    public static function all(): self
+    {
+    }
+
+    /**
+     * Coll: Specifies a field to be the key of the fetched array
+     *
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::indexBy
+     */
+    public static function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see LogisticsAddressModel::unscoped
+     */
+    public static function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see LogisticsAddressModel::setCacheTime
+     */
+    public static function setCacheTime(?int $seconds): self
+    {
+    }
+
+    /**
+     * Returns the name of columns of current table
+     *
+     * @return array
+     * @see LogisticsAddressModel::getColumns
+     */
+    public static function getColumns(): array
+    {
+    }
+
+    /**
+     * Check if column name exists
+     *
+     * @param string|int|null $name
+     * @return bool
+     * @see LogisticsAddressModel::hasColumn
+     */
+    public static function hasColumn($name): bool
+    {
+    }
+
+    /**
+     * Executes the generated query and returns the first array result
+     *
+     * @param mixed|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return array|null
+     * @see LogisticsAddressModel::fetch
+     */
+    public static function fetch($column = null, $operator = null, $value = null): ?array
+    {
+    }
+
+    /**
+     * Executes the generated query and returns all array results
+     *
+     * @param mixed|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return array
+     * @see LogisticsAddressModel::fetchAll
+     */
+    public static function fetchAll($column = null, $operator = null, $value = null): array
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param string|null $index
+     * @return array
+     * @see LogisticsAddressModel::pluck
+     */
+    public static function pluck(string $column, string $index = null): array
+    {
+    }
+
+    /**
+     * @param int $count
+     * @param callable $callback
+     * @return bool
+     * @see LogisticsAddressModel::chunk
+     */
+    public static function chunk(int $count, callable $callback): bool
+    {
+    }
+
+    /**
+     * Executes a COUNT query to receive the rows number
+     *
+     * @param string $column
+     * @return int
+     * @see LogisticsAddressModel::cnt
+     */
+    public static function cnt($column = '*'): int
+    {
+    }
+
+    /**
+     * Executes a MAX query to receive the max value of column
+     *
+     * @param string $column
+     * @return string|null
+     * @see LogisticsAddressModel::max
+     */
+    public static function max(string $column): ?string
+    {
+    }
+
+    /**
+     * Execute a update query with specified data
+     *
+     * @param array|string $set
+     * @param mixed $value
+     * @return int
+     * @see LogisticsAddressModel::update
+     */
+    public static function update($set = [], $value = null): int
+    {
+    }
+
+    /**
+     * Execute a delete query with specified conditions
+     *
+     * @param mixed|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return int
+     * @see LogisticsAddressModel::delete
+     */
+    public static function delete($column = null, $operator = null, $value = null): int
+    {
+    }
+
+    /**
+     * Sets the position of the first result to retrieve (the "offset")
+     *
+     * @param int|float|string $offset The first result to return
+     * @return $this
+     * @see LogisticsAddressModel::offset
+     */
+    public static function offset($offset): self
+    {
+    }
+
+    /**
+     * Sets the maximum number of results to retrieve (the "limit")
+     *
+     * @param int|float|string $limit The maximum number of results to retrieve
+     * @return $this
+     * @see LogisticsAddressModel::limit
+     */
+    public static function limit($limit): self
+    {
+    }
+
+    /**
+     * Sets the page number, the "OFFSET" value is equals "($page - 1) * LIMIT"
+     *
+     * @param int $page The page number
+     * @return $this
+     * @see LogisticsAddressModel::page
+     */
+    public static function page($page): self
+    {
+    }
+
+    /**
+     * Specifies an item that is to be returned in the query result.
+     * Replaces any previously specified selections, if any.
+     *
+     * @param array|string $columns the selection expressions
+     * @return $this
+     * @see LogisticsAddressModel::select
+     */
+    public static function select($columns = ['*']): self
+    {
+    }
+
+    /**
+     * @param array|string $columns
+     * @return $this
+     * @see LogisticsAddressModel::selectDistinct
+     */
+    public static function selectDistinct($columns): self
+    {
+    }
+
+    /**
+     * @param string $expression
+     * @return $this
+     * @see LogisticsAddressModel::selectRaw
+     */
+    public static function selectRaw($expression): self
+    {
+    }
+
+    /**
+     * Specifies columns that are not to be returned in the query result.
+     * Replaces any previously specified selections, if any.
+     *
+     * @param array|string $columns
+     * @return $this
+     * @see LogisticsAddressModel::selectExcept
+     */
+    public static function selectExcept($columns): self
+    {
+    }
+
+    /**
+     * Specifies an item of the main table that is to be returned in the query result.
+     * Default to all columns of the main table
+     *
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::selectMain
+     */
+    public static function selectMain(string $column = '*'): self
+    {
+    }
+
+    /**
+     * Sets table for FROM query
+     *
+     * @param string $table
+     * @param string|null $alias
+     * @return $this
+     * @see LogisticsAddressModel::from
+     */
+    public static function from(string $table, $alias = null): self
+    {
+    }
+
+    /**
+     * @param string $table
+     * @param mixed|null $alias
+     * @return $this
+     * @see LogisticsAddressModel::table
+     */
+    public static function table(string $table, $alias = null): self
+    {
+    }
+
+    /**
+     * Adds a inner join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @param string $type
+     * @return $this
+     * @see LogisticsAddressModel::join
+     */
+    public static function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
+    }
+
+    /**
+     * Adds a inner join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @return $this
+     * @see LogisticsAddressModel::innerJoin
+     */
+    public static function innerJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
+    }
+
+    /**
+     * Adds a left join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @return $this
+     * @see LogisticsAddressModel::leftJoin
+     */
+    public static function leftJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
+    }
+
+    /**
+     * Adds a right join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @return $this
+     * @see LogisticsAddressModel::rightJoin
+     */
+    public static function rightJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
+    }
+
+    /**
+     * Specifies one or more restrictions to the query result.
+     * Replaces any previously specified restrictions, if any.
+     *
+     * ```php
+     * $user = wei()->db('user')->where('id = 1');
+     * $user = wei()->db('user')->where('id = ?', 1);
+     * $users = wei()->db('user')->where(array('id' => '1', 'username' => 'twin'));
+     * $users = wei()->where(array('id' => array('1', '2', '3')));
+     * ```
+     *
+     * @param array|Closure|string|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::where
+     */
+    public static function where($column = null, $operator = null, $value = null): self
+    {
+    }
+
+    /**
+     * @param scalar $expression
+     * @param mixed $params
+     * @return $this
+     * @see LogisticsAddressModel::whereRaw
+     */
+    public static function whereRaw($expression, $params = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereBetween
+     */
+    public static function whereBetween(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereNotBetween
+     */
+    public static function whereNotBetween(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereIn
+     */
+    public static function whereIn(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereNotIn
+     */
+    public static function whereNotIn(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::whereNull
+     */
+    public static function whereNull(string $column): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::whereNotNull
+     */
+    public static function whereNotNull(string $column): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereDate
+     */
+    public static function whereDate(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereMonth
+     */
+    public static function whereMonth(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereDay
+     */
+    public static function whereDay(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereYear
+     */
+    public static function whereYear(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereTime
+     */
+    public static function whereTime(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrColumn2
+     * @param mixed|null $column2
+     * @return $this
+     * @see LogisticsAddressModel::whereColumn
+     */
+    public static function whereColumn(string $column, $opOrColumn2, $column2 = null): self
+    {
+    }
+
+    /**
+     * 搜索字段是否包含某个值
+     *
+     * @param string $column
+     * @param mixed $value
+     * @param string $condition
+     * @return $this
+     * @see LogisticsAddressModel::whereContains
+     */
+    public static function whereContains(string $column, $value, string $condition = 'AND'): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $value
+     * @param string $condition
+     * @return $this
+     * @see LogisticsAddressModel::whereNotContains
+     */
+    public static function whereNotContains(string $column, $value, string $condition = 'OR'): self
+    {
+    }
+
+    /**
+     * Search whether a column has a value other than the default value
+     *
+     * @param string $column
+     * @param bool $has
+     * @return $this
+     * @see LogisticsAddressModel::whereHas
+     */
+    public static function whereHas(string $column, bool $has = true): self
+    {
+    }
+
+    /**
+     * Search whether a column dont have a value other than the default value
+     *
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::whereNotHas
+     */
+    public static function whereNotHas(string $column): self
+    {
+    }
+
+    /**
+     * Specifies a grouping over the results of the query.
+     * Replaces any previously specified groupings, if any.
+     *
+     * @param mixed $column the grouping column
+     * @return $this
+     * @see LogisticsAddressModel::groupBy
+     */
+    public static function groupBy($column): self
+    {
+    }
+
+    /**
+     * Specifies a restriction over the groups of the query.
+     * Replaces any previous having restrictions, if any.
+     *
+     * @param mixed $column
+     * @param mixed $operator
+     * @param mixed|null $value
+     * @param mixed $condition
+     * @return $this
+     * @see LogisticsAddressModel::having
+     */
+    public static function having($column, $operator, $value = null, $condition = 'AND'): self
+    {
+    }
+
+    /**
+     * Specifies an ordering for the query results.
+     * Replaces any previously specified orderings, if any.
+     *
+     * @param string $column the ordering expression
+     * @param string $order the ordering direction
+     * @return $this
+     * @see LogisticsAddressModel::orderBy
+     */
+    public static function orderBy(string $column, $order = 'ASC'): self
+    {
+    }
+
+    /**
+     * Adds a DESC ordering to the query
+     *
+     * @param string $field The name of field
+     * @return $this
+     * @see LogisticsAddressModel::desc
+     */
+    public static function desc(string $field): self
+    {
+    }
+
+    /**
+     * Add an ASC ordering to the query
+     *
+     * @param string $field The name of field
+     * @return $this
+     * @see LogisticsAddressModel::asc
+     */
+    public static function asc(string $field): self
+    {
+    }
+
+    /**
+     * @return $this
+     * @see LogisticsAddressModel::forUpdate
+     */
+    public static function forUpdate(): self
+    {
+    }
+
+    /**
+     * @return $this
+     * @see LogisticsAddressModel::forShare
+     */
+    public static function forShare(): self
+    {
+    }
+
+    /**
+     * @param string|bool $lock
+     * @return $this
+     * @see LogisticsAddressModel::lock
+     */
+    public static function lock($lock): self
+    {
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see LogisticsAddressModel::when
+     */
+    public static function when($value, callable $callback, callable $default = null): self
+    {
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see LogisticsAddressModel::unless
+     */
+    public static function unless($value, callable $callback, callable $default = null): self
+    {
+    }
+
+    /**
+     * @param callable|null $converter
+     * @return $this
+     * @see LogisticsAddressModel::setDbKeyConverter
+     */
+    public static function setDbKeyConverter(callable $converter = null): self
+    {
+    }
+
+    /**
+     * @param callable|null $converter
+     * @return $this
+     * @see LogisticsAddressModel::setPhpKeyConverter
+     */
+    public static function setPhpKeyConverter(callable $converter = null): self
+    {
+    }
+
+    /**
+     * Add a (inner) join base on the relation to the query
+     *
+     * @param string|array $name
+     * @param string $type
+     * @return $this
+     * @see LogisticsAddressModel::joinRelation
+     */
+    public static function joinRelation($name, string $type = 'INNER'): self
+    {
+    }
+
+    /**
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsAddressModel::innerJoinRelation
+     */
+    public static function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsAddressModel::leftJoinRelation
+     */
+    public static function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsAddressModel::rightJoinRelation
+     */
+    public static function rightJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Check if the model method defines the "Relation" attribute (or the "@Relation" tag in doc comment)
+     *
+     * This method only checks whether the specified method has the "Relation" attribute,
+     * and does not check the actual logic.
+     * It is provided for external use to avoid directly calling `$this->$relation()` to cause attacks.
+     *
+     * @param string $method
+     * @return bool
+     * @see LogisticsAddressModel::isRelation
+     */
+    public static function isRelation(string $method): bool
+    {
+    }
+}
+
 class LogisticsProviderModel
 {
     /**
@@ -92,7 +1047,7 @@ class LogisticsProviderModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -164,6 +1119,7 @@ class LogisticsProviderModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsProviderModel::findAll
      */
     public static function findAll(array $ids): self
@@ -186,6 +1142,7 @@ class LogisticsProviderModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsProviderModel::findAllBy
      */
     public static function findAllBy($column, $operator = null, $value = null): self
@@ -238,6 +1195,7 @@ class LogisticsProviderModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsProviderModel::all
      */
     public static function all(): self
@@ -252,6 +1210,26 @@ class LogisticsProviderModel
      * @see LogisticsProviderModel::indexBy
      */
     public static function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see LogisticsProviderModel::unscoped
+     */
+    public static function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see LogisticsProviderModel::setCacheTime
+     */
+    public static function setCacheTime(?int $seconds): self
     {
     }
 
@@ -489,8 +1467,13 @@ class LogisticsProviderModel
      * @return $this
      * @see LogisticsProviderModel::join
      */
-    public static function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public static function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -503,8 +1486,12 @@ class LogisticsProviderModel
      * @return $this
      * @see LogisticsProviderModel::innerJoin
      */
-    public static function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function innerJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -517,8 +1504,12 @@ class LogisticsProviderModel
      * @return $this
      * @see LogisticsProviderModel::leftJoin
      */
-    public static function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function leftJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -531,8 +1522,12 @@ class LogisticsProviderModel
      * @return $this
      * @see LogisticsProviderModel::rightJoin
      */
-    public static function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function rightJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -865,22 +1860,47 @@ class LogisticsProviderModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see LogisticsProviderModel::setCacheTime
+     * @see LogisticsProviderModel::joinRelation
      */
-    public static function setCacheTime(?int $seconds): self
+    public static function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see LogisticsProviderModel::unscoped
+     * @see LogisticsProviderModel::innerJoinRelation
      */
-    public static function unscoped($scopes = []): self
+    public static function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsProviderModel::leftJoinRelation
+     */
+    public static function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsProviderModel::rightJoinRelation
+     */
+    public static function rightJoinRelation($name): self
     {
     }
 
@@ -906,7 +1926,7 @@ class LogisticsProviderModel
      * @return $this
      * @see LogisticsProviderModel::reallyDestroy
      */
-    public static function reallyDestroy($id = false): self
+    public static function reallyDestroy($id = null): self
     {
     }
 
@@ -937,15 +1957,6 @@ class LogisticsProviderModel
      * @see LogisticsProviderModel::withDeleted
      */
     public static function withDeleted(): self
-    {
-    }
-
-    /**
-     * @param array|string $columns
-     * @return $this
-     * @see LogisticsProviderModel::like
-     */
-    public static function like($columns): self
     {
     }
 }
@@ -1032,7 +2043,7 @@ class LogisticsServiceModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -1104,6 +2115,7 @@ class LogisticsServiceModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsServiceModel::findAll
      */
     public static function findAll(array $ids): self
@@ -1126,6 +2138,7 @@ class LogisticsServiceModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsServiceModel::findAllBy
      */
     public static function findAllBy($column, $operator = null, $value = null): self
@@ -1178,6 +2191,7 @@ class LogisticsServiceModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsServiceModel::all
      */
     public static function all(): self
@@ -1192,6 +2206,26 @@ class LogisticsServiceModel
      * @see LogisticsServiceModel::indexBy
      */
     public static function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see LogisticsServiceModel::unscoped
+     */
+    public static function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see LogisticsServiceModel::setCacheTime
+     */
+    public static function setCacheTime(?int $seconds): self
     {
     }
 
@@ -1429,8 +2463,13 @@ class LogisticsServiceModel
      * @return $this
      * @see LogisticsServiceModel::join
      */
-    public static function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public static function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -1443,8 +2482,12 @@ class LogisticsServiceModel
      * @return $this
      * @see LogisticsServiceModel::innerJoin
      */
-    public static function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function innerJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -1457,8 +2500,12 @@ class LogisticsServiceModel
      * @return $this
      * @see LogisticsServiceModel::leftJoin
      */
-    public static function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function leftJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -1471,8 +2518,12 @@ class LogisticsServiceModel
      * @return $this
      * @see LogisticsServiceModel::rightJoin
      */
-    public static function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function rightJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -1805,22 +2856,47 @@ class LogisticsServiceModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see LogisticsServiceModel::setCacheTime
+     * @see LogisticsServiceModel::joinRelation
      */
-    public static function setCacheTime(?int $seconds): self
+    public static function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see LogisticsServiceModel::unscoped
+     * @see LogisticsServiceModel::innerJoinRelation
      */
-    public static function unscoped($scopes = []): self
+    public static function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsServiceModel::leftJoinRelation
+     */
+    public static function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsServiceModel::rightJoinRelation
+     */
+    public static function rightJoinRelation($name): self
     {
     }
 
@@ -1846,7 +2922,7 @@ class LogisticsServiceModel
      * @return $this
      * @see LogisticsServiceModel::reallyDestroy
      */
-    public static function reallyDestroy($id = false): self
+    public static function reallyDestroy($id = null): self
     {
     }
 
@@ -1877,15 +2953,6 @@ class LogisticsServiceModel
      * @see LogisticsServiceModel::withDeleted
      */
     public static function withDeleted(): self
-    {
-    }
-
-    /**
-     * @param array|string $columns
-     * @return $this
-     * @see LogisticsServiceModel::like
-     */
-    public static function like($columns): self
     {
     }
 }
@@ -1976,7 +3043,7 @@ class ShippingTplModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -2048,6 +3115,7 @@ class ShippingTplModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplModel::findAll
      */
     public static function findAll(array $ids): self
@@ -2070,6 +3138,7 @@ class ShippingTplModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplModel::findAllBy
      */
     public static function findAllBy($column, $operator = null, $value = null): self
@@ -2122,6 +3191,7 @@ class ShippingTplModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplModel::all
      */
     public static function all(): self
@@ -2136,6 +3206,26 @@ class ShippingTplModel
      * @see ShippingTplModel::indexBy
      */
     public static function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see ShippingTplModel::unscoped
+     */
+    public static function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see ShippingTplModel::setCacheTime
+     */
+    public static function setCacheTime(?int $seconds): self
     {
     }
 
@@ -2373,8 +3463,13 @@ class ShippingTplModel
      * @return $this
      * @see ShippingTplModel::join
      */
-    public static function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public static function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -2387,8 +3482,12 @@ class ShippingTplModel
      * @return $this
      * @see ShippingTplModel::innerJoin
      */
-    public static function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function innerJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -2401,8 +3500,12 @@ class ShippingTplModel
      * @return $this
      * @see ShippingTplModel::leftJoin
      */
-    public static function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function leftJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -2415,8 +3518,12 @@ class ShippingTplModel
      * @return $this
      * @see ShippingTplModel::rightJoin
      */
-    public static function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function rightJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -2749,22 +3856,47 @@ class ShippingTplModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see ShippingTplModel::setCacheTime
+     * @see ShippingTplModel::joinRelation
      */
-    public static function setCacheTime(?int $seconds): self
+    public static function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see ShippingTplModel::unscoped
+     * @see ShippingTplModel::innerJoinRelation
      */
-    public static function unscoped($scopes = []): self
+    public static function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplModel::leftJoinRelation
+     */
+    public static function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplModel::rightJoinRelation
+     */
+    public static function rightJoinRelation($name): self
     {
     }
 
@@ -2790,7 +3922,7 @@ class ShippingTplModel
      * @return $this
      * @see ShippingTplModel::reallyDestroy
      */
-    public static function reallyDestroy($id = false): self
+    public static function reallyDestroy($id = null): self
     {
     }
 
@@ -2823,19 +3955,6 @@ class ShippingTplModel
     public static function withDeleted(): self
     {
     }
-
-    /**
-     * @param array|string $columns
-     * @return $this
-     * @see ShippingTplModel::like
-     */
-    public static function like($columns): self
-    {
-    }
-}
-
-class ShippingTplRule
-{
 }
 
 class ShippingTplRuleModel
@@ -2920,7 +4039,7 @@ class ShippingTplRuleModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -2992,6 +4111,7 @@ class ShippingTplRuleModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplRuleModel::findAll
      */
     public static function findAll(array $ids): self
@@ -3014,6 +4134,7 @@ class ShippingTplRuleModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplRuleModel::findAllBy
      */
     public static function findAllBy($column, $operator = null, $value = null): self
@@ -3066,6 +4187,7 @@ class ShippingTplRuleModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplRuleModel::all
      */
     public static function all(): self
@@ -3080,6 +4202,26 @@ class ShippingTplRuleModel
      * @see ShippingTplRuleModel::indexBy
      */
     public static function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see ShippingTplRuleModel::unscoped
+     */
+    public static function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see ShippingTplRuleModel::setCacheTime
+     */
+    public static function setCacheTime(?int $seconds): self
     {
     }
 
@@ -3317,8 +4459,13 @@ class ShippingTplRuleModel
      * @return $this
      * @see ShippingTplRuleModel::join
      */
-    public static function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public static function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -3331,8 +4478,12 @@ class ShippingTplRuleModel
      * @return $this
      * @see ShippingTplRuleModel::innerJoin
      */
-    public static function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function innerJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -3345,8 +4496,12 @@ class ShippingTplRuleModel
      * @return $this
      * @see ShippingTplRuleModel::leftJoin
      */
-    public static function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function leftJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -3359,8 +4514,12 @@ class ShippingTplRuleModel
      * @return $this
      * @see ShippingTplRuleModel::rightJoin
      */
-    public static function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
-    {
+    public static function rightJoin(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null
+    ): self {
     }
 
     /**
@@ -3693,22 +4852,47 @@ class ShippingTplRuleModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see ShippingTplRuleModel::setCacheTime
+     * @see ShippingTplRuleModel::joinRelation
      */
-    public static function setCacheTime(?int $seconds): self
+    public static function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see ShippingTplRuleModel::unscoped
+     * @see ShippingTplRuleModel::innerJoinRelation
      */
-    public static function unscoped($scopes = []): self
+    public static function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplRuleModel::leftJoinRelation
+     */
+    public static function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplRuleModel::rightJoinRelation
+     */
+    public static function rightJoinRelation($name): self
     {
     }
 
@@ -3734,7 +4918,7 @@ class ShippingTplRuleModel
      * @return $this
      * @see ShippingTplRuleModel::reallyDestroy
      */
-    public static function reallyDestroy($id = false): self
+    public static function reallyDestroy($id = null): self
     {
     }
 
@@ -3780,6 +4964,949 @@ class Logistics
 {
 }
 
+class LogisticsAddressModel
+{
+    /**
+     * Set each attribute value, without checking whether the column is fillable, and save the model
+     *
+     * @param iterable $attributes
+     * @return $this
+     * @see LogisticsAddressModel::saveAttributes
+     */
+    public function saveAttributes(iterable $attributes = []): self
+    {
+    }
+
+    /**
+     * Returns the record data as array
+     *
+     * @param array|callable $returnFields A indexed array specified the fields to return
+     * @param callable|null $prepend
+     * @return array
+     * @see LogisticsAddressModel::toArray
+     */
+    public function toArray($returnFields = [], callable $prepend = null): array
+    {
+    }
+
+    /**
+     * Returns the success result with model data
+     *
+     * @param array $merge
+     * @return Ret
+     * @see LogisticsAddressModel::toRet
+     */
+    public function toRet(array $merge = []): \Wei\Ret
+    {
+    }
+
+    /**
+     * Return the record table name
+     *
+     * @return string
+     * @see LogisticsAddressModel::getTable
+     */
+    public function getTable(): string
+    {
+    }
+
+    /**
+     * Import a PHP array in this record
+     *
+     * @param iterable $array
+     * @return $this
+     * @see LogisticsAddressModel::fromArray
+     */
+    public function fromArray(iterable $array): self
+    {
+    }
+
+    /**
+     * Save the record or data to database
+     *
+     * @param iterable $attributes
+     * @return $this
+     * @see LogisticsAddressModel::save
+     */
+    public function save(iterable $attributes = []): self
+    {
+    }
+
+    /**
+     * Delete the current record and trigger the beforeDestroy and afterDestroy callback
+     *
+     * @param int|string $id
+     * @return $this
+     * @see LogisticsAddressModel::destroy
+     */
+    public function destroy($id = null): self
+    {
+    }
+
+    /**
+     * Set the record field value
+     *
+     * @param string|int|null $name
+     * @param mixed $value
+     * @param bool $throwException
+     * @return $this|false
+     * @see LogisticsAddressModel::set
+     */
+    public function set($name, $value, bool $throwException = true)
+    {
+    }
+
+    /**
+     * Executes the generated SQL and returns the found record object or false
+     *
+     * @param int|string|array|null $id
+     * @return $this|null
+     * @see LogisticsAddressModel::find
+     */
+    public function find($id): ?self
+    {
+    }
+
+    /**
+     * Find a record by primary key, or throws 404 exception if record not found
+     *
+     * @param int|string $id
+     * @return $this
+     * @throws \Exception
+     * @see LogisticsAddressModel::findOrFail
+     */
+    public function findOrFail($id): self
+    {
+    }
+
+    /**
+     * Find a record by primary key, or init with the specified attributes if record not found
+     *
+     * @param int|string $id
+     * @param array|object $attributes
+     * @return $this
+     * @see LogisticsAddressModel::findOrInit
+     */
+    public function findOrInit($id = null, $attributes = []): self
+    {
+    }
+
+    /**
+     * Find a record by primary key, or save with the specified attributes if record not found
+     *
+     * @param int|string $id
+     * @param array $attributes
+     * @return $this
+     * @see LogisticsAddressModel::findOrCreate
+     */
+    public function findOrCreate($id, $attributes = []): self
+    {
+    }
+
+    /**
+     * @param array $attributes
+     * @param array|object $data
+     * @return $this
+     * @see LogisticsAddressModel::findByOrCreate
+     */
+    public function findByOrCreate($attributes, $data = []): self
+    {
+    }
+
+    /**
+     * Executes the generated SQL and returns the found record collection object or false
+     *
+     * @param array $ids
+     * @return $this|$this[]
+     * @phpstan-return $this
+     * @see LogisticsAddressModel::findAll
+     */
+    public function findAll(array $ids): self
+    {
+    }
+
+    /**
+     * @param mixed $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this|null
+     * @see LogisticsAddressModel::findBy
+     */
+    public function findBy($column, $operator = null, $value = null): ?self
+    {
+    }
+
+    /**
+     * @param mixed $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this|$this[]
+     * @phpstan-return $this
+     * @see LogisticsAddressModel::findAllBy
+     */
+    public function findAllBy($column, $operator = null, $value = null): self
+    {
+    }
+
+    /**
+     * @param array $attributes
+     * @param array|object $data
+     * @return $this
+     * @see LogisticsAddressModel::findOrInitBy
+     */
+    public function findOrInitBy(array $attributes, $data = []): self
+    {
+    }
+
+    /**
+     * Find a record by primary key value and throws 404 exception if record not found
+     *
+     * @param mixed $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this
+     * @throws \Exception
+     * @see LogisticsAddressModel::findByOrFail
+     */
+    public function findByOrFail($column, $operator = null, $value = null): self
+    {
+    }
+
+    /**
+     * @param Req|null $req
+     * @return $this
+     * @throws \Exception
+     * @see LogisticsAddressModel::findFromReq
+     */
+    public function findFromReq(\Wei\Req $req = null): self
+    {
+    }
+
+    /**
+     * Executes the generated SQL and returns the found record object or null if not found
+     *
+     * @return $this|null
+     * @see LogisticsAddressModel::first
+     */
+    public function first(): ?self
+    {
+    }
+
+    /**
+     * @return $this|$this[]
+     * @phpstan-return $this
+     * @see LogisticsAddressModel::all
+     */
+    public function all(): self
+    {
+    }
+
+    /**
+     * Coll: Specifies a field to be the key of the fetched array
+     *
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::indexBy
+     */
+    public function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see LogisticsAddressModel::unscoped
+     */
+    public function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see LogisticsAddressModel::setCacheTime
+     */
+    public function setCacheTime(?int $seconds): self
+    {
+    }
+
+    /**
+     * Returns the name of columns of current table
+     *
+     * @return array
+     * @see LogisticsAddressModel::getColumns
+     */
+    public function getColumns(): array
+    {
+    }
+
+    /**
+     * Check if column name exists
+     *
+     * @param string|int|null $name
+     * @return bool
+     * @see LogisticsAddressModel::hasColumn
+     */
+    public function hasColumn($name): bool
+    {
+    }
+
+    /**
+     * Executes the generated query and returns the first array result
+     *
+     * @param mixed|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return array|null
+     * @see LogisticsAddressModel::fetch
+     */
+    public function fetch($column = null, $operator = null, $value = null): ?array
+    {
+    }
+
+    /**
+     * Executes the generated query and returns all array results
+     *
+     * @param mixed|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return array
+     * @see LogisticsAddressModel::fetchAll
+     */
+    public function fetchAll($column = null, $operator = null, $value = null): array
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param string|null $index
+     * @return array
+     * @see LogisticsAddressModel::pluck
+     */
+    public function pluck(string $column, string $index = null): array
+    {
+    }
+
+    /**
+     * @param int $count
+     * @param callable $callback
+     * @return bool
+     * @see LogisticsAddressModel::chunk
+     */
+    public function chunk(int $count, callable $callback): bool
+    {
+    }
+
+    /**
+     * Executes a COUNT query to receive the rows number
+     *
+     * @param string $column
+     * @return int
+     * @see LogisticsAddressModel::cnt
+     */
+    public function cnt($column = '*'): int
+    {
+    }
+
+    /**
+     * Executes a MAX query to receive the max value of column
+     *
+     * @param string $column
+     * @return string|null
+     * @see LogisticsAddressModel::max
+     */
+    public function max(string $column): ?string
+    {
+    }
+
+    /**
+     * Execute a update query with specified data
+     *
+     * @param array|string $set
+     * @param mixed $value
+     * @return int
+     * @see LogisticsAddressModel::update
+     */
+    public function update($set = [], $value = null): int
+    {
+    }
+
+    /**
+     * Execute a delete query with specified conditions
+     *
+     * @param mixed|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return int
+     * @see LogisticsAddressModel::delete
+     */
+    public function delete($column = null, $operator = null, $value = null): int
+    {
+    }
+
+    /**
+     * Sets the position of the first result to retrieve (the "offset")
+     *
+     * @param int|float|string $offset The first result to return
+     * @return $this
+     * @see LogisticsAddressModel::offset
+     */
+    public function offset($offset): self
+    {
+    }
+
+    /**
+     * Sets the maximum number of results to retrieve (the "limit")
+     *
+     * @param int|float|string $limit The maximum number of results to retrieve
+     * @return $this
+     * @see LogisticsAddressModel::limit
+     */
+    public function limit($limit): self
+    {
+    }
+
+    /**
+     * Sets the page number, the "OFFSET" value is equals "($page - 1) * LIMIT"
+     *
+     * @param int $page The page number
+     * @return $this
+     * @see LogisticsAddressModel::page
+     */
+    public function page($page): self
+    {
+    }
+
+    /**
+     * Specifies an item that is to be returned in the query result.
+     * Replaces any previously specified selections, if any.
+     *
+     * @param array|string $columns the selection expressions
+     * @return $this
+     * @see LogisticsAddressModel::select
+     */
+    public function select($columns = ['*']): self
+    {
+    }
+
+    /**
+     * @param array|string $columns
+     * @return $this
+     * @see LogisticsAddressModel::selectDistinct
+     */
+    public function selectDistinct($columns): self
+    {
+    }
+
+    /**
+     * @param string $expression
+     * @return $this
+     * @see LogisticsAddressModel::selectRaw
+     */
+    public function selectRaw($expression): self
+    {
+    }
+
+    /**
+     * Specifies columns that are not to be returned in the query result.
+     * Replaces any previously specified selections, if any.
+     *
+     * @param array|string $columns
+     * @return $this
+     * @see LogisticsAddressModel::selectExcept
+     */
+    public function selectExcept($columns): self
+    {
+    }
+
+    /**
+     * Specifies an item of the main table that is to be returned in the query result.
+     * Default to all columns of the main table
+     *
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::selectMain
+     */
+    public function selectMain(string $column = '*'): self
+    {
+    }
+
+    /**
+     * Sets table for FROM query
+     *
+     * @param string $table
+     * @param string|null $alias
+     * @return $this
+     * @see LogisticsAddressModel::from
+     */
+    public function from(string $table, $alias = null): self
+    {
+    }
+
+    /**
+     * @param string $table
+     * @param mixed|null $alias
+     * @return $this
+     * @see LogisticsAddressModel::table
+     */
+    public function table(string $table, $alias = null): self
+    {
+    }
+
+    /**
+     * Adds a inner join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @param string $type
+     * @return $this
+     * @see LogisticsAddressModel::join
+     */
+    public function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
+    }
+
+    /**
+     * Adds a inner join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @return $this
+     * @see LogisticsAddressModel::innerJoin
+     */
+    public function innerJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
+    {
+    }
+
+    /**
+     * Adds a left join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @return $this
+     * @see LogisticsAddressModel::leftJoin
+     */
+    public function leftJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
+    {
+    }
+
+    /**
+     * Adds a right join to the query
+     *
+     * @param string $table The table name to join
+     * @param string|null $first
+     * @param string $operator
+     * @param string|null $second
+     * @return $this
+     * @see LogisticsAddressModel::rightJoin
+     */
+    public function rightJoin(string $table, string $first = null, string $operator = '=', string $second = null): self
+    {
+    }
+
+    /**
+     * Specifies one or more restrictions to the query result.
+     * Replaces any previously specified restrictions, if any.
+     *
+     * ```php
+     * $user = wei()->db('user')->where('id = 1');
+     * $user = wei()->db('user')->where('id = ?', 1);
+     * $users = wei()->db('user')->where(array('id' => '1', 'username' => 'twin'));
+     * $users = wei()->where(array('id' => array('1', '2', '3')));
+     * ```
+     *
+     * @param array|Closure|string|null $column
+     * @param mixed|null $operator
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::where
+     */
+    public function where($column = null, $operator = null, $value = null): self
+    {
+    }
+
+    /**
+     * @param scalar $expression
+     * @param mixed $params
+     * @return $this
+     * @see LogisticsAddressModel::whereRaw
+     */
+    public function whereRaw($expression, $params = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereBetween
+     */
+    public function whereBetween(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereNotBetween
+     */
+    public function whereNotBetween(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereIn
+     */
+    public function whereIn(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param array $params
+     * @return $this
+     * @see LogisticsAddressModel::whereNotIn
+     */
+    public function whereNotIn(string $column, array $params): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::whereNull
+     */
+    public function whereNull(string $column): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::whereNotNull
+     */
+    public function whereNotNull(string $column): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereDate
+     */
+    public function whereDate(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereMonth
+     */
+    public function whereMonth(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereDay
+     */
+    public function whereDay(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereYear
+     */
+    public function whereYear(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrValue
+     * @param mixed|null $value
+     * @return $this
+     * @see LogisticsAddressModel::whereTime
+     */
+    public function whereTime(string $column, $opOrValue, $value = null): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $opOrColumn2
+     * @param mixed|null $column2
+     * @return $this
+     * @see LogisticsAddressModel::whereColumn
+     */
+    public function whereColumn(string $column, $opOrColumn2, $column2 = null): self
+    {
+    }
+
+    /**
+     * 搜索字段是否包含某个值
+     *
+     * @param string $column
+     * @param mixed $value
+     * @param string $condition
+     * @return $this
+     * @see LogisticsAddressModel::whereContains
+     */
+    public function whereContains(string $column, $value, string $condition = 'AND'): self
+    {
+    }
+
+    /**
+     * @param string $column
+     * @param mixed $value
+     * @param string $condition
+     * @return $this
+     * @see LogisticsAddressModel::whereNotContains
+     */
+    public function whereNotContains(string $column, $value, string $condition = 'OR'): self
+    {
+    }
+
+    /**
+     * Search whether a column has a value other than the default value
+     *
+     * @param string $column
+     * @param bool $has
+     * @return $this
+     * @see LogisticsAddressModel::whereHas
+     */
+    public function whereHas(string $column, bool $has = true): self
+    {
+    }
+
+    /**
+     * Search whether a column dont have a value other than the default value
+     *
+     * @param string $column
+     * @return $this
+     * @see LogisticsAddressModel::whereNotHas
+     */
+    public function whereNotHas(string $column): self
+    {
+    }
+
+    /**
+     * Specifies a grouping over the results of the query.
+     * Replaces any previously specified groupings, if any.
+     *
+     * @param mixed $column the grouping column
+     * @return $this
+     * @see LogisticsAddressModel::groupBy
+     */
+    public function groupBy($column): self
+    {
+    }
+
+    /**
+     * Specifies a restriction over the groups of the query.
+     * Replaces any previous having restrictions, if any.
+     *
+     * @param mixed $column
+     * @param mixed $operator
+     * @param mixed|null $value
+     * @param mixed $condition
+     * @return $this
+     * @see LogisticsAddressModel::having
+     */
+    public function having($column, $operator, $value = null, $condition = 'AND'): self
+    {
+    }
+
+    /**
+     * Specifies an ordering for the query results.
+     * Replaces any previously specified orderings, if any.
+     *
+     * @param string $column the ordering expression
+     * @param string $order the ordering direction
+     * @return $this
+     * @see LogisticsAddressModel::orderBy
+     */
+    public function orderBy(string $column, $order = 'ASC'): self
+    {
+    }
+
+    /**
+     * Adds a DESC ordering to the query
+     *
+     * @param string $field The name of field
+     * @return $this
+     * @see LogisticsAddressModel::desc
+     */
+    public function desc(string $field): self
+    {
+    }
+
+    /**
+     * Add an ASC ordering to the query
+     *
+     * @param string $field The name of field
+     * @return $this
+     * @see LogisticsAddressModel::asc
+     */
+    public function asc(string $field): self
+    {
+    }
+
+    /**
+     * @return $this
+     * @see LogisticsAddressModel::forUpdate
+     */
+    public function forUpdate(): self
+    {
+    }
+
+    /**
+     * @return $this
+     * @see LogisticsAddressModel::forShare
+     */
+    public function forShare(): self
+    {
+    }
+
+    /**
+     * @param string|bool $lock
+     * @return $this
+     * @see LogisticsAddressModel::lock
+     */
+    public function lock($lock): self
+    {
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see LogisticsAddressModel::when
+     */
+    public function when($value, callable $callback, callable $default = null): self
+    {
+    }
+
+    /**
+     * @param mixed $value
+     * @param callable $callback
+     * @param callable|null $default
+     * @return $this
+     * @see LogisticsAddressModel::unless
+     */
+    public function unless($value, callable $callback, callable $default = null): self
+    {
+    }
+
+    /**
+     * @param callable|null $converter
+     * @return $this
+     * @see LogisticsAddressModel::setDbKeyConverter
+     */
+    public function setDbKeyConverter(callable $converter = null): self
+    {
+    }
+
+    /**
+     * @param callable|null $converter
+     * @return $this
+     * @see LogisticsAddressModel::setPhpKeyConverter
+     */
+    public function setPhpKeyConverter(callable $converter = null): self
+    {
+    }
+
+    /**
+     * Add a (inner) join base on the relation to the query
+     *
+     * @param string|array $name
+     * @param string $type
+     * @return $this
+     * @see LogisticsAddressModel::joinRelation
+     */
+    public function joinRelation($name, string $type = 'INNER'): self
+    {
+    }
+
+    /**
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsAddressModel::innerJoinRelation
+     */
+    public function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsAddressModel::leftJoinRelation
+     */
+    public function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsAddressModel::rightJoinRelation
+     */
+    public function rightJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Check if the model method defines the "Relation" attribute (or the "@Relation" tag in doc comment)
+     *
+     * This method only checks whether the specified method has the "Relation" attribute,
+     * and does not check the actual logic.
+     * It is provided for external use to avoid directly calling `$this->$relation()` to cause attacks.
+     *
+     * @param string $method
+     * @return bool
+     * @see LogisticsAddressModel::isRelation
+     */
+    public function isRelation(string $method): bool
+    {
+    }
+}
+
 class LogisticsProviderModel
 {
     /**
@@ -3862,7 +5989,7 @@ class LogisticsProviderModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -3934,6 +6061,7 @@ class LogisticsProviderModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsProviderModel::findAll
      */
     public function findAll(array $ids): self
@@ -3956,6 +6084,7 @@ class LogisticsProviderModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsProviderModel::findAllBy
      */
     public function findAllBy($column, $operator = null, $value = null): self
@@ -4008,6 +6137,7 @@ class LogisticsProviderModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsProviderModel::all
      */
     public function all(): self
@@ -4022,6 +6152,26 @@ class LogisticsProviderModel
      * @see LogisticsProviderModel::indexBy
      */
     public function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see LogisticsProviderModel::unscoped
+     */
+    public function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see LogisticsProviderModel::setCacheTime
+     */
+    public function setCacheTime(?int $seconds): self
     {
     }
 
@@ -4259,8 +6409,13 @@ class LogisticsProviderModel
      * @return $this
      * @see LogisticsProviderModel::join
      */
-    public function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -4635,22 +6790,47 @@ class LogisticsProviderModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see LogisticsProviderModel::setCacheTime
+     * @see LogisticsProviderModel::joinRelation
      */
-    public function setCacheTime(?int $seconds): self
+    public function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see LogisticsProviderModel::unscoped
+     * @see LogisticsProviderModel::innerJoinRelation
      */
-    public function unscoped($scopes = []): self
+    public function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsProviderModel::leftJoinRelation
+     */
+    public function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsProviderModel::rightJoinRelation
+     */
+    public function rightJoinRelation($name): self
     {
     }
 
@@ -4676,7 +6856,7 @@ class LogisticsProviderModel
      * @return $this
      * @see LogisticsProviderModel::reallyDestroy
      */
-    public function reallyDestroy($id = false): self
+    public function reallyDestroy($id = null): self
     {
     }
 
@@ -4707,15 +6887,6 @@ class LogisticsProviderModel
      * @see LogisticsProviderModel::withDeleted
      */
     public function withDeleted(): self
-    {
-    }
-
-    /**
-     * @param array|string $columns
-     * @return $this
-     * @see LogisticsProviderModel::like
-     */
-    public function like($columns): self
     {
     }
 }
@@ -4802,7 +6973,7 @@ class LogisticsServiceModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -4874,6 +7045,7 @@ class LogisticsServiceModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsServiceModel::findAll
      */
     public function findAll(array $ids): self
@@ -4896,6 +7068,7 @@ class LogisticsServiceModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsServiceModel::findAllBy
      */
     public function findAllBy($column, $operator = null, $value = null): self
@@ -4948,6 +7121,7 @@ class LogisticsServiceModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see LogisticsServiceModel::all
      */
     public function all(): self
@@ -4962,6 +7136,26 @@ class LogisticsServiceModel
      * @see LogisticsServiceModel::indexBy
      */
     public function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see LogisticsServiceModel::unscoped
+     */
+    public function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see LogisticsServiceModel::setCacheTime
+     */
+    public function setCacheTime(?int $seconds): self
     {
     }
 
@@ -5199,8 +7393,13 @@ class LogisticsServiceModel
      * @return $this
      * @see LogisticsServiceModel::join
      */
-    public function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -5575,22 +7774,47 @@ class LogisticsServiceModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see LogisticsServiceModel::setCacheTime
+     * @see LogisticsServiceModel::joinRelation
      */
-    public function setCacheTime(?int $seconds): self
+    public function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see LogisticsServiceModel::unscoped
+     * @see LogisticsServiceModel::innerJoinRelation
      */
-    public function unscoped($scopes = []): self
+    public function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsServiceModel::leftJoinRelation
+     */
+    public function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see LogisticsServiceModel::rightJoinRelation
+     */
+    public function rightJoinRelation($name): self
     {
     }
 
@@ -5616,7 +7840,7 @@ class LogisticsServiceModel
      * @return $this
      * @see LogisticsServiceModel::reallyDestroy
      */
-    public function reallyDestroy($id = false): self
+    public function reallyDestroy($id = null): self
     {
     }
 
@@ -5647,15 +7871,6 @@ class LogisticsServiceModel
      * @see LogisticsServiceModel::withDeleted
      */
     public function withDeleted(): self
-    {
-    }
-
-    /**
-     * @param array|string $columns
-     * @return $this
-     * @see LogisticsServiceModel::like
-     */
-    public function like($columns): self
     {
     }
 }
@@ -5746,7 +7961,7 @@ class ShippingTplModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -5818,6 +8033,7 @@ class ShippingTplModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplModel::findAll
      */
     public function findAll(array $ids): self
@@ -5840,6 +8056,7 @@ class ShippingTplModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplModel::findAllBy
      */
     public function findAllBy($column, $operator = null, $value = null): self
@@ -5892,6 +8109,7 @@ class ShippingTplModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplModel::all
      */
     public function all(): self
@@ -5906,6 +8124,26 @@ class ShippingTplModel
      * @see ShippingTplModel::indexBy
      */
     public function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see ShippingTplModel::unscoped
+     */
+    public function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see ShippingTplModel::setCacheTime
+     */
+    public function setCacheTime(?int $seconds): self
     {
     }
 
@@ -6143,8 +8381,13 @@ class ShippingTplModel
      * @return $this
      * @see ShippingTplModel::join
      */
-    public function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -6519,22 +8762,47 @@ class ShippingTplModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see ShippingTplModel::setCacheTime
+     * @see ShippingTplModel::joinRelation
      */
-    public function setCacheTime(?int $seconds): self
+    public function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see ShippingTplModel::unscoped
+     * @see ShippingTplModel::innerJoinRelation
      */
-    public function unscoped($scopes = []): self
+    public function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplModel::leftJoinRelation
+     */
+    public function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplModel::rightJoinRelation
+     */
+    public function rightJoinRelation($name): self
     {
     }
 
@@ -6560,7 +8828,7 @@ class ShippingTplModel
      * @return $this
      * @see ShippingTplModel::reallyDestroy
      */
-    public function reallyDestroy($id = false): self
+    public function reallyDestroy($id = null): self
     {
     }
 
@@ -6593,19 +8861,6 @@ class ShippingTplModel
     public function withDeleted(): self
     {
     }
-
-    /**
-     * @param array|string $columns
-     * @return $this
-     * @see ShippingTplModel::like
-     */
-    public function like($columns): self
-    {
-    }
-}
-
-class ShippingTplRule
-{
 }
 
 class ShippingTplRuleModel
@@ -6690,7 +8945,7 @@ class ShippingTplRuleModel
     /**
      * Set the record field value
      *
-     * @param string|int $name
+     * @param string|int|null $name
      * @param mixed $value
      * @param bool $throwException
      * @return $this|false
@@ -6762,6 +9017,7 @@ class ShippingTplRuleModel
      *
      * @param array $ids
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplRuleModel::findAll
      */
     public function findAll(array $ids): self
@@ -6784,6 +9040,7 @@ class ShippingTplRuleModel
      * @param mixed|null $operator
      * @param mixed|null $value
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplRuleModel::findAllBy
      */
     public function findAllBy($column, $operator = null, $value = null): self
@@ -6836,6 +9093,7 @@ class ShippingTplRuleModel
 
     /**
      * @return $this|$this[]
+     * @phpstan-return $this
      * @see ShippingTplRuleModel::all
      */
     public function all(): self
@@ -6850,6 +9108,26 @@ class ShippingTplRuleModel
      * @see ShippingTplRuleModel::indexBy
      */
     public function indexBy(string $column): self
+    {
+    }
+
+    /**
+     * @param array|string|true $scopes
+     * @return $this
+     * @see ShippingTplRuleModel::unscoped
+     */
+    public function unscoped($scopes = []): self
+    {
+    }
+
+    /**
+     * Set or remove cache time for the query
+     *
+     * @param int|null $seconds
+     * @return $this
+     * @see ShippingTplRuleModel::setCacheTime
+     */
+    public function setCacheTime(?int $seconds): self
     {
     }
 
@@ -7087,8 +9365,13 @@ class ShippingTplRuleModel
      * @return $this
      * @see ShippingTplRuleModel::join
      */
-    public function join(string $table, string $first = null, string $operator = '=', string $second = null, string $type = 'INNER'): self
-    {
+    public function join(
+        string $table,
+        string $first = null,
+        string $operator = '=',
+        string $second = null,
+        string $type = 'INNER'
+    ): self {
     }
 
     /**
@@ -7463,22 +9746,47 @@ class ShippingTplRuleModel
     }
 
     /**
-     * Set or remove cache time for the query
+     * Add a (inner) join base on the relation to the query
      *
-     * @param int|null $seconds
+     * @param string|array $name
+     * @param string $type
      * @return $this
-     * @see ShippingTplRuleModel::setCacheTime
+     * @see ShippingTplRuleModel::joinRelation
      */
-    public function setCacheTime(?int $seconds): self
+    public function joinRelation($name, string $type = 'INNER'): self
     {
     }
 
     /**
-     * @param array|string|true $scopes
+     * Add a inner join base on the relation to the query
+     *
+     * @param string|array $name
      * @return $this
-     * @see ShippingTplRuleModel::unscoped
+     * @see ShippingTplRuleModel::innerJoinRelation
      */
-    public function unscoped($scopes = []): self
+    public function innerJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a left join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplRuleModel::leftJoinRelation
+     */
+    public function leftJoinRelation($name): self
+    {
+    }
+
+    /**
+     * Add a right join base on the relation to the query
+     *
+     * @param string|array $name
+     * @return $this
+     * @see ShippingTplRuleModel::rightJoinRelation
+     */
+    public function rightJoinRelation($name): self
     {
     }
 
@@ -7504,7 +9812,7 @@ class ShippingTplRuleModel
      * @return $this
      * @see ShippingTplRuleModel::reallyDestroy
      */
-    public function reallyDestroy($id = false): self
+    public function reallyDestroy($id = null): self
     {
     }
 
