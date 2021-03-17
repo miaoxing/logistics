@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`admin/logistics-addresses form 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/api/regions?parentId=%E4%B8%AD%E5%9B%BD",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/logistics-addresses/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/api/regions?parentId=140000",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/api/regions?parentId=140200",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
+
+exports[`admin/logistics-addresses form 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "method": "get",
+        "url": "/api/regions?parentId=%E4%B8%AD%E5%9B%BD",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/admin-api/logistics-addresses/defaults",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/api/regions?parentId=140000",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
+        "url": "/api/regions?parentId=140200",
+      },
+    ],
+    Array [
+      Object {
+        "data": Object {
+          "address": "199号",
+          "city": 140222,
+          "country": 140000,
+          "id": 1,
+          "name": "联系人1",
+          "phone": "13800138000",
+          "postalCode": undefined,
+          "province": 140200,
+          "regionId": 140222,
+          "remark": undefined,
+          "sort": 51,
+          "types": Array [
+            1,
+          ],
+        },
+        "loading": true,
+        "method": "POST",
+        "url": "/admin-api/logistics-addresses",
+      },
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
+  ],
+}
+`;
