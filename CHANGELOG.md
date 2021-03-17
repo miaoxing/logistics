@@ -1,3 +1,22 @@
+## [0.1.9](https://github.com/miaoxing/logistics/compare/v0.1.8...v0.1.9) (2021-03-17)
+
+
+### Features
+
+* 增加后台查看地址列表 ([aa02022](https://github.com/miaoxing/logistics/commit/aa02022afbb9cd29f6693d56befe7f1b363003f5))
+* 增加后台添加和编辑地址操作 ([e82dba0](https://github.com/miaoxing/logistics/commit/e82dba09d4284780e291a9d304a222701a745cec))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-form:** upgrade from `0.2.10` to `0.2.11`
+* **@mxjs/a-region-cascader:** upgrade from `0.1.6` to `0.1.7`
+* **@miaoxing/app:** upgrade from `0.2.11` to `0.2.12`
+* **@miaoxing/region:** upgrade from `0.1.8` to `0.1.9`
+
 ## [0.1.8](https://github.com/miaoxing/logistics/compare/v0.1.7...v0.1.8) (2021-03-12)
 
 
