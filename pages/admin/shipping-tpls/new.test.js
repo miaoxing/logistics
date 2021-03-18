@@ -6,6 +6,7 @@ import {app} from '@mxjs/app';
 import $, {Ret} from 'miaoxing';
 import {waitFor} from '@testing-library/dom';
 import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
+import {act} from 'react-dom/test-utils';
 
 bootstrap();
 
@@ -87,12 +88,12 @@ describe(path, () => {
     expect(getByLabelText('名称').value).toBe('测试');
 
     // 提交表单
-    fireEvent.click(screen.getByText('提 交'));
+    await act(async () => {
+      fireEvent.click(screen.getByText('提 交'));
+    });
 
     await Promise.all([promise3]);
     expect($.http).toHaveBeenCalledTimes(3);
     expect($.http).toMatchSnapshot();
-
-    // TODO Warning: An update to Form inside a test was not wrapped in act(...).
   });
 });
