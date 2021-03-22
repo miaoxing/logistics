@@ -1,3 +1,24 @@
+## [0.1.10](https://github.com/miaoxing/logistics/compare/v0.1.9...v0.1.10) (2021-03-22)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `6.3.3` to `6.3.4`
+* **@mxjs/a-clink:** upgrade from `0.1.4` to `0.1.5`
+* **@mxjs/a-form:** upgrade from `0.2.11` to `0.2.12`
+* **@mxjs/a-page:** upgrade from `0.2.4` to `0.2.5`
+* **@mxjs/a-region-cascader:** upgrade from `0.1.7` to `0.1.8`
+* **@mxjs/a-table:** upgrade from `0.3.7` to `0.3.8`
+* **@mxjs/app:** upgrade from `0.2.8` to `0.2.9`
+* **@mxjs/test:** upgrade from `0.1.4` to `0.1.5`
+* **jest-preset-miaoxing:** upgrade from `0.2.2` to `0.2.3`
+* **miaoxing:** upgrade from `0.2.1` to `0.2.2`
+* **@miaoxing/app:** upgrade from `0.2.12` to `0.2.13`
+* **@miaoxing/region:** upgrade from `0.1.9` to `0.1.10`
+
 ## [0.1.9](https://github.com/miaoxing/logistics/compare/v0.1.8...v0.1.9) (2021-03-17)
 
 
