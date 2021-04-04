@@ -16,7 +16,7 @@ import {
 } from 'antd';
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
-import {Flex, Text} from 'rebass';
+import {Flex, Text} from '@mxjs/box';
 import {css} from '@emotion/react';
 
 // 默认的物流服务编号，即"快递"
