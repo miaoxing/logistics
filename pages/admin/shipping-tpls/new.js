@@ -17,7 +17,7 @@ import {
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
 import {Flex, Text} from 'rebass';
-import {css} from 'emotion';
+import {css} from '@emotion/react';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
