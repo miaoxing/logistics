@@ -111,6 +111,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Replace package dependencies
+        run: npx replace-pkg-dep package.json
+
       - name: Install
         run: yarn install
 
