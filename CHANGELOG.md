@@ -1,3 +1,30 @@
+## [0.1.11](https://github.com/miaoxing/logistics/compare/v0.1.10...v0.1.11) (2021-04-27)
+
+
+### Features
+
+* 增加创建页面测试数据的 Seeder ([3951196](https://github.com/miaoxing/logistics/commit/3951196b299dd8da577ed44c97d6920513f72f52))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `6.3.4` to `6.4.0`
+* **@mxjs/a-clink:** upgrade from `0.1.5` to `0.1.6`
+* **@mxjs/a-form:** upgrade from `0.2.12` to `0.2.13`
+* **@mxjs/a-page:** upgrade from `0.2.5` to `0.2.6`
+* **@mxjs/a-region-cascader:** upgrade from `0.1.8` to `0.1.9`
+* **@mxjs/a-table:** upgrade from `0.3.8` to `0.3.9`
+* **@mxjs/actions:** upgrade from `0.1.0` to `0.1.1`
+* **@mxjs/app:** upgrade from `0.2.9` to `0.3.0`
+* **@mxjs/box:** upgrade from `0.1.0` to `0.2.0`
+* **@mxjs/test:** upgrade from `0.1.5` to `0.1.6`
+* **miaoxing:** upgrade from `0.2.2` to `0.2.3`
+* **@miaoxing/app:** upgrade from `0.2.13` to `0.3.0`
+* **@miaoxing/region:** upgrade from `0.1.10` to `0.1.11`
+
 ## [0.1.10](https://github.com/miaoxing/logistics/compare/v0.1.9...v0.1.10) (2021-03-22)
 
 

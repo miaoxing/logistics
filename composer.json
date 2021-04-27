@@ -8,11 +8,11 @@
   ],
   "license": "MIT",
   "require": {
-    "miaoxing/app": "^0.2.13",
-    "miaoxing/region": "^0.1.10"
+    "miaoxing/app": "^0.3.0",
+    "miaoxing/region": "^0.1.11"
   },
   "require-dev": {
-    "miaoxing/dev": "^6.3.4"
+    "miaoxing/dev": "^6.4.0"
   },
   "autoload": {
     "psr-4": {
