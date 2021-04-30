@@ -20,7 +20,7 @@
     "@mxjs/app": "^0.3.0",
     "@mxjs/box": "^0.2.0",
     "@mxjs/test": "^0.1.6",
-    "@testing-library/react": "^10.0.4",
+    "@testing-library/react": "^11.2.6",
     "antd": "^4.13.1",
     "core-js": "^3.6.5",
     "@emotion/react": "^11.1.5",
