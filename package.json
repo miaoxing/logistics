@@ -9,7 +9,7 @@
     "preset": "jest-preset-miaoxing"
   },
   "devDependencies": {
-    "@ant-design/icons": "^4.5.0",
+    "@ant-design/icons": "^4.6.2",
     "@miaoxing/dev": "^6.4.0",
     "@mxjs/a-clink": "^0.1.6",
     "@mxjs/a-form": "^0.2.13",
@@ -21,7 +21,7 @@
     "@mxjs/box": "^0.2.0",
     "@mxjs/test": "^0.1.6",
     "@testing-library/react": "^11.2.6",
-    "antd": "^4.13.1",
+    "antd": "^4.15.2",
     "core-js": "^3.6.5",
     "@emotion/react": "^11.1.5",
     "jest-preset-miaoxing": "^0.2.3",
