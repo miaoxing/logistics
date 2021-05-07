@@ -2,6 +2,9 @@
 
 namespace Miaoxing\Logistics\Controller\Admin;
 
+/**
+ * @mixin \PageMixin
+ */
 class LogisticsTraces extends \Miaoxing\Plugin\BaseController
 {
     protected $controllerName = '物流跟踪';

@@ -2,6 +2,10 @@
 
 namespace Miaoxing\Logistics\Controller;
 
+/**
+ * @mixin \PageMixin
+ * @mixin \ResponseMixin
+ */
 class LogisticsTraces extends \Miaoxing\Plugin\BaseController
 {
     public function indexAction($req)

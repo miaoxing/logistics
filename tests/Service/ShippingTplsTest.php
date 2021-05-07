@@ -35,7 +35,8 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $tpl = wei()->shippingTpl()->setAppId()->save([
             'name' => '测试',
             'logisticsIds' => [
-                '1', '2',
+                '1',
+                '2',
             ],
             'useLogisticsIds' => [
                 '1' => '0',
@@ -60,7 +61,8 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
             'logisticsId' => '1',
             'isDefault' => '0',
             'areas' => [
-                '440300', '440100', // 深圳市,广州市
+                '440300',
+                '440100', // 深圳市,广州市
             ],
             'startFee' => '8.00',
             'plusFee' => '1.00',
@@ -96,7 +98,9 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
         $tpl = wei()->shippingTpl()->setAppId()->save([
             'name' => '测试',
             'logisticsIds' => [
-                '1', '2', '3',
+                '1',
+                '2',
+                '3',
             ],
             'useLogisticsIds' => [
                 '1' => '0',
@@ -122,7 +126,8 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
             'logisticsId' => '1',
             'isDefault' => '0',
             'areas' => [
-                '440300', '440100', // 深圳市,广州市
+                '440300',
+                '440100', // 深圳市,广州市
             ],
             'startFee' => '8.00',
             'plusFee' => '1.00',
@@ -142,7 +147,8 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
             'logisticsId' => '2',
             'isDefault' => '0',
             'areas' => [
-                '440100', '310100', // 广州市,上海市市辖区
+                '440100',
+                '310100', // 广州市,上海市市辖区
             ],
             'startFee' => '9.02',
             'plusFee' => '1.02',
@@ -641,8 +647,8 @@ class ShippingTplsTest extends \Miaoxing\Plugin\Test\BaseTestCase
         wei()->shippingTpl()->save();
         $shippingTpl = wei()->shippingTpl()->find();
 
-        $this->assertInternalType('array', $shippingTpl['logisticsIds']);
+        $this->assertIsArray($shippingTpl['logisticsIds']);
 
-        $this->assertInternalType('array', $shippingTpl['useLogisticsIds']);
+        $this->assertIsArray($shippingTpl['useLogisticsIds']);
     }
 }

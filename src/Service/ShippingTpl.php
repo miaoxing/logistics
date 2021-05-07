@@ -76,6 +76,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
      *
      * @param ShippingTplRule $shippingTplRules
      * @return $this
+     * @phpstan-ignore-next-line
      */
     public function setRules(ShippingTplRule $shippingTplRules)
     {
@@ -92,7 +93,9 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
      */
     public function toArray($returnFields = [])
     {
+        /** @phpstan-ignore-next-line */
         $data = parent::toArray($returnFields);
+        // @phpstan-ignore-next-line
         if (!$this->isColl) {
             $data['rules'] = $this->getRules()->toArray();
         }
@@ -171,6 +174,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
     public function getShippingConfig($city = null)
     {
         $services = [];
+        // @phpstan-ignore-next-line
         if ($this->isNew || $this['freeShipping']) {
             $services[] = $this->defaultService;
         } elseif (1 === $this->getRules()->length()) {
@@ -219,6 +223,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
      * @param Cart|\Miaoxing\Cart\Service\Cart[] $carts
      * @param \Miaoxing\Address\Service\Address $address
      * @return array
+     * @phpstan-ignore-next-line
      */
     public function getShippingServices(Cart $carts, \Miaoxing\Address\Service\Address $address = null)
     {
@@ -328,14 +333,12 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
 
     public function afterFind()
     {
-        parent::afterFind();
         $this['logisticsIds'] = explode(',', $this['logisticsIds']);
         $this['useLogisticsIds'] = (array) json_decode($this['useLogisticsIds'], true);
     }
 
     public function beforeSave()
     {
-        parent::beforeSave();
         $this['logisticsIds'] = implode(',', (array) $this['logisticsIds']);
         // key是原来的物流服务商编号,value是要使用的物流商编号
         $this['useLogisticsIds'] = json_encode((array) $this['useLogisticsIds'], \JSON_FORCE_OBJECT);
@@ -343,7 +346,6 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
 
     public function afterSave()
     {
-        parent::afterSave();
         $this['logisticsIds'] = explode(',', $this['logisticsIds']);
         $this['useLogisticsIds'] = (array) json_decode($this['useLogisticsIds'], true);
     }

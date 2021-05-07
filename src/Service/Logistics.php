@@ -9,7 +9,10 @@ use Miaoxing\Plugin\ConfigTrait;
  *
  * 注: 以s结尾才是名词
  *
- * @property int defaultLogisticsId
+ * @mixin \CacheMixin
+ * @mixin \EventMixin
+ * @mixin \UrlMixin
+ * @property int $defaultLogisticsId
  */
 class Logistics extends \Miaoxing\Plugin\BaseService
 {

@@ -35,6 +35,7 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
      * 商品详情页,展示配送方式,运费等
      *
      * @param \Miaoxing\Product\Service\Product $product
+     * @phpstan-ignore-next-line
      */
     public function onProductsShowItemMin(Product $product)
     {
@@ -56,6 +57,11 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
         $this->view->display('@logistics/shippingTpls/productsShowItem.php', get_defined_vars());
     }
 
+    /**
+     * @param Order $order
+     * @param Address|null $address
+     * @phpstan-ignore-next-line
+     */
     public function onPostOrderCartRender(Order $order, Address $address = null)
     {
         if (!$order->isRequireAddress()) {
@@ -70,6 +76,7 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
     /**
      * 根据指定的物流服务,计算运费
      * @param mixed $data
+     * @phpstan-ignore-next-line
      */
     public function onPreOrderCreate(Order $order, Address $address = null, $data, array $options = [])
     {

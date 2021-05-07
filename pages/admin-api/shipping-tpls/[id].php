@@ -30,7 +30,7 @@ return new class extends BaseController {
                         ],
                     ])
                     ->array('rules', '运费规则')->required($this->isRulesRequired($shippingTpl))
-                    ->each(function (V $v) use ($req) {
+                    ->each(function (V $v) {
                         $isDefault = $v->getData()['isDefault'] ?? false;
                         $v
                             ->uDefaultInt('serviceId', '服务编号')
