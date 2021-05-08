@@ -10,7 +10,6 @@ return new class extends BaseController {
     use CollTrait;
     use PostToPatchTrait {
         PostToPatchTrait::post insteadof CollTrait;
-
     }
 
     public function get()

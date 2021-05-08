@@ -22,7 +22,7 @@ class LogisticsAddressModel extends BaseModel
     /**
      * @internal
      */
-    const TYPE_RETURN = 1;
+    public const TYPE_RETURN = 1;
 
     /**
      * @internal

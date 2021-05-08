@@ -6,7 +6,7 @@ use Miaoxing\Cart\Service\Cart;
 
 class ShippingTpl extends \Miaoxing\Plugin\BaseService
 {
-    const CUSTOM_RULE = 0;
+    public const CUSTOM_RULE = 0;
 
     /**
      * {@inheritdoc}
@@ -308,7 +308,8 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
             $rule = $config['rule'];
 
             //  按“取最大首费，最小增费”作为首费来计算
-            if ($rule['startFee'] > $startFee
+            if (
+                $rule['startFee'] > $startFee
                 || ($rule['startFee'] == $startFee && $rule['plusFee'] < $bestRule['plusFee'])
             ) {
                 $startFee = $rule['startFee'];

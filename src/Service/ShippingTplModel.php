@@ -20,9 +20,9 @@ class ShippingTplModel extends BaseModel
     use ShippingTplTrait;
     use SoftDeleteTrait;
 
-    const VALUATION_TYPE_BY_PIECE = 1;
+    public const VALUATION_TYPE_BY_PIECE = 1;
 
-    const VALUATION_TYPE_BY_WEIGHT = 2;
+    public const VALUATION_TYPE_BY_WEIGHT = 2;
 
     protected $columns = [
         'serviceIds' => [

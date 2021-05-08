@@ -27,7 +27,7 @@ class Logistics extends \Miaoxing\Plugin\BaseService
     /**
      * 到店自提
      */
-    const ID_SELF_PICKUP = 2;
+    public const ID_SELF_PICKUP = 2;
 
     /**
      * {@inheritdoc}
