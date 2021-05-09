@@ -22,14 +22,12 @@
     "@mxjs/test": "^0.1.6",
     "@testing-library/react": "^11.2.6",
     "antd": "^4.15.2",
-    "core-js": "^3.6.5",
     "@emotion/react": "^11.1.5",
     "jest-preset-miaoxing": "^0.2.3",
     "miaoxing": "^0.2.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router": "^5.2.0",
-    "regenerator-runtime": "^0.13.5",
     "typescript": "^3.8.3"
   },
   "ciDependencies": {
