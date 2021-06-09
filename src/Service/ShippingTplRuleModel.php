@@ -7,6 +7,9 @@ use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\SoftDeleteTrait;
 
+/**
+ * @property LogisticsServiceModel $service
+ */
 class ShippingTplRuleModel extends BaseModel
 {
     use ModelTrait;
@@ -21,4 +24,9 @@ class ShippingTplRuleModel extends BaseModel
             ],
         ],
     ];
+
+    public function service(): LogisticsServiceModel
+    {
+        return $this->belongsTo(LogisticsServiceModel::class, 'id', 'serviceId');
+    }
 }
