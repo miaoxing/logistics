@@ -13,6 +13,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
     public function up()
     {
         $this->schema->table('logistics_services')->tableComment('物流服务')
+            ->id()
             ->string('name', 16)->comment('名称')
             ->timestamps()
             ->userstamps()
