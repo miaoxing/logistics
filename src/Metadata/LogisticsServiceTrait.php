@@ -3,6 +3,7 @@
 namespace Miaoxing\Logistics\Metadata;
 
 /**
+ * @property int|null $id
  * @property string $name 名称
  * @property string|null $createdAt
  * @property string|null $updatedAt

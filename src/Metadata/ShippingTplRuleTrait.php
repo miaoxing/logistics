@@ -10,9 +10,9 @@ namespace Miaoxing\Logistics\Metadata;
  * @property bool $isDefault 是否默认
  * @property string $regionIds 指定的区域编号
  * @property int $startAmount 首费数量
- * @property float $startFee 首费金额
+ * @property string $startFee 首费金额
  * @property int $addAmount 增费数量
- * @property float $addFee 增费金额
+ * @property string $addFee 增费金额
  * @property string|null $createdAt
  * @property string|null $updatedAt
  * @property int $createdBy
