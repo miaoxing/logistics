@@ -29,32 +29,34 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取列表数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: [
-          {
-            id: 1,
-            name: '联系人1',
-            phone: '13800138000',
-            region: {
-              name: '天镇县',
-              shortName: '天镇',
-              parent: {
-                name: '大同市',
-                shortName: '大同',
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: [
+            {
+              id: 1,
+              name: '联系人1',
+              phone: '13800138000',
+              region: {
+                name: '天镇县',
+                shortName: '天镇',
                 parent: {
-                  name: '山西省',
-                  shortName: '山西',
+                  name: '大同市',
+                  shortName: '大同',
+                  parent: {
+                    name: '山西省',
+                    shortName: '山西',
+                  },
                 },
               },
+              address: '199号',
+              types: [1],
+              sort: 51,
+              updatedAt: '2020-01-01 00:00:00',
             },
-            address: '199号',
-            types: [1],
-            sort: 51,
-            updatedAt: '2020-01-01 00:00:00',
-          },
-        ],
-      })));
+          ],
+        }),
+      }));
 
     const {findByText} = render(<MemoryRouter>
       <Index/>

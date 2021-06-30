@@ -34,67 +34,77 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取一级地区
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: [{
-          id: 140000,
-          name: '山西省',
-          shortName: '山西',
-          hasChildren: true,
-        }],
-      })))
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: [{
+            id: 140000,
+            name: '山西省',
+            shortName: '山西',
+            hasChildren: true,
+          }],
+        }),
+      }))
       // 读取默认数据
-      .mockImplementationOnce(() => promise2.resolve(Ret.new({
-        code: 1,
-        data: {
-          id: 1,
-          name: '联系人1',
-          phone: '13800138000',
-          region: {
-            id: 140222,
-            name: '天镇县',
-            shortName: '天镇',
-            parent: {
-              id: 140200,
-              name: '大同市',
-              shortName: '大同',
+      .mockImplementationOnce(() => promise2.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: {
+            id: 1,
+            name: '联系人1',
+            phone: '13800138000',
+            region: {
+              id: 140222,
+              name: '天镇县',
+              shortName: '天镇',
               parent: {
-                id: 140000,
-                name: '山西省',
-                shortName: '山西',
+                id: 140200,
+                name: '大同市',
+                shortName: '大同',
+                parent: {
+                  id: 140000,
+                  name: '山西省',
+                  shortName: '山西',
+                },
               },
             },
+            address: '199号',
+            types: [1],
+            sort: 51,
           },
-          address: '199号',
-          types: [1],
-          sort: 51,
-        },
-      })))
+        }),
+      }))
       // 读取二级地区
-      .mockImplementationOnce(() => promise3.resolve(Ret.new({
-        code: 1,
-        data: [{
-          id: 140200,
-          parentId: 140000,
-          name: '大同市',
-          shortName: '大同',
-          hasChildren: true,
-        }],
-      })))
+      .mockImplementationOnce(() => promise3.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: [{
+            id: 140200,
+            parentId: 140000,
+            name: '大同市',
+            shortName: '大同',
+            hasChildren: true,
+          }],
+        }),
+      }))
       // 读取三级地区
-      .mockImplementationOnce(() => promise4.resolve(Ret.new({
-        code: 1,
-        data: [{
-          hasChildren: false,
-          id: 140222,
-          name: '天镇县',
-          parentId: 140200,
-          shortName: '天镇',
-        }],
-      })))
+      .mockImplementationOnce(() => promise4.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: [{
+            hasChildren: false,
+            id: 140222,
+            name: '天镇县',
+            parentId: 140200,
+            shortName: '天镇',
+          }],
+        }),
+      }))
       // 提交
       .mockImplementationOnce(() => promise5.resolve({
-        code: 1,
+        ret: {
+          code: 1,
+        },
       }));
 
     const {getByLabelText} = render(<MemoryRouter>

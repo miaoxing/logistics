@@ -33,47 +33,53 @@ describe(path, () => {
 
     $.http = jest.fn()
       // 读取默认数据
-      .mockImplementationOnce(() => promise.resolve(Ret.new({
-        code: 1,
-        data: {
-          name: '测试',
-          sort: 50,
-          rules: [
-            {
-              id: 1,
-              serviceId: 1,
-              isDefault: true,
-              regionIds: [],
-              startAmount: 1,
-              startFee: 2,
-              addAmount: 3,
-              addFee: 4,
-            },
-            {
-              id: 2,
-              serviceId: 1,
-              isDefault: false,
-              regionIds: [1],
-              startAmount: 1,
-              startFee: 2,
-              addAmount: 3,
-              addFee: 4,
-            },
-          ],
-        },
-      })))
+      .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: {
+            name: '测试',
+            sort: 50,
+            rules: [
+              {
+                id: 1,
+                serviceId: 1,
+                isDefault: true,
+                regionIds: [],
+                startAmount: 1,
+                startFee: 2,
+                addAmount: 3,
+                addFee: 4,
+              },
+              {
+                id: 2,
+                serviceId: 1,
+                isDefault: false,
+                regionIds: [1],
+                startAmount: 1,
+                startFee: 2,
+                addAmount: 3,
+                addFee: 4,
+              },
+            ],
+          },
+        }),
+      }))
       // 读取区域数据
-      .mockImplementationOnce(() => promise2.resolve(Ret.new({
-        code: 1,
-        data: [{
-          id: 1,
-          name: '默认地区',
-        }],
-      })))
+      .mockImplementationOnce(() => promise2.resolve({
+        ret: Ret.new({
+          code: 1,
+          data: [{
+            id: 1,
+            name: '默认地区',
+          }],
+        }),
+      }))
       // 提交
-      .mockImplementationOnce(() => promise3.resolve(Ret.new({
-        code: 1,
-      })));
+      .mockImplementationOnce(() => promise3.resolve({
+        ret: Ret.new({
+          code: 1,
+        }),
+      }));
 
     const {getByLabelText} = render(<MemoryRouter>
       <Page/>
