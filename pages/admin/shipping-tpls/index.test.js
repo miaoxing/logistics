@@ -30,16 +30,18 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取列表数据
       .mockImplementationOnce(() => promise.resolve({
-        code: 1,
-        data: [
-          {
-            id: 1,
-            name: '测试模板',
-            isFreeShipping: true,
-            sort: 51,
-            updatedAt: '2020-01-01 00:00:00',
-          },
-        ],
+        ret: {
+          code: 1,
+          data: [
+            {
+              id: 1,
+              name: '测试模板',
+              isFreeShipping: true,
+              sort: 51,
+              updatedAt: '2020-01-01 00:00:00',
+            },
+          ],
+        },
       }));
 
     const {findByText} = render(<MemoryRouter>
