@@ -17,7 +17,7 @@ export default () => {
       </PageActions>
 
       <Form
-        afterLoad={(ret) => {
+        afterLoad={({ret}) => {
           if (ret.data.region) {
             const region = ret.data.region;
             ret.data.regionIds = [
