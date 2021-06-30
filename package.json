@@ -34,6 +34,9 @@
     "@mxjs/box": "miaoxing/mxjs-box",
     "babel-preset-miaoxing": "miaoxing/babel-preset-miaoxing",
     "@miaoxing/dev": "miaoxing/dev",
-    "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing"
+    "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing",
+    "@mxjs/a-form": "miaoxing/mxjs-a-form",
+    "@mxjs/a-table": "miaoxing/mxjs-a-table",
+    "@mxjs/a-region-cascader": "miaoxing/mxjs-a-region-cascader"
   }
 }
