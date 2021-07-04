@@ -40,7 +40,7 @@ class LogisticsAddressModel extends BaseModel
         ],
     ];
 
-    public function region()
+    public function region(): RegionModel
     {
         return $this->belongsTo(RegionModel::class);
     }
