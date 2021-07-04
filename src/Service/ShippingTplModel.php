@@ -50,7 +50,7 @@ class ShippingTplModel extends BaseModel
     /**
      * @Relation
      */
-    public function rules()
+    public function rules(): ShippingTplRuleModel
     {
         return $this->hasMany(ShippingTplRuleModel::class);
     }
