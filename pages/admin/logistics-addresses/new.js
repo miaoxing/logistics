@@ -1,7 +1,6 @@
 /**
  * @share [id]/edit
  */
-import React from 'react';
 import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormAction, FormItem} from '@mxjs/a-form';
