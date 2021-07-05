@@ -1,7 +1,6 @@
 import Index from './index';
 import {render} from '@testing-library/react';
 import {MemoryRouter} from 'react-router';
-import React from 'react';
 import $ from 'miaoxing';
 import {bootstrap, createPromise, setUrl, resetUrl} from '@mxjs/test';
 import {app} from '@mxjs/app';
