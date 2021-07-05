@@ -140,10 +140,10 @@ class ShippingTplModelTest extends BaseTestCase
         $this->assertEquals(2, $rules->count());
 
         // 匹配第一条
-        $this->assertSame(8.0, $rules[0]->startFee);
+        $this->assertSame('8', $rules[0]->startFee);
 
         // 匹配第二条
-        $this->assertSame(10.0, $rules[1]->startFee);
+        $this->assertSame('10', $rules[1]->startFee);
     }
 
     public function testGetRulesBySpecialCity()
@@ -155,13 +155,13 @@ class ShippingTplModelTest extends BaseTestCase
         $this->assertEquals(3, $rules->count());
 
         // 匹配第一条
-        $this->assertSame(10.0, $rules[0]->startFee);
+        $this->assertSame('10', $rules[0]->startFee);
 
         // 匹配第二条
-        $this->assertSame(9.02, $rules[1]->startFee);
+        $this->assertSame('9.02', $rules[1]->startFee);
 
         // 匹配第三条
-        $this->assertSame(10.03, $rules[2]->startFee);
+        $this->assertSame('10.03', $rules[2]->startFee);
     }
 
     public function testGetRulesBySpecialCityId()
@@ -173,13 +173,13 @@ class ShippingTplModelTest extends BaseTestCase
         $this->assertEquals(3, $rules->count());
 
         // 匹配第一条
-        $this->assertSame(10.0, $rules[0]->startFee);
+        $this->assertSame('10', $rules[0]->startFee);
 
         // 匹配第二条
-        $this->assertSame(9.02, $rules[1]->startFee);
+        $this->assertSame('9.02', $rules[1]->startFee);
 
         // 匹配第三条
-        $this->assertSame(10.03, $rules[2]->startFee);
+        $this->assertSame('10.03', $rules[2]->startFee);
     }
 
     /**
