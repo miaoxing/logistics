@@ -6,7 +6,12 @@
   "author": "twinh",
   "license": "MIT",
   "jest": {
-    "preset": "jest-preset-miaoxing"
+    "preset": "jest-preset-miaoxing",
+    "globals": {
+      "ENABLE_INNER_HTML": true,
+      "ENABLE_ADJACENT_HTML": true,
+      "ENABLE_SIZE_APIS": true
+    }
   },
   "devDependencies": {
     "@ant-design/icons": "^4.6.2",
