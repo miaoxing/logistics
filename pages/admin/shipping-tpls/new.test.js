@@ -33,8 +33,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: {
             name: '测试',
             sort: 50,
@@ -65,19 +64,17 @@ describe(path, () => {
       }))
       // 读取区域数据
       .mockImplementationOnce(() => promise2.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: [{
             id: 1,
             name: '默认地区',
+            children: [],
           }],
         }),
       }))
       // 提交
       .mockImplementationOnce(() => promise3.resolve({
-        ret: Ret.new({
-          code: 1,
-        }),
+        ret: Ret.suc(),
       }));
 
     const {getByLabelText} = render(<MemoryRouter>
