@@ -29,8 +29,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取列表数据
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: [
             {
               id: 1,

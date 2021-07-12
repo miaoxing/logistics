@@ -34,8 +34,7 @@ describe(path, () => {
     $.http = jest.fn()
       // 读取一级地区
       .mockImplementationOnce(() => promise.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: [{
             id: 140000,
             name: '山西省',
@@ -46,8 +45,7 @@ describe(path, () => {
       }))
       // 读取默认数据
       .mockImplementationOnce(() => promise2.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: {
             id: 1,
             name: '联系人1',
@@ -75,8 +73,7 @@ describe(path, () => {
       }))
       // 读取二级地区
       .mockImplementationOnce(() => promise3.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: [{
             id: 140200,
             parentId: 140000,
@@ -88,8 +85,7 @@ describe(path, () => {
       }))
       // 读取三级地区
       .mockImplementationOnce(() => promise4.resolve({
-        ret: Ret.new({
-          code: 1,
+        ret: Ret.suc({
           data: [{
             hasChildren: false,
             id: 140222,
