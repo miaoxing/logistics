@@ -6,6 +6,7 @@ use Miaoxing\Logistics\Metadata\LogisticsAddressTrait;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
+use Miaoxing\Plugin\Model\SnowflakeTrait;
 use Miaoxing\Plugin\Model\SoftDeleteTrait;
 use Miaoxing\Region\Service\RegionModel;
 
@@ -17,6 +18,7 @@ class LogisticsAddressModel extends BaseModel
     use LogisticsAddressTrait;
     use ModelTrait;
     use ReqQueryTrait;
+    use SnowflakeTrait;
     use SoftDeleteTrait;
 
     /**

@@ -7,6 +7,7 @@ use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\HasAppIdTrait;
 use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
+use Miaoxing\Plugin\Model\SnowflakeTrait;
 use Miaoxing\Plugin\Model\SoftDeleteTrait;
 use Miaoxing\Region\Service\RegionModel;
 
@@ -19,6 +20,7 @@ class ShippingTplModel extends BaseModel
     use ModelTrait;
     use ReqQueryTrait;
     use ShippingTplTrait;
+    use SnowflakeTrait;
     use SoftDeleteTrait;
 
     public const VALUATION_TYPE_BY_PIECE = 1;

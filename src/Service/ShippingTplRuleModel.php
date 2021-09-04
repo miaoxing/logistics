@@ -5,6 +5,7 @@ namespace Miaoxing\Logistics\Service;
 use Miaoxing\Logistics\Metadata\ShippingTplRuleTrait;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\ModelTrait;
+use Miaoxing\Plugin\Model\SnowflakeTrait;
 use Miaoxing\Plugin\Model\SoftDeleteTrait;
 
 /**
@@ -14,6 +15,7 @@ class ShippingTplRuleModel extends BaseModel
 {
     use ModelTrait;
     use ShippingTplRuleTrait;
+    use SnowflakeTrait;
     use SoftDeleteTrait;
 
     protected $columns = [
