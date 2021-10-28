@@ -1,3 +1,58 @@
+# [0.2.0](https://github.com/miaoxing/logistics/compare/v0.1.14...v0.2.0) (2021-10-28)
+
+
+### Bug Fixes
+
+* **Cast:** `decimal` 字段转换为 PHP 变量时，由浮点数改为字符串 ([3100368](https://github.com/miaoxing/logistics/commit/3100368be3e13c2fc9535ac14dad53f6a4f86635))
+* **logistics:** 物流服务表 `logistics_services` 增加主键 ([f320650](https://github.com/miaoxing/logistics/commit/f3206503efb8b5b336154122585c229c1190c47a))
+* **LogisticsServiceModel:** 引入模型 trait 错误 ([1c238a7](https://github.com/miaoxing/logistics/commit/1c238a721ffac9ab926543104ff385b20fafaf04))
+
+
+### Code Refactoring
+
+* `expand` 参数改为 `include` ([aa2b3e6](https://github.com/miaoxing/logistics/commit/aa2b3e64ba7d25ccca141b2661366ec1d94fbeb8))
+* **Model:** 模型的关联方法加上返回值 ([809d743](https://github.com/miaoxing/logistics/commit/809d743e0ffeb9e9c16665f2f25a03a1c0a28e79))
+
+
+### Features
+
+* 数据表主键 由 `int` 改为 `bigint` ([7223ca1](https://github.com/miaoxing/logistics/commit/7223ca136bb9943890e567bc21879335e533564d))
+* 更新 `react` 到 17 ([664b67d](https://github.com/miaoxing/logistics/commit/664b67dcf838cb4a3490ca9baa9b438ffc1bf8d7))
+* 模型通过 `SnowflakeTrait` 生成 id ([ff80bd7](https://github.com/miaoxing/logistics/commit/ff80bd7ff020ea7d1ca9f78f9cb7fa2e0f67d62f))
+* **logistics:** 增加根据城市获取匹配运费规则的方法 ([164221c](https://github.com/miaoxing/logistics/commit/164221c8ccb9e2bbe150befc97b6c59e12c7eb26))
+* **logistics:** 增加物流相关资源类 ([3d94b79](https://github.com/miaoxing/logistics/commit/3d94b79728e0aa4fdd1c96029b4e5cc567c8aae2))
+
+
+### BREAKING CHANGES
+
+* 数据表主键 由 `int` 改为 `bigint`
+* `expand` 参数改为 `include`
+* 更新 `react` 到 17
+* **Model:** 模型的关联方法加上返回值
+* **Cast:** `decimal` 字段转换为 PHP 变量时，由浮点数改为字符串
+* **logistics:** 物流服务表 `logistics_services` 增加主键
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `7.0.1` to `8.0.0`
+* **@mxjs/a-clink:** upgrade from `0.1.8` to `0.2.0`
+* **@mxjs/a-form:** upgrade from `0.2.15` to `0.3.0`
+* **@mxjs/a-page:** upgrade from `0.2.8` to `0.3.0`
+* **@mxjs/a-region-cascader:** upgrade from `0.1.11` to `0.1.12`
+* **@mxjs/a-table:** upgrade from `0.3.11` to `0.4.0`
+* **@mxjs/actions:** upgrade from `0.1.3` to `0.2.0`
+* **@mxjs/app:** upgrade from `0.3.2` to `0.3.3`
+* **@mxjs/box:** upgrade from `0.2.2` to `0.2.3`
+* **@mxjs/test:** upgrade from `0.1.8` to `0.2.0`
+* **jest-preset-miaoxing:** upgrade from `0.2.4` to `0.2.5`
+* **miaoxing:** upgrade from `0.2.5` to `0.3.0`
+* **@miaoxing/app:** upgrade from `0.3.3` to `0.4.0`
+* **@miaoxing/region:** upgrade from `0.1.14` to `0.2.0`
+
 ## [0.1.14](https://github.com/miaoxing/logistics/compare/v0.1.13...v0.1.14) (2021-05-21)
 
 
