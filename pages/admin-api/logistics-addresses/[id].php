@@ -7,7 +7,7 @@ use Miaoxing\Services\Service\ShowAction;
 use Miaoxing\Services\Service\UpdateAction;
 use Wei\V;
 
-return new class extends BaseController {
+return new class () extends BaseController {
     use ItemTrait;
 
     public function get()
