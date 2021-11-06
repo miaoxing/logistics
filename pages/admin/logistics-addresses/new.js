@@ -5,7 +5,7 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormAction, FormItem} from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
-import {Checkbox, Col, Row} from 'antd';
+import {Checkbox, Col, Input, Row} from 'antd';
 import $ from 'miaoxing';
 
 export default () => {
@@ -60,7 +60,9 @@ export default () => {
           </Checkbox.Group>
         </FormItem>
 
-        <FormItem label="备注" name="remark" type="textarea"/>
+        <FormItem label="备注" name="remark">
+          <Input.TextArea maxLength={255} showCount/>
+        </FormItem>
 
         <FormItem label="顺序" name="sort" type="number" extra="大的显示在前面，按从大到小排列。"/>
 
