@@ -7,6 +7,7 @@ import {Form, FormAction, FormItem} from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
 import {Checkbox, Col, Input, Row} from 'antd';
 import $ from 'miaoxing';
+import {FormItemSort} from '@miaoxing/admin';
 
 export default () => {
   return (
@@ -64,7 +65,7 @@ export default () => {
           <Input.TextArea maxLength={255} showCount/>
         </FormItem>
 
-        <FormItem label="顺序" name="sort" type="number" extra="大的显示在前面，按从大到小排列。"/>
+        <FormItemSort/>
 
         <FormItem name="id" type="hidden"/>
 

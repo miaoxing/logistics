@@ -18,6 +18,7 @@ import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
 import {Flex, Text} from '@mxjs/box';
 import {css} from '@emotion/react';
+import {FormItemSort} from '@miaoxing/admin';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
@@ -280,14 +281,14 @@ export default () => {
               </FormItem>
             </>}
 
-            <FormItem label="顺序" name="sort" type="number"
-              extra={
+            <FormItemSort extra={
                 <>
                   大的显示在前面，按从大到小排列。<br/>
                   创建商品时，将默认选中最大顺序的运费模板。
                 </>
               }
             />
+
             <FormItem name="id" type="hidden"/>
             <FormAction/>
           </>;
