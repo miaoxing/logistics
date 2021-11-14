@@ -5,9 +5,10 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormAction, FormItem} from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
-import {Checkbox, Col, Input, Row} from 'antd';
+import {Checkbox, Col, Row} from 'antd';
 import $ from 'miaoxing';
 import {FormItemSort} from '@miaoxing/admin';
+import Input from '@mxjs/a-input';
 
 export default () => {
   return (
@@ -33,9 +34,13 @@ export default () => {
           return values;
         }}
       >
-        <FormItem label="联系人姓名" name="name" required/>
+        <FormItem label="联系人姓名" name="name" required>
+          <Input maxLength={16}/>
+        </FormItem>
 
-        <FormItem label="联系人电话" name="phone" required/>
+        <FormItem label="联系人电话" name="phone" required>
+          <Input maxLength={16}/>
+        </FormItem>
 
         <FormItem label="地区" name="regionIds" required>
           <RegionCascader parentId="中国" url={$.url('api/regions')} fieldNames={{
@@ -45,9 +50,13 @@ export default () => {
           }}/>
         </FormItem>
 
-        <FormItem label="详细地址" name="address" required/>
+        <FormItem label="详细地址" name="address" required>
+          <Input maxLength={255}/>
+        </FormItem>
 
-        <FormItem label="邮编" name="postalCode"/>
+        <FormItem label="邮编" name="postalCode">
+          <Input maxLength={8}/>
+        </FormItem>
 
         <FormItem label="使用场景" name="types">
           <Checkbox.Group>
@@ -62,7 +71,7 @@ export default () => {
         </FormItem>
 
         <FormItem label="备注" name="remark">
-          <Input.TextArea maxLength={255} showCount/>
+          <Input.TextArea maxLength={255}/>
         </FormItem>
 
         <FormItemSort/>
