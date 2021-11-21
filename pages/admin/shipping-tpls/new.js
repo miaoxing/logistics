@@ -11,25 +11,27 @@ import {
   Switch,
   Table,
   Form as AntdForm,
-  Input,
+  InputNumber,
   TreeSelect,
 } from 'antd';
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
 import {Flex, Text} from '@mxjs/box';
 import {css} from '@emotion/react';
-import {FormItemSort} from '@miaoxing/admin';
+import {FormItemSort, InputPrice} from '@miaoxing/admin';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
 
 const FeeFormItem = (props) => {
-  return <FormItem
-    required
-    css={{width: 55, marginBottom: 0}}
-    {...props}
-  >
-    <Input css={{textAlign: 'center'}}/>
+  return <FormItem required css={{'&&':{marginBottom: 0}}} {...props}>
+    <InputPrice css={{'&&': {width: 70}}}/>
+  </FormItem>;
+};
+
+const NumberFormItem = (props) => {
+  return <FormItem required css={{'&&':{marginBottom: 0}}} {...props}>
+    <InputNumber min={1} max={1000} precision={0} controls={false} css={{'&&': {width: 70}}}/>
   </FormItem>;
 };
 
@@ -232,15 +234,15 @@ export default () => {
                               title: '运费',
                               dataIndex: 'startAmount',
                               align: 'center',
-                              width: 410,
+                              width: 440,
                               className: verticalAlignBaseline,
                               render: (value, row, ruleIndex) => {
                                 return <Flex alignItems="baseline" justifyContent="space-between">
-                                  <FeeFormItem name={[index, 'rules', ruleIndex, 'startAmount']}/>
+                                  <NumberFormItem name={[index, 'rules', ruleIndex, 'startAmount']}/>
                                   {' '}{unit}内{' '}
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'startFee']}/>
                                   {' '}元，每增加{' '}
-                                  <FeeFormItem name={[index, 'rules', ruleIndex, 'addAmount']}/>
+                                  <NumberFormItem name={[index, 'rules', ruleIndex, 'addAmount']}/>
                                   {' '}{unit}{' '}
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'addFee']}/>
                                   {' '}元
@@ -282,11 +284,11 @@ export default () => {
             </>}
 
             <FormItemSort extra={
-                <>
-                  大的显示在前面，按从大到小排列。<br/>
-                  创建商品时，将默认选中最大顺序的运费模板。
-                </>
-              }
+              <>
+                大的显示在前面，按从大到小排列。<br/>
+                创建商品时，将默认选中最大顺序的运费模板。
+              </>
+            }
             />
 
             <FormItem name="id" type="hidden"/>
