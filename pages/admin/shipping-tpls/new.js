@@ -16,7 +16,7 @@ import {
 } from 'antd';
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
-import {Flex, Text} from '@mxjs/box';
+import {Box} from '@mxjs/box';
 import {css} from '@emotion/react';
 import {FormItemSort, InputPrice} from '@miaoxing/admin';
 
@@ -145,9 +145,9 @@ export default () => {
               </FormItem>
 
               <FormItem label="运费规则" wrapperCol={{span: 18}}>
-                <Text color="muted" mt={1}>
+                <Box mt1 gray500>
                   请设置地区对应的运费，未设置的地区使用默认运费。
-                </Text>
+                </Box>
 
                 <Divider/>
 
@@ -237,7 +237,7 @@ export default () => {
                               width: 440,
                               className: verticalAlignBaseline,
                               render: (value, row, ruleIndex) => {
-                                return <Flex alignItems="baseline" justifyContent="space-between">
+                                return <Box alignItems="baseline" toBetween>
                                   <NumberFormItem name={[index, 'rules', ruleIndex, 'startAmount']}/>
                                   {' '}{unit}内{' '}
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'startFee']}/>
@@ -246,7 +246,7 @@ export default () => {
                                   {' '}{unit}{' '}
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'addFee']}/>
                                   {' '}元
-                                </Flex>;
+                                </Box>;
                               },
                             },
                             {
