@@ -43,7 +43,7 @@ export default () => {
         </FormItem>
 
         <FormItem label="地区" name="regionIds" required>
-          <RegionCascader parentId="中国" url={$.url('api/regions')} fieldNames={{
+          <RegionCascader parentId="中国" url={$.apiUrl('regions')} fieldNames={{
             label: 'shortName',
             value: 'id',
             children: 'children',
