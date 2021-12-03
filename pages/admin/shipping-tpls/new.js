@@ -17,7 +17,7 @@ import {
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
 import {Box} from '@mxjs/box';
-import {css} from '@emotion/react';
+import {css} from '@fower/core';
 import {FormItemSort, InputPrice} from '@miaoxing/admin';
 
 // 默认的物流服务编号，即"快递"
@@ -234,7 +234,7 @@ export default () => {
                               title: '运费',
                               dataIndex: 'startAmount',
                               align: 'center',
-                              width: 440,
+                              width: 460,
                               className: verticalAlignBaseline,
                               render: (value, row, ruleIndex) => {
                                 return <Box alignItems="baseline" toBetween>
