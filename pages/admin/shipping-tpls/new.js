@@ -17,21 +17,21 @@ import {
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
 import {Box} from '@mxjs/box';
-import {css} from '@fower/core';
 import {FormItemSort, InputPrice} from '@miaoxing/admin';
+import {css} from '@emotion/css';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
 
 const FeeFormItem = (props) => {
-  return <FormItem required css={{'&&':{marginBottom: 0}}} {...props}>
-    <InputPrice css={{'&&': {width: 70}}}/>
+  return <FormItem required className={css({'&&':{marginBottom: 0}})} {...props}>
+    <InputPrice className={css({'&&': {width: 70}})}/>
   </FormItem>;
 };
 
 const NumberFormItem = (props) => {
-  return <FormItem required css={{'&&':{marginBottom: 0}}} {...props}>
-    <InputNumber min={1} max={1000} precision={0} controls={false} css={{'&&': {width: 70}}}/>
+  return <FormItem required className={css({'&&':{marginBottom: 0}})} {...props}>
+    <InputNumber min={1} max={1000} precision={0} controls={false} className={css({'&&': {width: 70}})}/>
   </FormItem>;
 };
 
