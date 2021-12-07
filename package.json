@@ -19,6 +19,7 @@
     "@mxjs/a-page": "^0.3.0",
     "@mxjs/a-region-cascader": "^0.1.12",
     "@mxjs/a-table": "^0.4.0",
+    "@mxjs/a-input": "^0.1.0",
     "@mxjs/actions": "^0.2.0",
     "@mxjs/app": "^0.3.3",
     "@mxjs/box": "^0.2.3",
@@ -40,6 +41,7 @@
     "jest-preset-miaoxing": "miaoxing/jest-preset-miaoxing",
     "@mxjs/a-clink": "miaoxing/mxjs-a-clink",
     "@mxjs/a-form": "miaoxing/mxjs-a-form",
+    "@mxjs/a-input": "miaoxing/mxjs-a-input",
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-region-cascader": "miaoxing/mxjs-a-region-cascader"
   },
