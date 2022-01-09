@@ -12,7 +12,7 @@ exports[`admin/shipping-tpls form 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/api/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
+        "url": "/admin-api/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
       },
     ],
   ],
@@ -47,7 +47,7 @@ exports[`admin/shipping-tpls form 2`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/api/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
+        "url": "/admin-api/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
       },
     ],
     Array [
