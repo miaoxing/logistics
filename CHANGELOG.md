@@ -1,3 +1,46 @@
+# [0.3.0](https://github.com/miaoxing/logistics/compare/v0.2.0...v0.3.0) (2022-01-12)
+
+
+### Bug Fixes
+
+* 获取区域地址由浏览器地址改为接口地址 ([cb1fae4](https://github.com/miaoxing/logistics/commit/cb1fae40edb3f02dbd592b80122f4a2f5e47a9fc))
+
+
+### Features
+
+* 更新 `antd` 到 `~4.17.4` ([be48355](https://github.com/miaoxing/logistics/commit/be48355c84328c7f6b77de1a3d78b456e410d093))
+* 更新 typescript 到 `^4.5.2` ([8e69bfc](https://github.com/miaoxing/logistics/commit/8e69bfc769eb705c1552715b730554291bccce89))
+* **logistics:** 添加/编辑地址显示字数限制 ([784432a](https://github.com/miaoxing/logistics/commit/784432a1dd1e91a6013cd62f3a4e079d7efd9c7c))
+* 显示 `textarea` 的长度限制 ([4a6b34e](https://github.com/miaoxing/logistics/commit/4a6b34e877510efd45f8921dcc62d08862f1d4eb))
+
+
+### BREAKING CHANGES
+
+* 更新 typescript 到 `^4.5.2`
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.0.0` to `8.0.1`
+* **@mxjs/a-clink:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/a-form:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/a-page:** upgrade from `0.3.0` to `0.3.1`
+* **@mxjs/a-region-cascader:** upgrade from `0.1.12` to `0.1.13`
+* **@mxjs/a-table:** upgrade from `0.4.0` to `0.4.1`
+* **@mxjs/a-input:** upgrade from `0.1.0` to `0.1.1`
+* **@mxjs/actions:** upgrade from `0.2.0` to `0.2.1`
+* **@mxjs/app:** upgrade from `0.3.3` to `0.4.0`
+* **@mxjs/box:** upgrade from `0.2.3` to `0.3.0`
+* **@mxjs/test:** upgrade from `0.2.0` to `0.2.1`
+* **jest-preset-miaoxing:** upgrade from `0.2.5` to `0.3.0`
+* **miaoxing:** upgrade from `0.3.0` to `0.4.0`
+* **@miaoxing/admin:** upgrade from `0.4.0` to `0.5.0`
+* **@miaoxing/app:** upgrade from `0.4.0` to `0.5.0`
+* **@miaoxing/region:** upgrade from `0.2.0` to `0.2.1`
+
 # [0.2.0](https://github.com/miaoxing/logistics/compare/v0.1.14...v0.2.0) (2021-10-28)
 
 
