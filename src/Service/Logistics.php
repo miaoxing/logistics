@@ -51,7 +51,7 @@ class Logistics extends \Miaoxing\Plugin\BaseService
     public function getNames()
     {
         if (!$this->names) {
-            $this->names = $this->cache->get('logisticsName', 60, function () {
+            $this->names = $this->cache->remember('logisticsName', 60, function () {
                 $names = [];
                 $logistics = wei()->logistics()->select('id, name')->fetchAll();
                 foreach ($logistics as $row) {
