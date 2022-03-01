@@ -13,6 +13,7 @@ import {
   Form as AntdForm,
   InputNumber,
   TreeSelect,
+  Typography,
 } from 'antd';
 import $ from 'miaoxing';
 import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
@@ -257,10 +258,10 @@ export default () => {
                               className: verticalAlignBaseline,
                               render: (value, row, ruleIndex) => {
                                 return row.isDefault ? <span title="默认地区不能删除">-</span> : (
-                                  <a className="text-danger" onClick={deleteRule.bind(this, ruleIndex)} href="#"
+                                  <Typography.Link type="danger" onClick={deleteRule.bind(this, ruleIndex)} href="#"
                                     title="删除">
                                     <DeleteOutlined/>
-                                  </a>
+                                  </Typography.Link>
                                 );
                               },
                             },
