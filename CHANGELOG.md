@@ -1,3 +1,36 @@
+# [0.4.0](https://github.com/miaoxing/logistics/compare/v0.3.2...v0.4.0) (2022-03-04)
+
+
+### Bug Fixes
+
+* **logistics:** 删除图标未显示为红色 ([f832621](https://github.com/miaoxing/logistics/commit/f83262155127b89b9450b9ac2d1a389942fbb7ae))
+
+
+### Features
+
+* 数据表 `app_id` 字段由 `int` 升级到 `bigint` ([28cabfe](https://github.com/miaoxing/logistics/commit/28cabfe90148ee4f30f537d244e18c4744063a3e))
+
+
+### BREAKING CHANGES
+
+* 数据表 `app_id` 字段由 `int` 升级到 `bigint`
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `0.2.2` to `0.2.3`
+* **@mxjs/a-form:** upgrade from `0.3.2` to `0.3.3`
+* **@mxjs/a-page:** upgrade from `0.3.2` to `0.3.3`
+* **@mxjs/a-table:** upgrade from `0.4.2` to `0.4.3`
+* **@mxjs/app:** upgrade from `0.4.1` to `0.4.2`
+* **@mxjs/test:** upgrade from `0.2.2` to `0.2.3`
+* **@miaoxing/admin:** upgrade from `0.5.2` to `0.6.0`
+* **@miaoxing/app:** upgrade from `0.6.0` to `0.6.1`
+* **@miaoxing/region:** upgrade from `0.2.3` to `0.2.4`
+
 ## [0.3.2](https://github.com/miaoxing/logistics/compare/v0.3.1...v0.3.2) (2022-02-28)
 
 
