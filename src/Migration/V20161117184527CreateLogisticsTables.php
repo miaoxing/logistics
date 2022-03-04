@@ -56,7 +56,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
 
         $this->schema->table('shipping_tpls')->tableComment('运费模板')
             ->bigId()
-            ->uInt('app_id')
+            ->uBigInt('app_id')
             ->string('service_ids', 64)->comment('支持的物流服务编号')
             ->string('name', 32)->comment('名称')
             ->uInt('send_region_id')->comment('发货地址')
@@ -71,7 +71,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
 
         $this->schema->table('shipping_tpl_rules')
             ->bigId()
-            ->uInt('app_id')
+            ->uBigInt('app_id')
             ->uBigInt('shipping_tpl_id')
             ->uSmallInt('service_id')->defaults(1)->comment('物流服务编号')
             ->bool('is_default')->comment('是否默认')
