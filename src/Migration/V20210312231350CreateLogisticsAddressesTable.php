@@ -13,6 +13,7 @@ class V20210312231350CreateLogisticsAddressesTable extends BaseMigration
     {
         $this->schema->table('logistics_addresses')->tableComment('物流地址')
             ->bigId()
+            ->uBigInt('app_id')->comment('应用编号')
             ->uInt('region_id')->comment('地区编号')
             ->string('name', 16)->comment('联系人姓名')
             ->string('phone', 16)->comment('联系人电话')

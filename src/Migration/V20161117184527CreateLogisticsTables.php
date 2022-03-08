@@ -13,7 +13,8 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
     public function up()
     {
         $this->schema->table('logistics_services')->tableComment('物流服务')
-            ->id()
+            ->bigId()
+            ->uBigInt('app_id')->comment('应用编号')
             ->string('name', 16)->comment('名称')
             ->timestamps()
             ->userstamps()
@@ -21,7 +22,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
             ->exec();
 
         $this->db->batchInsert('logistics_services', [
-            ['name' => '快递'],
+            ['app_id' => 1, 'name' => '快递'],
         ]);
 
         $this->schema->table('logistics_providers')->tableComment('物流服务商')
@@ -111,6 +112,7 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
 
         $this->db->batchInsert('shipping_tpl_rules', [
             [
+                'app_id' => 1,
                 'shipping_tpl_id' => 2,
                 'is_default' => true,
                 'start_amount' => 1,
