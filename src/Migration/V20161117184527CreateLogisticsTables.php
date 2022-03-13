@@ -132,9 +132,11 @@ class V20161117184527CreateLogisticsTables extends BaseMigration
      */
     public function down()
     {
-        $this->schema->dropIfExists('logistics_services');
-        $this->schema->dropIfExists('logistics_providers');
-        $this->schema->dropIfExists('shipping_tpls');
-        $this->schema->dropIfExists('shipping_tpl_rules');
+        $this->schema->dropIfExists([
+            'logistics_services',
+            'logistics_providers',
+            'shipping_tpls',
+            'shipping_tpl_rules',
+        ]);
     }
 }
