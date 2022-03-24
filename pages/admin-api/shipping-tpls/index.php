@@ -14,8 +14,8 @@ return new class () extends BaseController {
 
     public function get()
     {
-        return IndexAction
-            ::beforeFind(function (ShippingTplModel $models) {
+        return IndexAction::new()
+            ->beforeFind(function (ShippingTplModel $models) {
                 $models->setDefaultSortColumn(['sort', 'id']);
             })
             ->exec($this);

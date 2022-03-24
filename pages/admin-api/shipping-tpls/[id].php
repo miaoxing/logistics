@@ -15,8 +15,8 @@ return new class () extends BaseController {
 
     public function patch()
     {
-        return UpdateAction
-            ::beforeSave(function (ShippingTplModel $shippingTpl, $req) {
+        return UpdateAction::new()
+            ->beforeSave(function (ShippingTplModel $shippingTpl, $req) {
                 $shippingTpl->serviceIds = array_filter(array_unique(array_column((array) $req['rules'], 'serviceId')));
 
                 return V::defaultOptional()

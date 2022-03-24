@@ -14,8 +14,8 @@ return new class () extends BaseController {
 
     public function get()
     {
-        return IndexAction
-            ::beforeFind(function (LogisticsAddressModel $models) {
+        return IndexAction::new()
+            ->beforeFind(function (LogisticsAddressModel $models) {
                 $models->setDefaultSortColumn(['sort', 'id']);
             })
             ->afterFind(function (LogisticsAddressModel $models) {

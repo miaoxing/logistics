@@ -24,8 +24,8 @@ return new class () extends BaseController {
 
     public function patch()
     {
-        return UpdateAction
-            ::beforeSave(function (LogisticsAddressModel $address, $req) {
+        return UpdateAction::new()
+            ->beforeSave(function (LogisticsAddressModel $address, $req) {
                 return V::defaultOptional()
                     ->char('name', '联系人姓名', 0, 16)->required($address->isNew())->notBlank()
                     ->char('phone', '联系人电话', 0, 16)->required($address->isNew())->notBlank()
