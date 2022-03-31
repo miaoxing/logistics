@@ -1,3 +1,32 @@
+# [0.5.0](https://github.com/miaoxing/logistics/compare/v0.4.0...v0.5.0) (2022-03-31)
+
+
+### Bug Fixes
+
+* 数据表增加 `app_id` 字段 ([8aee552](https://github.com/miaoxing/logistics/commit/8aee5528b84789f0e2870384941f932c652fee1c))
+
+
+### BREAKING CHANGES
+
+* 数据表增加 `app_id` 字段
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `0.2.3` to `0.2.4`
+* **@mxjs/a-form:** upgrade from `0.3.3` to `0.3.4`
+* **@mxjs/a-page:** upgrade from `0.3.3` to `0.3.4`
+* **@mxjs/a-table:** upgrade from `0.4.3` to `0.4.4`
+* **@mxjs/app:** upgrade from `0.4.2` to `0.4.3`
+* **@mxjs/box:** upgrade from `0.3.1` to `0.3.2`
+* **@mxjs/test:** upgrade from `0.2.3` to `0.2.4`
+* **@miaoxing/admin:** upgrade from `0.6.0` to `0.7.0`
+* **@miaoxing/app:** upgrade from `0.6.1` to `0.6.2`
+* **@miaoxing/region:** upgrade from `0.2.4` to `0.2.5`
+
 # [0.4.0](https://github.com/miaoxing/logistics/compare/v0.3.2...v0.4.0) (2022-03-04)
 
 
