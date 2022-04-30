@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/logistics",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "main": "index.js",
   "author": "twinh",
@@ -15,8 +15,8 @@
     "@ant-design/icons": "^4.6.2",
     "@miaoxing/dev": "^8.1.0",
     "@mxjs/a-clink": "^0.2.4",
-    "@mxjs/a-form": "^0.3.4",
-    "@mxjs/a-page": "^0.3.4",
+    "@mxjs/a-form": "^0.3.5",
+    "@mxjs/a-page": "^0.3.5",
     "@mxjs/a-region-cascader": "^0.1.15",
     "@mxjs/a-table": "^0.4.4",
     "@mxjs/a-input": "^0.1.2",
