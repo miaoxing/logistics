@@ -42,7 +42,17 @@ export default () => {
           <Input maxLength={16}/>
         </FormItem>
 
-        <FormItem label="地区" name="regionIds" required>
+        <FormItem label="地区" name="regionIds" required
+          rules={[
+            {
+              validator: async (rule, value) => {
+                if (value && value.length !== 3) {
+                  throw new Error('请选择地区到第三级');
+                }
+              },
+            },
+          ]}
+        >
           <RegionCascader parentId="中国" url={$.apiUrl('regions')} fieldNames={{
             label: 'shortName',
             value: 'id',
