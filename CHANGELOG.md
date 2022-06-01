@@ -1,3 +1,33 @@
+## [0.5.2](https://github.com/miaoxing/logistics/compare/v0.5.1...v0.5.2) (2022-06-01)
+
+
+### Bug Fixes
+
+* **logistics:** 校验地区要选择到第三级 ([885974d](https://github.com/miaoxing/logistics/commit/885974d0f18376308f1e5d9f3e1ce0e3268fe734))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.1.0` to `8.1.1`
+* **@mxjs/a-clink:** upgrade from `0.2.4` to `0.2.5`
+* **@mxjs/a-form:** upgrade from `0.3.5` to `0.3.6`
+* **@mxjs/a-page:** upgrade from `0.3.5` to `0.3.6`
+* **@mxjs/a-region-cascader:** upgrade from `0.1.15` to `0.1.16`
+* **@mxjs/a-table:** upgrade from `0.4.4` to `0.4.5`
+* **@mxjs/a-input:** upgrade from `0.1.2` to `0.1.3`
+* **@mxjs/actions:** upgrade from `0.2.2` to `0.2.3`
+* **@mxjs/app:** upgrade from `0.4.3` to `0.5.0`
+* **@mxjs/box:** upgrade from `0.3.2` to `0.3.3`
+* **@mxjs/test:** upgrade from `0.2.4` to `0.2.5`
+* **jest-preset-miaoxing:** upgrade from `0.3.0` to `0.3.1`
+* **miaoxing:** upgrade from `0.4.1` to `0.4.2`
+* **@miaoxing/admin:** upgrade from `0.7.1` to `0.7.2`
+* **@miaoxing/app:** upgrade from `0.6.3` to `0.6.4`
+* **@miaoxing/region:** upgrade from `0.2.6` to `0.2.7`
+
 ## [0.5.1](https://github.com/miaoxing/logistics/compare/v0.5.0...v0.5.1) (2022-04-30)
 
 
