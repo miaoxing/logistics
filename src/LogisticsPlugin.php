@@ -3,6 +3,7 @@
 namespace Miaoxing\Logistics;
 
 use Miaoxing\Address\Service\Address;
+use Miaoxing\Admin\Service\AdminMenu;
 use Miaoxing\Logistics\Service\Logistics;
 use Miaoxing\Order\Service\Order;
 use Miaoxing\Product\Service\Product;
@@ -14,21 +15,11 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
 
     protected $name = '物流管理,包括运费模板等';
 
-    public function onAdminNavGetNavs(&$navs, &$categories, &$subCategories)
+    public function onAdminMenuGetMenus(AdminMenu $menu)
     {
-        $subCategories[] = [
-            'parentId' => 'setting',
-            'url' => 'admin/shipping-tpls',
-            'name' => '运费模板管理',
-            'sort' => 20,
-        ];
-
-        $subCategories[] = [
-            'parentId' => 'setting',
-            'url' => 'admin/logistics-addresses',
-            'name' => '地址管理',
-            'sort' => 10,
-        ];
+        $setting = $menu->child('setting');
+        $setting->addChild()->setLabel('运费模板管理')->setUrl('admin/shipping-tpls')->setSort(200);
+        $setting->addChild()->setLabel('地址管理')->setUrl('admin/logistics-addresses')->setSort(100);
     }
 
     /**
