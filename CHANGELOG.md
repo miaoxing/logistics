@@ -1,3 +1,20 @@
+## [0.5.5](https://github.com/miaoxing/logistics/compare/v0.5.4...v0.5.5) (2022-07-02)
+
+
+### Bug Fixes
+
+* 解决 composer 2.2+ 默认不启用插件导致安装路径错误 ([ec221c6](https://github.com/miaoxing/logistics/commit/ec221c6bb0956ed8c6df12a38e78cd0add7fa6fa))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/admin:** upgrade from `0.8.0` to `0.8.1`
+* **@miaoxing/app:** upgrade from `0.6.5` to `0.6.6`
+* **@miaoxing/region:** upgrade from `0.2.8` to `0.2.9`
+
 ## [0.5.4](https://github.com/miaoxing/logistics/compare/v0.5.3...v0.5.4) (2022-07-01)
 
 
