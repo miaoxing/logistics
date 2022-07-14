@@ -26,16 +26,16 @@ return new class () extends BaseController {
     {
         return UpdateAction::new()
             ->beforeSave(function (LogisticsAddressModel $address, $req) {
-                return V::defaultOptional()
-                    ->char('name', '联系人姓名', 0, 16)->required($address->isNew())->notBlank()
-                    ->char('phone', '联系人电话', 0, 16)->required($address->isNew())->notBlank()
-                    ->uDefaultInt('regionId', '地区')->required($address->isNew())->notBlank()
-                    ->tinyChar('address', '详细地址')->required($address->isNew())->notBlank()
-                    ->char('postalCode', '邮编', 0, 8)
-                    ->array('type', '使用场景')
-                    ->tinyChar('remark', '备注')
-                    ->uSmallInt('sort', '顺序')
-                    ->check($req);
+                $v = V::defaultOptional();
+                $v->char('name', '联系人姓名', 0, 16)->required($address->isNew())->notBlank();
+                $v->char('phone', '联系人电话', 0, 16)->required($address->isNew())->notBlank();
+                $v->uDefaultInt('regionId', '地区')->required($address->isNew())->notBlank();
+                $v->tinyChar('address', '详细地址')->required($address->isNew())->notBlank();
+                $v->char('postalCode', '邮编', 0, 8);
+                $v->array('type', '使用场景');
+                $v->tinyChar('remark', '备注');
+                $v->uSmallInt('sort', '顺序');
+                return $v->check($req);
             })
             ->exec($this);
     }

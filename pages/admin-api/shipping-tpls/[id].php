@@ -19,28 +19,26 @@ return new class () extends BaseController {
             ->beforeSave(function (ShippingTplModel $shippingTpl, $req) {
                 $shippingTpl->serviceIds = array_filter(array_unique(array_column((array) $req['rules'], 'serviceId')));
 
-                return V::defaultOptional()
-                    ->tinyChar('name', '名称')->required($shippingTpl->isNew())->notBlank()
-                    ->bool('isFreeShipping', '是否包邮')
-                    ->string('valuationType', '计价方式')->in([
-                        [
-                            ShippingTplModel::VALUATION_TYPE_BY_PIECE,
-                            ShippingTplModel::VALUATION_TYPE_BY_WEIGHT,
-                        ],
-                    ])
-                    ->array('rules', '运费规则')->required($this->isRulesRequired($shippingTpl))
-                    ->each(function (V $v) {
-                        $isDefault = $v->getData()['isDefault'] ?? false;
-                        $v
-                            ->uDefaultInt('serviceId', '服务编号')
-                            ->array('regionIds', '地区', $isDefault ? null : 1)->required(!$isDefault)
-                            ->uSmallInt('startAmount', '首费数量', 1)
-                            ->uNumber('startFee', '首费金额', 10, 2)
-                            ->uSmallInt('addAmount', '增费数量', 1)
-                            ->uNumber('addFee', '增费金额', 10, 2);
-                    })
-                    ->uSmallInt('sort', '顺序')
-                    ->check($req);
+                $v = V::defaultOptional();
+                $v->tinyChar('name', '名称')->required($shippingTpl->isNew())->notBlank();
+                $v->bool('isFreeShipping', '是否包邮');
+                $v->string('valuationType', '计价方式')->in([
+                    [
+                        ShippingTplModel::VALUATION_TYPE_BY_PIECE,
+                        ShippingTplModel::VALUATION_TYPE_BY_WEIGHT,
+                    ],
+                ]);
+                $v->array('rules', '运费规则')->required($this->isRulesRequired($shippingTpl))->each(function (V $v) {
+                    $isDefault = $v->getData()['isDefault'] ?? false;
+                    $v->uDefaultInt('serviceId', '服务编号');
+                    $v->array('regionIds', '地区', $isDefault ? null : 1)->required(!$isDefault);
+                    $v->uSmallInt('startAmount', '首费数量', 1);
+                    $v->uNumber('startFee', '首费金额', 10, 2);
+                    $v->uSmallInt('addAmount', '增费数量', 1);
+                    $v->uNumber('addFee', '增费金额', 10, 2);
+                });
+                $v->uSmallInt('sort', '顺序');
+                return $v->check($req);
             })
             ->afterSave(function (ShippingTplModel $shippingTpl, $req) {
                 if ($req['rules']) {
