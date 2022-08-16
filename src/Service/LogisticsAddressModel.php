@@ -8,8 +8,8 @@ use Miaoxing\Plugin\Model\HasAppIdTrait;
 use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
 use Miaoxing\Plugin\Model\SnowflakeTrait;
-use Miaoxing\Plugin\Model\SoftDeleteTrait;
 use Miaoxing\Region\Service\RegionModel;
+use Wei\Model\SoftDeleteTrait;
 
 /**
  * @property RegionModel $region
