@@ -97,9 +97,7 @@ describe(path, () => {
       }))
       // 提交
       .mockImplementationOnce(() => promise5.resolve({
-        ret: {
-          code: 1,
-        },
+        ret: Ret.suc(),
       }));
 
     const {getByLabelText} = render(<MemoryRouter>
