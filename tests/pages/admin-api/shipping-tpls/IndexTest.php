@@ -79,7 +79,7 @@ class IndexTest extends BaseTestCase
             'valuationType' => 'a',
         ]);
 
-        $this->assertRetErr($ret, '计价方式必须在指定的数据中:1, 2');
+        $this->assertRetErr($ret, '计价方式必须在指定的数据中');
     }
 
     public function testPostWithoutRules()

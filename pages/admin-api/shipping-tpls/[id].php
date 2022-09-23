@@ -22,12 +22,7 @@ return new class () extends BaseController {
                 $v = V::defaultOptional();
                 $v->tinyChar('name', '名称')->required($shippingTpl->isNew())->notBlank();
                 $v->bool('isFreeShipping', '是否包邮');
-                $v->string('valuationType', '计价方式')->in([
-                    [
-                        ShippingTplModel::VALUATION_TYPE_BY_PIECE,
-                        ShippingTplModel::VALUATION_TYPE_BY_WEIGHT,
-                    ],
-                ]);
+                $v->inConst('valuationType', '计价方式', ShippingTplModel::class, 'VALUATION_TYPE');
                 $v->array('rules', '运费规则')->required($this->isRulesRequired($shippingTpl))->each(function (V $v) {
                     $isDefault = $v->getData()['isDefault'] ?? false;
                     $v->uDefaultInt('serviceId', '服务编号');
