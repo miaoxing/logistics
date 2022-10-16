@@ -38,7 +38,7 @@ const NumberFormItem = (props) => {
 
 const verticalAlignBaseline = css({verticalAlign: 'baseline'});
 
-export default () => {
+const New = () => {
   const form = useRef();
 
   // 加载区域
@@ -300,3 +300,5 @@ export default () => {
     </Page>
   );
 };
+
+export default New;

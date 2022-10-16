@@ -8,7 +8,7 @@ const typeNames = {
   1: '退货',
 };
 
-export default () => {
+const Index = () => {
   const [table] = useTable();
 
   return (
@@ -71,3 +71,5 @@ export default () => {
     </Page>
   );
 };
+
+export default Index;

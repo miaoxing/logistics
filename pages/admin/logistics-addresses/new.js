@@ -10,7 +10,7 @@ import $ from 'miaoxing';
 import {FormItemSort} from '@miaoxing/admin';
 import Input from '@mxjs/a-input';
 
-export default () => {
+const New = () => {
   return (
     <Page>
       <PageActions>
@@ -93,3 +93,5 @@ export default () => {
     </Page>
   );
 };
+
+export default New;

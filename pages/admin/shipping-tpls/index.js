@@ -3,7 +3,7 @@ import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {LinkActions} from '@mxjs/actions';
 
-export default () => {
+const Index = () => {
   const [table] = useTable();
 
   return (
@@ -51,3 +51,5 @@ export default () => {
     </Page>
   );
 };
+
+export default Index;
