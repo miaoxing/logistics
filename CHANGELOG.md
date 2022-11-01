@@ -1,3 +1,23 @@
+## [0.5.9](https://github.com/miaoxing/logistics/compare/v0.5.8...v0.5.9) (2022-11-01)
+
+
+### Bug Fixes
+
+* **logistics:** 解决使用场景检查错误 ([39c8a88](https://github.com/miaoxing/logistics/commit/39c8a88b1e3423af189ad3d26db37fc853dea686))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `1.0.1` to `1.1.0`
+* **@mxjs/a-form:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/a-table:** upgrade from `1.1.0` to `1.1.1`
+* **@miaoxing/admin:** upgrade from `0.9.2` to `0.9.3`
+* **@miaoxing/app:** upgrade from `0.6.9` to `0.6.10`
+* **@miaoxing/region:** upgrade from `0.2.12` to `0.2.13`
+
 ## [0.5.8](https://github.com/miaoxing/logistics/compare/v0.5.7...v0.5.8) (2022-09-30)
 
 
