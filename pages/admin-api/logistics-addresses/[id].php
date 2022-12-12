@@ -32,7 +32,7 @@ return new class () extends BaseController {
                 $v->uDefaultInt('regionId', '地区')->required($address->isNew())->notBlank();
                 $v->tinyChar('address', '详细地址')->required($address->isNew())->notBlank();
                 $v->char('postalCode', '邮编', 0, 8);
-                $v->array('types', '使用场景', 0, 8)->each(function (V $v) {
+                $v->array('types', '使用场景', 0, 8)->unique()->each(function (V $v) {
                     $v->self()->label('值')->inConst(LogisticsAddressModel::class, 'TYPE');
                 });
                 $v->tinyChar('remark', '备注');
