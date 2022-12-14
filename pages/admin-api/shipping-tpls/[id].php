@@ -20,8 +20,9 @@ return new class () extends BaseController {
                 $shippingTpl->serviceIds = array_filter(array_unique(array_column((array) $req['rules'], 'serviceId')));
 
                 $v = V::defaultOptional();
-                $v->tinyChar('name', '名称')->required($shippingTpl->isNew())->notBlank();
-                $v->bool('isFreeShipping', '是否包邮');
+                $v->setModel($shippingTpl);
+                $v->modelColumn('name', '名称')->required($shippingTpl->isNew())->notBlank();
+                $v->modelColumn('isFreeShipping', '是否包邮');
                 $v->inConst('valuationType', '计价方式', ShippingTplModel::class, 'VALUATION_TYPE');
                 $v->array('rules', '运费规则')->required($this->isRulesRequired($shippingTpl))->each(function (V $v) {
                     $isDefault = $v->getData()['isDefault'] ?? false;
@@ -32,7 +33,7 @@ return new class () extends BaseController {
                     $v->uSmallInt('addAmount', '增费数量', 1);
                     $v->uNumber('addFee', '增费金额', 10, 2);
                 });
-                $v->uSmallInt('sort', '顺序');
+                $v->modelColumn('sort', '顺序');
                 return $v->check($req);
             })
             ->afterSave(function (ShippingTplModel $shippingTpl, $req) {
