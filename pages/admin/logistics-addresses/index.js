@@ -3,13 +3,23 @@ import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {LinkActions} from '@mxjs/actions';
 import {Tag} from 'antd';
-
-const typeNames = {
-  1: '退货',
-};
+import {useState} from 'react';
+import useAsyncEffect from 'use-async-effect';
+import api from '@mxjs/api';
+import $ from 'miaoxing';
 
 const Index = () => {
   const [table] = useTable();
+
+  const [types, setTypes] = useState({});
+  useAsyncEffect(async () => {
+    const {ret} = await api.get('consts/logisticsAddressModel-type');
+    if (ret.isErr()) {
+      $.ret(ret);
+      return;
+    }
+    setTypes(ret.data.items);
+  }, []);
 
   return (
     <Page>
@@ -43,7 +53,7 @@ const Index = () => {
               title: '使用场景',
               dataIndex: 'types',
               render: (value) => value.length ?
-                value.map(type => <Tag key={type} color="orange">{typeNames[type]}</Tag>) : '-',
+                value.map(type => <Tag key={type} color="orange">{types?.[type]?.name}</Tag>) : '-',
             },
             {
               title: '顺序',

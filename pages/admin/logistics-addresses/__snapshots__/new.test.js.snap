@@ -18,6 +18,12 @@ exports[`admin/logistics-addresses form 1`] = `
     Array [
       Object {
         "method": "get",
+        "url": "/admin-api/consts/logisticsAddressModel-type",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
         "url": "/admin-api/regions?parentId=140000",
       },
     ],
@@ -29,6 +35,13 @@ exports[`admin/logistics-addresses form 1`] = `
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
     Object {
       "type": "return",
       "value": Promise {
@@ -79,6 +92,12 @@ exports[`admin/logistics-addresses form 2`] = `
     Array [
       Object {
         "method": "get",
+        "url": "/admin-api/consts/logisticsAddressModel-type",
+      },
+    ],
+    Array [
+      Object {
+        "method": "get",
         "url": "/admin-api/regions?parentId=140000",
       },
     ],
@@ -113,6 +132,13 @@ exports[`admin/logistics-addresses form 2`] = `
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": Promise {
+        "reject": [Function],
+        "resolve": [Function],
+      },
+    },
     Object {
       "type": "return",
       "value": Promise {

@@ -30,6 +30,7 @@ describe(path, () => {
     const promise3 = createPromise();
     const promise4 = createPromise();
     const promise5 = createPromise();
+    const promise6 = createPromise();
 
     $.http = jest.fn()
       // 读取一级地区
@@ -71,8 +72,22 @@ describe(path, () => {
           },
         }),
       }))
-      // 读取二级地区
+      // 读取使用场景
       .mockImplementationOnce(() => promise3.resolve({
+        ret: Ret.suc({
+          data: {
+            items: {
+              1: {
+                id: 1,
+                key: 'return',
+                name: '退货',
+              },
+            },
+          },
+        }),
+      }))
+      // 读取二级地区
+      .mockImplementationOnce(() => promise4.resolve({
         ret: Ret.suc({
           data: [{
             id: 140200,
@@ -84,7 +99,7 @@ describe(path, () => {
         }),
       }))
       // 读取三级地区
-      .mockImplementationOnce(() => promise4.resolve({
+      .mockImplementationOnce(() => promise5.resolve({
         ret: Ret.suc({
           data: [{
             hasChildren: false,
@@ -96,7 +111,7 @@ describe(path, () => {
         }),
       }))
       // 提交
-      .mockImplementationOnce(() => promise5.resolve({
+      .mockImplementationOnce(() => promise6.resolve({
         ret: Ret.suc(),
       }));
 
@@ -104,8 +119,8 @@ describe(path, () => {
       <Page/>
     </MemoryRouter>);
 
-    await Promise.all([promise, promise2, promise3, promise4]);
-    expect($.http).toHaveBeenCalledTimes(4);
+    await Promise.all([promise, promise2, promise3, promise4, promise5]);
+    expect($.http).toHaveBeenCalledTimes(5);
     expect($.http).toMatchSnapshot();
 
     // 看到表单加载了数据
@@ -115,8 +130,8 @@ describe(path, () => {
     // 提交表单
     fireEvent.click(screen.getByText('提 交'));
 
-    await Promise.all([promise5]);
-    expect($.http).toHaveBeenCalledTimes(5);
+    await Promise.all([promise6]);
+    expect($.http).toHaveBeenCalledTimes(6);
     expect($.http).toMatchSnapshot();
   });
 });

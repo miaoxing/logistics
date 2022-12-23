@@ -4,6 +4,7 @@ namespace Miaoxing\Logistics\Service;
 
 use Miaoxing\Logistics\Metadata\LogisticsAddressTrait;
 use Miaoxing\Plugin\BaseModel;
+use Miaoxing\Plugin\ConstTrait;
 use Miaoxing\Plugin\Model\HasAppIdTrait;
 use Miaoxing\Plugin\Model\ModelTrait;
 use Miaoxing\Plugin\Model\ReqQueryTrait;
@@ -16,6 +17,7 @@ use Wei\Model\SoftDeleteTrait;
  */
 class LogisticsAddressModel extends BaseModel
 {
+    use ConstTrait;
     use HasAppIdTrait;
     use LogisticsAddressTrait;
     use ModelTrait;

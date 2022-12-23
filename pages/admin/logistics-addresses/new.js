@@ -5,12 +5,25 @@ import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
 import {Form, FormAction, FormItem} from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
-import {Checkbox, Col, Row} from 'antd';
+import {Checkbox} from 'antd';
 import $ from 'miaoxing';
 import {FormItemSort} from '@miaoxing/admin';
 import Input from '@mxjs/a-input';
+import {useState} from 'react';
+import useAsyncEffect from 'use-async-effect';
+import api from '@mxjs/api';
 
 const New = () => {
+  const [types, setTypes] = useState([]);
+  useAsyncEffect(async () => {
+    const {ret} = await api.get('consts/logisticsAddressModel-type');
+    if (ret.isErr()) {
+      $.ret(ret);
+      return;
+    }
+    setTypes(Object.values(ret.data.items));
+  }, []);
+
   return (
     <Page>
       <PageActions>
@@ -70,13 +83,11 @@ const New = () => {
 
         <FormItem label="使用场景" name="types">
           <Checkbox.Group>
-            <Row>
-              <Col span={32}>
-                <Checkbox value={1}>
-                  退货
-                </Checkbox>
-              </Col>
-            </Row>
+            {types.map(type => (
+              <Checkbox key={type.id} value={type.id}>
+                {type.name}
+              </Checkbox>
+            ))}
           </Checkbox.Group>
         </FormItem>
 

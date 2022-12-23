@@ -25,10 +25,25 @@ describe(path, () => {
 
   test('index', async () => {
     const promise = createPromise();
+    const promise2 = createPromise();
 
     $.http = jest.fn()
-      // 读取列表数据
+      // 读取使用场景
       .mockImplementationOnce(() => promise.resolve({
+        ret: Ret.suc({
+          data: {
+            items: {
+              1: {
+                id: 1,
+                key: 'return',
+                name: '退货',
+              },
+            },
+          },
+        }),
+      }))
+      // 读取列表数据
+      .mockImplementationOnce(() => promise2.resolve({
         ret: Ret.suc({
           data: [
             {
@@ -67,8 +82,8 @@ describe(path, () => {
     await findByText('51');
     await findByText('2020-01-01 00:00:00');
 
-    await Promise.all([promise]);
-    expect($.http).toHaveBeenCalledTimes(1);
+    await Promise.all([promise, promise2]);
+    expect($.http).toHaveBeenCalledTimes(2);
     expect($.http).toMatchSnapshot();
   });
 });
