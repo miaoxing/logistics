@@ -1,3 +1,32 @@
+## [0.5.12](https://github.com/miaoxing/logistics/compare/v0.5.11...v0.5.12) (2023-01-01)
+
+
+### Bug Fixes
+
+* **logistics:** 检查使用场景不能包含相同的值 ([40b0192](https://github.com/miaoxing/logistics/commit/40b0192eb4f02f64461e203b60725dd3da116114))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.1.3` to `8.2.0`
+* **@mxjs/a-clink:** upgrade from `1.1.2` to `1.1.3`
+* **@mxjs/a-form:** upgrade from `1.1.4` to `1.1.5`
+* **@mxjs/a-page:** upgrade from `1.1.1` to `1.1.2`
+* **@mxjs/a-region-cascader:** upgrade from `1.0.1` to `1.0.2`
+* **@mxjs/a-table:** upgrade from `1.2.0` to `1.2.1`
+* **@mxjs/a-input:** upgrade from `1.0.1` to `1.0.2`
+* **@mxjs/actions:** upgrade from `0.2.5` to `0.2.6`
+* **@mxjs/app:** upgrade from `0.5.3` to `0.5.4`
+* **@mxjs/box:** upgrade from `0.3.5` to `0.3.6`
+* **@mxjs/test:** upgrade from `1.0.2` to `1.0.3`
+* **miaoxing:** upgrade from `0.4.5` to `0.4.6`
+* **@miaoxing/admin:** upgrade from `0.9.5` to `0.9.6`
+* **@miaoxing/app:** upgrade from `0.6.11` to `0.6.12`
+* **@miaoxing/region:** upgrade from `0.2.14` to `0.2.15`
+
 ## [0.5.11](https://github.com/miaoxing/logistics/compare/v0.5.10...v0.5.11) (2022-12-01)
 
 
