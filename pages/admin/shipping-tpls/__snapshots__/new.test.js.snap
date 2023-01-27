@@ -5,6 +5,7 @@ exports[`admin/shipping-tpls form 1`] = `
   "calls": Array [
     Array [
       Object {
+        "loading": true,
         "method": "get",
         "url": "/admin-api/shipping-tpls/defaults",
       },
@@ -40,6 +41,7 @@ exports[`admin/shipping-tpls form 2`] = `
   "calls": Array [
     Array [
       Object {
+        "loading": true,
         "method": "get",
         "url": "/admin-api/shipping-tpls/defaults",
       },

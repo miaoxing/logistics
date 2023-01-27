@@ -11,6 +11,7 @@ exports[`admin/logistics-addresses form 1`] = `
     ],
     Array [
       Object {
+        "loading": true,
         "method": "get",
         "url": "/admin-api/logistics-addresses/defaults",
       },
@@ -85,6 +86,7 @@ exports[`admin/logistics-addresses form 2`] = `
     ],
     Array [
       Object {
+        "loading": true,
         "method": "get",
         "url": "/admin-api/logistics-addresses/defaults",
       },
