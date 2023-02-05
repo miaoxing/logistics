@@ -18,8 +18,14 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
     public function onAdminMenuGetMenus(AdminMenu $menu)
     {
         $setting = $menu->child('setting');
-        $setting->addChild()->setLabel('运费模板管理')->setUrl('admin/shipping-tpls')->setSort(200);
-        $setting->addChild()->setLabel('地址管理')->setUrl('admin/logistics-addresses')->setSort(100);
+
+        $tpls = $setting->addChild()->setLabel('运费模板管理')->setUrl('admin/shipping-tpls')->setSort(200);
+        $tpls->addChild()->setUrl('admin/shipping-tpls/new')->setLabel('添加');
+        $tpls->addChild()->setUrl('admin/shipping-tpls/[id]/edit')->setLabel('编辑');
+
+        $addresses = $setting->addChild()->setLabel('地址管理')->setUrl('admin/logistics-addresses')->setSort(100);
+        $addresses->addChild()->setUrl('admin/logistics-addresses/new')->setLabel('添加');
+        $addresses->addChild()->setUrl('admin/logistics-addresses/[id]/edit')->setLabel('编辑');
     }
 
     /**
