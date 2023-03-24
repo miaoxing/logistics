@@ -1,7 +1,6 @@
-import {CTableDeleteLink, Table, TableProvider, useTable} from '@mxjs/a-table';
+import {CTableDeleteLink, Table, TableActions, TableProvider, useTable} from '@mxjs/a-table';
 import {CEditLink, CNewBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
-import {LinkActions} from '@mxjs/actions';
 import {Tag} from 'antd';
 import {useState} from 'react';
 import useAsyncEffect from 'use-async-effect';
@@ -69,10 +68,10 @@ const Index = () => {
               title: '操作',
               dataIndex: 'id',
               render: (id) => (
-                <LinkActions>
+                <TableActions>
                   <CEditLink id={id}/>
                   <CTableDeleteLink id={id}/>
-                </LinkActions>
+                </TableActions>
               ),
             },
           ]}
