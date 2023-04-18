@@ -1,3 +1,18 @@
+## [0.5.16](https://github.com/miaoxing/logistics/compare/v0.5.15...v0.5.16) (2023-04-18)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `1.2.0` to `1.2.1`
+* **@mxjs/a-form:** upgrade from `1.2.1` to `1.2.2`
+* **@mxjs/a-page:** upgrade from `2.1.0` to `2.1.1`
+* **@mxjs/a-table:** upgrade from `1.4.0` to `1.4.1`
+* **@mxjs/actions:** upgrade from `0.2.9` to `0.2.10`
+* **@miaoxing/admin:** upgrade from `0.10.1` to `0.10.2`
+
 ## [0.5.15](https://github.com/miaoxing/logistics/compare/v0.5.14...v0.5.15) (2023-04-15)
 
 
