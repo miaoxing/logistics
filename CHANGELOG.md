@@ -1,3 +1,32 @@
+## [0.5.18](https://github.com/miaoxing/logistics/compare/v0.5.17...v0.5.18) (2023-05-31)
+
+
+### Features
+
+* **antd5:** 更新 `antd` 到 `5.1.6` ([bd79a43](https://github.com/miaoxing/logistics/commit/bd79a430df215069d885f090bf714b8d654088aa))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `8.2.0` to `8.2.1`
+* **@mxjs/a-clink:** upgrade from `1.2.1` to `1.2.2`
+* **@mxjs/a-form:** upgrade from `1.3.0` to `1.4.0`
+* **@mxjs/a-page:** upgrade from `2.1.1` to `2.1.2`
+* **@mxjs/a-region-cascader:** upgrade from `1.0.2` to `1.0.3`
+* **@mxjs/a-table:** upgrade from `1.4.2` to `1.5.0`
+* **@mxjs/a-input:** upgrade from `1.1.0` to `1.2.0`
+* **@mxjs/actions:** upgrade from `0.2.10` to `0.2.11`
+* **@mxjs/app:** upgrade from `0.5.4` to `0.5.5`
+* **@mxjs/box:** upgrade from `0.3.6` to `0.3.7`
+* **@mxjs/test:** upgrade from `1.0.3` to `1.0.4`
+* **miaoxing:** upgrade from `0.4.6` to `0.4.7`
+* **@miaoxing/admin:** upgrade from `0.10.3` to `0.10.4`
+* **@miaoxing/app:** upgrade from `0.7.2` to `0.7.3`
+* **@miaoxing/region:** upgrade from `0.2.19` to `0.2.20`
+
 ## [0.5.17](https://github.com/miaoxing/logistics/compare/v0.5.16...v0.5.17) (2023-04-30)
 
 
