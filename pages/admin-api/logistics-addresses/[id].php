@@ -25,7 +25,7 @@ return new class () extends BaseController {
     public function patch()
     {
         return UpdateAction::new()
-            ->beforeSave(function (LogisticsAddressModel $address, $req) {
+            ->validate(function (LogisticsAddressModel $address, $req) {
                 $v = V::defaultOptional();
                 $v->setModel($address);
                 $v->modelColumn('name', '联系人姓名')->required($address->isNew())->notBlank();
