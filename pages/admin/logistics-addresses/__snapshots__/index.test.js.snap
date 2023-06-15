@@ -6,13 +6,13 @@ exports[`admin/logistics-addresses index 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/consts/logisticsAddressModel-type",
+        "url": "/api/admin/consts/logisticsAddressModel-type",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/logistics-addresses?page=1&limit=20",
+        "url": "/api/admin/logistics-addresses?page=1&limit=20",
       },
     ],
   ],

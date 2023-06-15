@@ -1,6 +1,6 @@
 <?php
 
-namespace MiaoxingTest\Logistics\Pages\AdminApi\ShippingTpls;
+namespace MiaoxingTest\Logistics\Pages\Api\Admin\ShippingTpls;
 
 use Miaoxing\Logistics\Service\ShippingTplModel;
 use Miaoxing\Plugin\Service\Tester;

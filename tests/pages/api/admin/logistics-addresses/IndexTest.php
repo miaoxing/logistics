@@ -1,6 +1,6 @@
 <?php
 
-namespace MiaoxingTest\Logistics\Pages\AdminApi\LogisticsAddresses;
+namespace MiaoxingTest\Logistics\Pages\Api\Admin\LogisticsAddresses;
 
 use Miaoxing\Logistics\Service\LogisticsAddressModel;
 use Miaoxing\Plugin\Service\Tester;

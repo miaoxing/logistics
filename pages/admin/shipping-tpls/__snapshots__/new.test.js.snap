@@ -7,13 +7,13 @@ exports[`admin/shipping-tpls form 1`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/admin-api/shipping-tpls/defaults",
+        "url": "/api/admin/shipping-tpls/defaults",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
+        "url": "/api/admin/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
       },
     ],
   ],
@@ -43,13 +43,13 @@ exports[`admin/shipping-tpls form 2`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/admin-api/shipping-tpls/defaults",
+        "url": "/api/admin/shipping-tpls/defaults",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
+        "url": "/api/admin/regions?virtual=0&parentId=%E4%B8%AD%E5%9B%BD&include=children",
       },
     ],
     Array [
@@ -87,7 +87,7 @@ exports[`admin/shipping-tpls form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/admin-api/shipping-tpls",
+        "url": "/api/admin/shipping-tpls",
       },
     ],
   ],

@@ -6,32 +6,32 @@ exports[`admin/logistics-addresses form 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?parentId=%E4%B8%AD%E5%9B%BD",
+        "url": "/api/admin/regions?parentId=%E4%B8%AD%E5%9B%BD",
       },
     ],
     Array [
       Object {
         "loading": true,
         "method": "get",
-        "url": "/admin-api/logistics-addresses/defaults",
+        "url": "/api/admin/logistics-addresses/defaults",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/consts/logisticsAddressModel-type",
+        "url": "/api/admin/consts/logisticsAddressModel-type",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?parentId=140000",
+        "url": "/api/admin/regions?parentId=140000",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?parentId=140200",
+        "url": "/api/admin/regions?parentId=140200",
       },
     ],
   ],
@@ -81,32 +81,32 @@ exports[`admin/logistics-addresses form 2`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?parentId=%E4%B8%AD%E5%9B%BD",
+        "url": "/api/admin/regions?parentId=%E4%B8%AD%E5%9B%BD",
       },
     ],
     Array [
       Object {
         "loading": true,
         "method": "get",
-        "url": "/admin-api/logistics-addresses/defaults",
+        "url": "/api/admin/logistics-addresses/defaults",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/consts/logisticsAddressModel-type",
+        "url": "/api/admin/consts/logisticsAddressModel-type",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?parentId=140000",
+        "url": "/api/admin/regions?parentId=140000",
       },
     ],
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/regions?parentId=140200",
+        "url": "/api/admin/regions?parentId=140200",
       },
     ],
     Array [
@@ -129,7 +129,7 @@ exports[`admin/logistics-addresses form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/admin-api/logistics-addresses",
+        "url": "/api/admin/logistics-addresses",
       },
     ],
   ],

@@ -6,7 +6,7 @@ exports[`admin/shipping-tpls index 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/admin-api/shipping-tpls?page=1&limit=20",
+        "url": "/api/admin/shipping-tpls?page=1&limit=20",
       },
     ],
   ],
