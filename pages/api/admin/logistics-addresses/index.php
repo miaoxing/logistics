@@ -1,12 +1,12 @@
 <?php
 
 use Miaoxing\Logistics\Service\LogisticsAddressModel;
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Page\CollTrait;
 use Miaoxing\Services\Page\PostToPatchTrait;
 use Miaoxing\Services\Service\IndexAction;
 
-return new class () extends BaseController {
+return new class () extends BasePage {
     use CollTrait;
     use PostToPatchTrait {
         PostToPatchTrait::post insteadof CollTrait;

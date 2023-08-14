@@ -1,13 +1,13 @@
 <?php
 
 use Miaoxing\Logistics\Service\ShippingTplModel;
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Page\ItemTrait;
 use Miaoxing\Services\Service\UpdateAction;
 use Wei\Req;
 use Wei\V;
 
-return new class () extends BaseController {
+return new class () extends BasePage {
     use ItemTrait;
 
     protected $include = [

@@ -1,13 +1,13 @@
 <?php
 
 use Miaoxing\Logistics\Service\LogisticsAddressModel;
-use Miaoxing\Plugin\BaseController;
+use Miaoxing\Plugin\BasePage;
 use Miaoxing\Services\Page\ItemTrait;
 use Miaoxing\Services\Service\ShowAction;
 use Miaoxing\Services\Service\UpdateAction;
 use Wei\V;
 
-return new class () extends BaseController {
+return new class () extends BasePage {
     use ItemTrait;
 
     public function get()
