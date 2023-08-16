@@ -4,13 +4,12 @@
 import {useEffect, useRef, useState} from 'react';
 import {CListBtn} from '@mxjs/a-clink';
 import {Page, PageActions} from '@mxjs/a-page';
-import {Form, FormItem, FormAction} from '@mxjs/a-form';
+import {Form, FormItem, FormAction, FormList} from '@mxjs/a-form';
 import {
   Divider,
   Radio,
   Switch,
   Table,
-  Form as AntdForm,
   InputNumber,
   TreeSelect,
   Typography,
@@ -152,7 +151,7 @@ const New = () => {
 
                 <Divider/>
 
-                <AntdForm.List
+                <FormList
                   name="services">
                   {(fields) => (
                     <>
@@ -280,7 +279,7 @@ const New = () => {
 
                     </>
                   )}
-                </AntdForm.List>
+                </FormList>
               </FormItem>
             </>}
 
