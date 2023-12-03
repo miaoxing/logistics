@@ -4,6 +4,7 @@ namespace Miaoxing\Logistics\Service;
 
 use Miaoxing\App\Service\Logger;
 use Miaoxing\Plugin\BaseService;
+use Wei\Http;
 use Wei\RetTrait;
 
 /**
@@ -15,7 +16,7 @@ class Kuaidi100 extends BaseService
 
     public function getTraces($name, $code)
     {
-        $http = wei()->http([
+        $http = Http::get([
             'url' => sprintf('https://www.kuaidi100.com/query?type=%s&postid=%s&id=1&valicode=&temp=', $name, $code),
             'userAgent' => implode(' ', [
                 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N)',
