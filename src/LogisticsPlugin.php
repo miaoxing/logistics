@@ -31,7 +31,7 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
     /**
      * 商品详情页,展示配送方式,运费等
      *
-     * @param \Miaoxing\Product\Service\Product $product
+     * @param Product $product
      * @phpstan-ignore-next-line
      */
     public function onProductsShowItemMin(Product $product)

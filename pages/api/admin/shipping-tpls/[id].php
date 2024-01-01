@@ -23,7 +23,7 @@ return new class () extends BasePage {
                 $v->modelColumn('name', '名称')->required($shippingTpl->isNew())->notBlank();
                 $v->modelColumn('isFreeShipping', '是否包邮');
                 $v->inConst('valuationType', '计价方式', ShippingTplModel::class, 'VALUATION_TYPE');
-                $v->array('rules', '运费规则')->required($this->isRulesRequired($shippingTpl, $req))->each(function (V $v) {
+                $v->array('rules', '运费规则')->required($this->isRulesRequired($shippingTpl, $req))->each(static function (V $v) {
                     $isDefault = $v->getData()['isDefault'] ?? false;
                     $v->uDefaultInt('serviceId', '服务编号');
                     $v->array('regionIds', '地区', $isDefault ? null : 1)->required(!$isDefault);
@@ -35,10 +35,10 @@ return new class () extends BasePage {
                 $v->modelColumn('sort', '顺序');
                 return $v->check($req);
             })
-            ->beforeSave(function (ShippingTplModel $shippingTpl, $req) {
+            ->beforeSave(static function (ShippingTplModel $shippingTpl, $req) {
                 $shippingTpl->serviceIds = array_filter(array_unique(array_column((array) $req['rules'], 'serviceId')));
             })
-            ->afterSave(function (ShippingTplModel $shippingTpl, $req) {
+            ->afterSave(static function (ShippingTplModel $shippingTpl, $req) {
                 if ($req['rules']) {
                     $shippingTpl->rules()->saveRelation($req['rules']);
                 }

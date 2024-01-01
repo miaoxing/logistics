@@ -15,10 +15,10 @@ return new class () extends BasePage {
     public function get()
     {
         return IndexAction::new()
-            ->beforeFind(function (LogisticsAddressModel $models) {
+            ->beforeFind(static function (LogisticsAddressModel $models) {
                 $models->setDefaultSortColumn(['sort', 'id']);
             })
-            ->afterFind(function (LogisticsAddressModel $models) {
+            ->afterFind(static function (LogisticsAddressModel $models) {
                 $models->load('region.parent.parent');
             })
             ->exec($this);

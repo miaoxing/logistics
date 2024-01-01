@@ -15,7 +15,7 @@ return new class () extends BasePage {
     public function get()
     {
         return IndexAction::new()
-            ->beforeFind(function (ShippingTplModel $models) {
+            ->beforeFind(static function (ShippingTplModel $models) {
                 $models->setDefaultSortColumn(['sort', 'id']);
             })
             ->exec($this);

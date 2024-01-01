@@ -12,8 +12,7 @@ return new class () extends BasePage {
 
     public function get()
     {
-        return ShowAction
-            ::afterFind(function (LogisticsAddressModel $address) {
+        return ShowAction::afterFind(function (LogisticsAddressModel $address) {
                 $region = $address->region;
                 while ($region && $region->parentId) {
                     $region = $region->parent;
@@ -25,7 +24,7 @@ return new class () extends BasePage {
     public function patch()
     {
         return UpdateAction::new()
-            ->validate(function (LogisticsAddressModel $address, $req) {
+            ->validate(static function (LogisticsAddressModel $address, $req) {
                 $v = V::defaultOptional();
                 $v->setModel($address);
                 $v->modelColumn('name', '联系人姓名')->required($address->isNew())->notBlank();
@@ -33,7 +32,7 @@ return new class () extends BasePage {
                 $v->modelColumn('regionId', '地区')->required($address->isNew())->notBlank();
                 $v->modelColumn('address', '详细地址')->required($address->isNew())->notBlank();
                 $v->modelColumn('postalCode', '邮编');
-                $v->array('types', '使用场景', 0, 8)->unique()->each(function (V $v) {
+                $v->array('types', '使用场景', 0, 8)->unique()->each(static function (V $v) {
                     $v->self()->label('值')->inConst(LogisticsAddressModel::class, 'TYPE');
                 });
                 $v->modelColumn('remark', '备注');
