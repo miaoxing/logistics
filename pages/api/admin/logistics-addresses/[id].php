@@ -12,7 +12,8 @@ return new class () extends BasePage {
 
     public function get()
     {
-        return ShowAction::afterFind(function (LogisticsAddressModel $address) {
+        return ShowAction::new()
+            ->afterFind(function (LogisticsAddressModel $address) {
                 $region = $address->region;
                 while ($region && $region->parentId) {
                     $region = $region->parent;
