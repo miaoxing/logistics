@@ -1,41 +1,54 @@
 /**
  * @share [id]/edit
  */
-import {useEffect, useRef, useState} from 'react';
-import {CListBtn} from '@mxjs/a-clink';
-import {Page, PageActions} from '@mxjs/a-page';
-import {Form, FormItem, FormAction, FormList} from '@mxjs/a-form';
+import { useEffect, useRef, useState } from 'react';
+import { CListBtn } from '@mxjs/a-clink';
+import { Page, PageActions } from '@mxjs/a-page';
+import { Form, FormItem, FormAction, FormList } from '@mxjs/a-form';
 import {
-  Divider,
   Radio,
   Switch,
   Table,
   InputNumber,
   TreeSelect,
-  Typography,
+  Typography, theme,
 } from 'antd';
 import $ from 'miaoxing';
-import {DeleteOutlined, PlusOutlined} from '@ant-design/icons';
-import {Box} from '@mxjs/box';
-import {FormItemSort, InputPrice} from '@miaoxing/admin';
-import {css} from '@emotion/css';
+import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
+import { Box } from '@mxjs/a-box';
+import { FormItemSort, InputPrice } from '@miaoxing/admin';
+import { css } from '@emotion/css';
+import PropTypes from 'prop-types';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
 
 const FeeFormItem = (props) => {
-  return <FormItem required className={css({'&&':{marginBottom: 0}})} {...props}>
+  return <FormItem required className={css({'&&': {marginBottom: 0}})} {...props}>
     <InputPrice className={css({'&&': {width: 70}})}/>
   </FormItem>;
 };
 
 const NumberFormItem = (props) => {
-  return <FormItem required className={css({'&&':{marginBottom: 0}})} {...props}>
+  return <FormItem required className={css({'&&': {marginBottom: 0}})} {...props}>
     <InputNumber min={1} max={1000} precision={0} controls={false} className={css({'&&': {width: 70}})}/>
   </FormItem>;
 };
 
-const verticalAlignBaseline = css({verticalAlign: 'baseline'});
+const {useToken} = theme;
+const FormText = ({children, ...rest}) => {
+  const {token} = useToken();
+
+  return (
+    <Box h={token.controlHeight + 'px'} display="flex" alignItems="center" {...rest}>{children}</Box>
+  );
+};
+
+FormText.propTypes = {
+  children: PropTypes.node,
+};
+
+const verticalAlignTop = css({verticalAlign: 'top'});
 
 const New = () => {
   const form = useRef();
@@ -145,11 +158,7 @@ const New = () => {
               </FormItem>
 
               <FormItem label="运费规则" wrapperCol={{span: 18}}>
-                <Box mt1 gray500>
-                  请设置地区对应的运费，未设置的地区使用默认运费。
-                </Box>
-
-                <Divider/>
+                <FormText color="gray.500" mb={2}>请设置地区对应的运费，未设置的地区使用默认运费。</FormText>
 
                 <FormList
                   name="services">
@@ -189,10 +198,10 @@ const New = () => {
                             {
                               title: '地区',
                               dataIndex: 'regionIds',
-                              className: verticalAlignBaseline,
+                              className: verticalAlignTop,
                               render: (cell, row, ruleIndex) => {
                                 if (row.isDefault) {
-                                  return '默认';
+                                  return <FormText>默认</FormText>;
                                 }
 
                                 // 找到其他规则已选中的地区
@@ -220,11 +229,11 @@ const New = () => {
 
                                 return (
                                   <FormItem name={[index, 'rules', ruleIndex, 'regionIds']} required
-                                    style={{marginBottom: 0}}
+                                            style={{marginBottom: 0}}
                                   >
                                     <TreeSelect treeData={treeData} treeCheckable
-                                      showCheckedStrategy={TreeSelect.SHOW_PARENT} placeholder="请选择"
-                                      treeNodeFilterProp="title"
+                                                showCheckedStrategy={TreeSelect.SHOW_PARENT} placeholder="请选择"
+                                                treeNodeFilterProp="title"
                                     />
                                   </FormItem>
                                 );
@@ -235,17 +244,17 @@ const New = () => {
                               dataIndex: 'startAmount',
                               align: 'center',
                               width: 460,
-                              className: verticalAlignBaseline,
+                              className: verticalAlignTop,
                               render: (value, row, ruleIndex) => {
-                                return <Box alignItems="baseline" toBetween>
+                                return <Box display="flex" alignItems="flex-start" justifyContent="space-between">
                                   <NumberFormItem name={[index, 'rules', ruleIndex, 'startAmount']}/>
-                                  {' '}{unit}内{' '}
+                                  <FormText>{unit}内</FormText>
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'startFee']}/>
-                                  {' '}元，每增加{' '}
+                                  <FormText>元，每增加</FormText>
                                   <NumberFormItem name={[index, 'rules', ruleIndex, 'addAmount']}/>
-                                  {' '}{unit}{' '}
+                                  <FormText>{unit}</FormText>
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'addFee']}/>
-                                  {' '}元
+                                  <FormText>元</FormText>
                                 </Box>;
                               },
                             },
@@ -254,11 +263,11 @@ const New = () => {
                               dataIndex: 'id',
                               align: 'center',
                               width: 100,
-                              className: verticalAlignBaseline,
+                              className: verticalAlignTop,
                               render: (value, row, ruleIndex) => {
                                 return row.isDefault ? <span title="默认地区不能删除">-</span> : (
                                   <Typography.Link type="danger" onClick={deleteRule.bind(this, ruleIndex)} href="#"
-                                    title="删除">
+                                                   title="删除">
                                     <DeleteOutlined/>
                                   </Typography.Link>
                                 );
