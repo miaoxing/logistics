@@ -1,3 +1,28 @@
+## [0.5.27](https://github.com/miaoxing/logistics/compare/v0.5.26...v0.5.27) (2024-01-31)
+
+
+### Features
+
+* **logistics:** 更新 box 组件为 chakra-ui，文字对齐 ([bf2e628](https://github.com/miaoxing/logistics/commit/bf2e628f1ee38e325f1a5423116ea8219fb2be20))
+* 更新 `react` 支持 18 ([73db2c1](https://github.com/miaoxing/logistics/commit/73db2c1eaa16d364b3c0f5ab52d9bbc64197e440))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `2.0.5` to `2.1.0`
+* **@mxjs/a-form:** upgrade from `2.0.3` to `2.1.0`
+* **@mxjs/a-page:** upgrade from `2.2.3` to `2.3.0`
+* **@mxjs/a-table:** upgrade from `1.6.3` to `1.7.0`
+* **@mxjs/a-input:** upgrade from `1.3.3` to `1.4.0`
+* **@mxjs/actions:** upgrade from `0.2.16` to `0.2.17`
+* **@mxjs/a-box:** upgrade from `1.0.0` to `1.1.0`
+* **@miaoxing/admin:** upgrade from `0.11.5` to `0.12.0`
+* **@miaoxing/app:** upgrade from `0.7.11` to `0.8.0`
+* **@miaoxing/region:** upgrade from `0.2.28` to `0.2.29`
+
 ## [0.5.26](https://github.com/miaoxing/logistics/compare/v0.5.25...v0.5.26) (2024-01-08)
 
 
