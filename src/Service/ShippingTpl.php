@@ -121,7 +121,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
      * @return array
      * @phpstan-ignore-next-line
      */
-    public function getShippingServices(Cart $carts, \Miaoxing\Address\Service\Address $address = null)
+    public function getShippingServices(Cart $carts, ?\Miaoxing\Address\Service\Address $address = null)
     {
         $cityId = $address ? $address->getCityIdOrName() : null;
 

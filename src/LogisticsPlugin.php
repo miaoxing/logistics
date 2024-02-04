@@ -59,7 +59,7 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
      * @param Address|null $address
      * @phpstan-ignore-next-line
      */
-    public function onPostOrderCartRender(Order $order, Address $address = null)
+    public function onPostOrderCartRender(Order $order, ?Address $address = null)
     {
         if (!$order->isRequireAddress()) {
             return;
@@ -75,7 +75,7 @@ class LogisticsPlugin extends \Miaoxing\Plugin\BasePlugin
      * @param mixed $data
      * @phpstan-ignore-next-line
      */
-    public function onPreOrderCreate(Order $order, Address $address = null, $data, array $options = [])
+    public function onPreOrderCreate(Order $order, ?Address $address = null, $data = [], array $options = [])
     {
         // 自提自动设置
         if ($order->getCarts()->isSelfPickUp()) {
