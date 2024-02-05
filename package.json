@@ -24,7 +24,7 @@
     "@mxjs/app": "^0.6.5",
     "@mxjs/a-box": "^1.1.0",
     "@mxjs/test": "^1.0.10",
-    "@testing-library/react": "^11.2.6",
+    "@testing-library/react": "^14",
     "antd": "~5.1.6",
     "jest-preset-miaoxing": "^0.3.1",
     "miaoxing": "^0.4.12",
