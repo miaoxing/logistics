@@ -1,3 +1,25 @@
+## [0.5.28](https://github.com/miaoxing/logistics/compare/v0.5.27...v0.5.28) (2024-02-20)
+
+
+### Features
+
+* 更新 antd, antd icons 版本 ([bee80ea](https://github.com/miaoxing/logistics/commit/bee80ea9078ee0a2a91595f0deea982bd3a0e7b6))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `2.1.0` to `2.1.1`
+* **@mxjs/a-form:** upgrade from `2.1.0` to `2.2.0`
+* **@mxjs/a-page:** upgrade from `2.3.0` to `2.4.0`
+* **@mxjs/a-table:** upgrade from `1.7.0` to `1.8.0`
+* **@mxjs/a-input:** upgrade from `1.4.0` to `1.5.0`
+* **@miaoxing/admin:** upgrade from `0.12.0` to `0.12.1`
+* **@miaoxing/app:** upgrade from `0.8.0` to `0.8.1`
+* **@miaoxing/region:** upgrade from `0.2.29` to `0.2.30`
+
 ## [0.5.27](https://github.com/miaoxing/logistics/compare/v0.5.26...v0.5.27) (2024-01-31)
 
 
