@@ -1,6 +1,6 @@
 {
   "name": "@miaoxing/logistics",
-  "version": "0.5.28",
+  "version": "0.5.29",
   "private": true,
   "main": "index.js",
   "author": "twinh",
@@ -16,7 +16,7 @@
     "@miaoxing/dev": "^9.1.0",
     "@mxjs/a-clink": "^2.1.1",
     "@mxjs/a-form": "^2.2.0",
-    "@mxjs/a-page": "^2.4.0",
+    "@mxjs/a-page": "^2.4.1",
     "@mxjs/a-region-cascader": "^1.0.8",
     "@mxjs/a-table": "^1.8.0",
     "@mxjs/a-input": "^1.5.0",
