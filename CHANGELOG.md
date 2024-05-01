@@ -1,3 +1,32 @@
+# [0.6.0](https://github.com/miaoxing/logistics/compare/v0.5.30...v0.6.0) (2024-05-01)
+
+
+### Features
+
+* 更新 `react-router` 到 v6 ([104c852](https://github.com/miaoxing/logistics/commit/104c852115219eee481378dfeb80f21914d870c8))
+
+
+### BREAKING CHANGES
+
+* 更新 `react-router` 到 v6
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `2.1.2` to `3.0.0`
+* **@mxjs/a-form:** upgrade from `2.2.1` to `3.0.0`
+* **@mxjs/a-page:** upgrade from `2.5.0` to `3.0.0`
+* **@mxjs/a-table:** upgrade from `1.8.1` to `1.8.2`
+* **@mxjs/app:** upgrade from `0.6.6` to `0.7.0`
+* **@mxjs/test:** upgrade from `1.0.11` to `1.1.0`
+* **miaoxing:** upgrade from `0.4.13` to `0.4.14`
+* **@miaoxing/admin:** upgrade from `0.12.3` to `0.13.0`
+* **@miaoxing/app:** upgrade from `0.8.3` to `0.9.0`
+* **@miaoxing/region:** upgrade from `0.2.32` to `0.2.33`
+
 ## [0.5.30](https://github.com/miaoxing/logistics/compare/v0.5.29...v0.5.30) (2024-03-31)
 
 
