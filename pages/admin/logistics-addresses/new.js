@@ -66,7 +66,7 @@ const New = () => {
             },
           ]}
         >
-          <RegionCascader parentId="中国" url={$.apiUrl('regions')} fieldNames={{
+          <RegionCascader parentId="中国" url="regions" fieldNames={{
             label: 'shortName',
             value: 'id',
             children: 'children',

@@ -56,7 +56,10 @@ const New = () => {
   // 加载区域
   const [regions, setRegions] = useState([]);
   useEffect(() => {
-    $.get($.apiUrl('regions', {virtual: 0, parentId: '中国', include: 'children'})).then(({ret}) => {
+    $.get({
+      url: 'regions',
+      params: { virtual: 0, parentId: '中国', include: 'children' }
+    }).then(({ret}) => {
       if (ret.isSuc()) {
         const data = ret.data.map(region => {
           return {
