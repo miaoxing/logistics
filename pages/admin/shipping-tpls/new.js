@@ -58,7 +58,7 @@ const New = () => {
   useEffect(() => {
     $.get({
       url: 'regions',
-      params: { virtual: 0, parentId: '中国', include: 'children' }
+      params: { virtual: 0, parentId: '中国', include: 'children' },
     }).then(({ret}) => {
       if (ret.isSuc()) {
         const data = ret.data.map(region => {

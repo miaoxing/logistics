@@ -4,7 +4,6 @@ import {Page, PageActions} from '@mxjs/a-page';
 import {Tag} from 'antd';
 import {useState} from 'react';
 import useAsyncEffect from 'use-async-effect';
-import api from '@mxjs/api';
 import $ from 'miaoxing';
 
 const Index = () => {
@@ -12,7 +11,7 @@ const Index = () => {
 
   const [types, setTypes] = useState({});
   useAsyncEffect(async () => {
-    const {ret} = await api.get('consts/logisticsAddressModel-type');
+    const {ret} = await $.get('consts/logisticsAddressModel-type');
     if (ret.isErr()) {
       $.ret(ret);
       return;
