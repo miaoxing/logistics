@@ -1,3 +1,29 @@
+## [0.6.1](https://github.com/miaoxing/logistics/compare/v0.6.0...v0.6.1) (2024-05-30)
+
+
+### Features
+
+* `api.xxx` 调用改为 `$.xx` ([74730e3](https://github.com/miaoxing/logistics/commit/74730e3c937d69af1cd777909963beda798d64ad))
+* 简化接口地址 ([6b3169e](https://github.com/miaoxing/logistics/commit/6b3169e66c3d47eb2adcfbdb0f319ce72055a3fb))
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-clink:** upgrade from `3.0.0` to `3.0.1`
+* **@mxjs/a-form:** upgrade from `3.0.0` to `3.0.1`
+* **@mxjs/a-page:** upgrade from `3.0.0` to `3.0.1`
+* **@mxjs/a-region-cascader:** upgrade from `1.0.9` to `1.1.0`
+* **@mxjs/a-table:** upgrade from `1.8.2` to `1.8.3`
+* **@mxjs/app:** upgrade from `0.7.0` to `0.8.0`
+* **@mxjs/test:** upgrade from `1.1.0` to `2.0.0`
+* **miaoxing:** upgrade from `0.4.14` to `0.4.15`
+* **@miaoxing/admin:** upgrade from `0.13.0` to `0.13.1`
+* **@miaoxing/app:** upgrade from `0.9.0` to `0.10.0`
+* **@miaoxing/region:** upgrade from `0.2.33` to `0.2.34`
+
 # [0.6.0](https://github.com/miaoxing/logistics/compare/v0.5.30...v0.6.0) (2024-05-01)
 
 
