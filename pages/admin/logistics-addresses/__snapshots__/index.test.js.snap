@@ -6,7 +6,7 @@ exports[`admin/logistics-addresses index 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/api/admin/consts/logisticsAddressModel-type",
+        "url": "consts/logisticsAddressModel-type",
       },
     ],
     Array [
