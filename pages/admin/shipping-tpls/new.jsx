@@ -15,10 +15,10 @@ import {
 } from 'antd';
 import $ from 'miaoxing';
 import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
-import { Box } from '@mxjs/a-box';
 import { FormItemSort, InputPrice } from '@miaoxing/admin';
 import { css } from '@emotion/css';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
@@ -36,11 +36,13 @@ const NumberFormItem = (props) => {
 };
 
 const {useToken} = theme;
-const FormText = ({children, ...rest}) => {
+const FormText = ({className, children, ...rest}) => {
   const {token} = useToken();
 
   return (
-    <Box h={token.controlHeight + 'px'} display="flex" alignItems="center" {...rest}>{children}</Box>
+    <div className={clsx('flex items-center', className)} style={{height: token.controlHeight}} {...rest}>
+      {children}
+    </div>
   );
 };
 
@@ -161,7 +163,7 @@ const New = () => {
               </FormItem>
 
               <FormItem label="运费规则" wrapperCol={{span: 18}}>
-                <FormText color="gray.500" mb={2}>请设置地区对应的运费，未设置的地区使用默认运费。</FormText>
+                <FormText className="text-gray-500 mb-2">请设置地区对应的运费，未设置的地区使用默认运费。</FormText>
 
                 <FormList
                   name="services">
@@ -249,7 +251,7 @@ const New = () => {
                               width: 460,
                               className: verticalAlignTop,
                               render: (value, row, ruleIndex) => {
-                                return <Box display="flex" alignItems="flex-start" justifyContent="space-between">
+                                return <div className="flex align-start justify-between">
                                   <NumberFormItem name={[index, 'rules', ruleIndex, 'startAmount']}/>
                                   <FormText>{unit}内</FormText>
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'startFee']}/>
@@ -258,7 +260,7 @@ const New = () => {
                                   <FormText>{unit}</FormText>
                                   <FeeFormItem name={[index, 'rules', ruleIndex, 'addFee']}/>
                                   <FormText>元</FormText>
-                                </Box>;
+                                </div>;
                               },
                             },
                             {
