@@ -16,7 +16,6 @@ import {
 import $ from 'miaoxing';
 import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import { FormItemSort, InputPrice } from '@miaoxing/admin';
-import { css } from '@emotion/css';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
@@ -24,14 +23,14 @@ import clsx from 'clsx';
 const DEFAULT_SERVICE_ID = 1;
 
 const FeeFormItem = (props) => {
-  return <FormItem required className={css({'&&': {marginBottom: 0}})} {...props}>
-    <InputPrice className={css({'&&': {width: 70}})}/>
+  return <FormItem required className="mb-0" {...props}>
+    <InputPrice className="w-[70px]"/>
   </FormItem>;
 };
 
 const NumberFormItem = (props) => {
-  return <FormItem required className={css({'&&': {marginBottom: 0}})} {...props}>
-    <InputNumber min={1} max={1000} precision={0} controls={false} className={css({'&&': {width: 70}})}/>
+  return <FormItem required className="mb-0" {...props}>
+    <InputNumber min={1} max={1000} precision={0} controls={false} className="w-[70px]"/>
   </FormItem>;
 };
 
@@ -49,8 +48,6 @@ const FormText = ({className, children, ...rest}) => {
 FormText.propTypes = {
   children: PropTypes.node,
 };
-
-const verticalAlignTop = css({verticalAlign: 'top'});
 
 const New = () => {
   const form = useRef();
@@ -203,7 +200,7 @@ const New = () => {
                             {
                               title: '地区',
                               dataIndex: 'regionIds',
-                              className: verticalAlignTop,
+                              className: 'align-top',
                               render: (cell, row, ruleIndex) => {
                                 if (row.isDefault) {
                                   return <FormText>默认</FormText>;
@@ -249,7 +246,7 @@ const New = () => {
                               dataIndex: 'startAmount',
                               align: 'center',
                               width: 460,
-                              className: verticalAlignTop,
+                              className: 'align-top',
                               render: (value, row, ruleIndex) => {
                                 return <div className="flex align-start justify-between">
                                   <NumberFormItem name={[index, 'rules', ruleIndex, 'startAmount']}/>
@@ -268,7 +265,7 @@ const New = () => {
                               dataIndex: 'id',
                               align: 'center',
                               width: 100,
-                              className: verticalAlignTop,
+                              className: 'align-top',
                               render: (value, row, ruleIndex) => {
                                 return row.isDefault ? <span title="默认地区不能删除">-</span> : (
                                   <Typography.Link type="danger" onClick={deleteRule.bind(this, ruleIndex)} href="#"

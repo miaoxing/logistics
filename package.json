@@ -44,8 +44,5 @@
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-region-cascader": "miaoxing/mxjs-a-region-cascader",
     "@mxjs/app": "miaoxing/mxjs-app"
-  },
-  "dependencies": {
-    "@emotion/css": "^11.5.0"
   }
 }
