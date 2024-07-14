@@ -65,7 +65,6 @@ exports[`admin/shipping-tpls form 2`] = `
     Array [
       Object {
         "data": Object {
-          "id": undefined,
           "isFreeShipping": undefined,
           "name": "测试",
           "rules": Array [

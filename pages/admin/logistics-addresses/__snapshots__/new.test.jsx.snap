@@ -115,7 +115,6 @@ exports[`admin/logistics-addresses form 2`] = `
           "address": "199号",
           "city": 140222,
           "country": 140000,
-          "id": 1,
           "name": "联系人1",
           "phone": "13800138000",
           "postalCode": undefined,

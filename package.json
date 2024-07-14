@@ -20,6 +20,7 @@
     "@mxjs/a-region-cascader": "^1.1.0",
     "@mxjs/a-table": "^1.9.0",
     "@mxjs/a-input": "^1.5.1",
+    "@mxjs/a-section": "^1.0.0",
     "@mxjs/app": "^0.8.0",
     "@mxjs/test": "^2.0.0",
     "@testing-library/react": "^14",
@@ -43,6 +44,7 @@
     "@mxjs/a-input": "miaoxing/mxjs-a-input",
     "@mxjs/a-table": "miaoxing/mxjs-a-table",
     "@mxjs/a-region-cascader": "miaoxing/mxjs-a-region-cascader",
+    "@mxjs/a-section": "miaoxing/mxjs-a-section",
     "@mxjs/app": "miaoxing/mxjs-app"
   }
 }
