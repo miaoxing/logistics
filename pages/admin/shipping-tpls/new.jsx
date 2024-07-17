@@ -4,7 +4,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { CListBtn } from '@mxjs/a-clink';
 import { Page, PageActions } from '@mxjs/a-page';
-import { Form, FormItem, FormAction, FormList } from '@mxjs/a-form';
+import { Form, FormItem, FormActions, FormList } from '@mxjs/a-form';
 import {
   Radio,
   Switch,
@@ -305,7 +305,7 @@ const New = () => {
               />
 
             </Section>
-            <FormAction/>
+            <FormActions/>
           </>;
         }}
       </Form>

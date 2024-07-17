@@ -3,7 +3,7 @@
  */
 import { CListBtn } from '@mxjs/a-clink';
 import { Page, PageActions } from '@mxjs/a-page';
-import { Form, FormAction, FormItem } from '@mxjs/a-form';
+import { Form, FormActions, FormItem } from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
 import { Checkbox } from 'antd';
 import $ from 'miaoxing';
@@ -99,7 +99,7 @@ const New = () => {
           <FormItemSort/>
         </Section>
 
-        <FormAction/>
+        <FormActions/>
       </Form>
     </Page>
   );
