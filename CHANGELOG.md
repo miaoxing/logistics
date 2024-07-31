@@ -1,3 +1,32 @@
+## [0.6.3](https://github.com/miaoxing/logistics/compare/v0.6.2...v0.6.3) (2024-07-31)
+
+
+### Features
+
+* **u:** 调整页面内容为卡片视图 ([8fcfbc9](https://github.com/miaoxing/logistics/commit/8fcfbc93d06fe6535ed2fec23fec8cc40978bf09))
+* Box 组件改为 tailwind 类名 ([37b3589](https://github.com/miaoxing/logistics/commit/37b35898a05170f51d097d63136cf7764bab28c4))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.1.1` to `9.1.2`
+* **@mxjs/a-clink:** upgrade from `3.0.1` to `3.0.2`
+* **@mxjs/a-form:** upgrade from `3.0.2` to `4.0.0`
+* **@mxjs/a-page:** upgrade from `3.0.1` to `4.0.0`
+* **@mxjs/a-region-cascader:** upgrade from `1.1.0` to `1.1.1`
+* **@mxjs/a-table:** upgrade from `1.9.0` to `2.0.0`
+* **@mxjs/a-input:** upgrade from `1.5.1` to `1.5.2`
+* **@mxjs/a-section:** upgrade from `1.0.0` to `1.1.0`
+* **@mxjs/app:** upgrade from `0.8.0` to `0.8.1`
+* **@mxjs/test:** upgrade from `2.0.0` to `2.0.1`
+* **miaoxing:** upgrade from `0.4.15` to `0.4.16`
+* **@miaoxing/admin:** upgrade from `0.13.2` to `0.14.0`
+* **@miaoxing/app:** upgrade from `0.10.1` to `0.10.2`
+* **@miaoxing/region:** upgrade from `0.2.35` to `0.2.36`
+
 ## [0.6.2](https://github.com/miaoxing/logistics/compare/v0.6.1...v0.6.2) (2024-06-30)
 
 
