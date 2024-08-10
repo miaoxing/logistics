@@ -7,7 +7,7 @@ use Miaoxing\Services\Service\ShowAction;
 use Miaoxing\Services\Service\UpdateAction;
 use Wei\V;
 
-return new class () extends BasePage {
+return new class extends BasePage {
     use ItemTrait;
 
     public function get()

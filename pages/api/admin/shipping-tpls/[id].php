@@ -7,7 +7,7 @@ use Miaoxing\Services\Service\UpdateAction;
 use Wei\Req;
 use Wei\V;
 
-return new class () extends BasePage {
+return new class extends BasePage {
     use ItemTrait;
 
     protected $include = [
