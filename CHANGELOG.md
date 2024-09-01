@@ -1,3 +1,32 @@
+## [0.6.6](https://github.com/miaoxing/logistics/compare/v0.6.5...v0.6.6) (2024-09-01)
+
+
+### Features
+
+* 插件增加 wei 命令行入口 ([64405a9](https://github.com/miaoxing/logistics/commit/64405a958a6296e5a8ce1185f143d452929b4da9))
+* 更新 `antd` 到 `~5.19` ([309198a](https://github.com/miaoxing/logistics/commit/309198a885fcb7467074deff3c75dfbad1b4ce67))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.1.3` to `9.2.0`
+* **@mxjs/a-clink:** upgrade from `3.0.4` to `3.0.5`
+* **@mxjs/a-form:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-page:** upgrade from `4.0.2` to `4.1.0`
+* **@mxjs/a-region-cascader:** upgrade from `1.1.2` to `1.1.3`
+* **@mxjs/a-table:** upgrade from `2.0.2` to `2.1.0`
+* **@mxjs/a-input:** upgrade from `1.5.3` to `1.6.0`
+* **@mxjs/a-section:** upgrade from `1.1.1` to `1.2.0`
+* **@mxjs/app:** upgrade from `0.8.2` to `0.8.3`
+* **@mxjs/test:** upgrade from `2.0.3` to `2.0.4`
+* **miaoxing:** upgrade from `0.4.18` to `0.4.19`
+* **@miaoxing/admin:** upgrade from `0.15.1` to `0.15.2`
+* **@miaoxing/app:** upgrade from `0.10.3` to `0.10.4`
+* **@miaoxing/region:** upgrade from `0.2.37` to `0.2.38`
+
 ## [0.6.5](https://github.com/miaoxing/logistics/compare/v0.6.4...v0.6.5) (2024-08-03)
 
 
