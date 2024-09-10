@@ -1,23 +1,14 @@
-import {CTableDeleteLink, Table, TableActions, TableProvider, useTable} from '@mxjs/a-table';
-import {CEditLink, CNewBtn} from '@mxjs/a-clink';
-import {Page, PageActions} from '@mxjs/a-page';
-import {Tag} from 'antd';
-import {useState} from 'react';
-import useAsyncEffect from 'use-async-effect';
-import $ from 'miaoxing';
+import { CTableDeleteLink, Table, TableActions, TableProvider, useTable } from '@mxjs/a-table';
+import { CEditLink, CNewBtn } from '@mxjs/a-clink';
+import { Page, PageActions } from '@mxjs/a-page';
+import { Tag } from 'antd';
+import { useQuery } from '@mxjs/query';
 
 const Index = () => {
   const [table] = useTable();
 
-  const [types, setTypes] = useState({});
-  useAsyncEffect(async () => {
-    const {ret} = await $.get('consts/logisticsAddressModel-type');
-    if (ret.isErr()) {
-      $.ret(ret);
-      return;
-    }
-    setTypes(ret.data.items);
-  }, []);
+  const { data } = useQuery('consts/logisticsAddressModel-type');
+  const items = data?.items;
 
   return (
     <Page>
@@ -40,7 +31,7 @@ const Index = () => {
             {
               title: '地址',
               dataIndex: 'address',
-              render: (value, {region}) => [
+              render: (value, { region }) => [
                 region?.parent?.parent?.shortName,
                 region?.parent?.shortName,
                 region?.shortName,
@@ -51,7 +42,7 @@ const Index = () => {
               title: '使用场景',
               dataIndex: 'types',
               render: (value) => value.length ?
-                value.map(type => <Tag key={type} color="orange">{types?.[type]?.name}</Tag>) : '-',
+                value.map(type => <Tag key={type} color="orange">{items?.[type]?.name}</Tag>) : '-',
             },
             {
               title: '顺序',

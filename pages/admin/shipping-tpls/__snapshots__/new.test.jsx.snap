@@ -5,20 +5,19 @@ exports[`admin/shipping-tpls form 1`] = `
   "calls": Array [
     Array [
       Object {
-        "loading": true,
-        "method": "get",
-        "url": "/api/admin/shipping-tpls/defaults",
-      },
-    ],
-    Array [
-      Object {
-        "method": "get",
         "params": Object {
           "include": "children",
           "parentId": "中国",
           "virtual": 0,
         },
         "url": "regions",
+      },
+    ],
+    Array [
+      Object {
+        "loading": true,
+        "method": "get",
+        "url": "/api/admin/shipping-tpls/defaults",
       },
     ],
   ],

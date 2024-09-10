@@ -1,24 +1,18 @@
 /**
  * @share [id]/edit
  */
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { CListBtn } from '@mxjs/a-clink';
 import { Page, PageActions } from '@mxjs/a-page';
-import { Form, FormItem, FormActions, FormList } from '@mxjs/a-form';
-import {
-  Radio,
-  Switch,
-  Table,
-  InputNumber,
-  TreeSelect,
-  Typography, theme,
-} from 'antd';
+import { Form, FormActions, FormItem, FormList } from '@mxjs/a-form';
+import { InputNumber, Radio, Switch, Table, theme, TreeSelect, Typography, } from 'antd';
 import $ from 'miaoxing';
 import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
 import { FormItemSort, InputPrice } from '@miaoxing/admin';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Section } from '@mxjs/a-section';
+import { useQuery } from '@mxjs/query';
 
 // 默认的物流服务编号，即"快递"
 const DEFAULT_SERVICE_ID = 1;
@@ -35,9 +29,9 @@ const NumberFormItem = (props) => {
   </FormItem>;
 };
 
-const {useToken} = theme;
-const FormText = ({className, children, ...rest}) => {
-  const {token} = useToken();
+const { useToken } = theme;
+const FormText = ({ className,children, ...rest }) => {
+  const { token } = useToken();
 
   return (
     <div className={clsx('flex items-center', className)} style={{height: token.controlHeight}} {...rest}>
@@ -54,31 +48,25 @@ const New = () => {
   const form = useRef();
 
   // 加载区域
-  const [regions, setRegions] = useState([]);
-  useEffect(() => {
-    $.get({
-      url: 'regions',
-      params: { virtual: 0, parentId: '中国', include: 'children' },
-    }).then(({ret}) => {
-      if (ret.isSuc()) {
-        const data = ret.data.map(region => {
-          return {
-            title: region.name,
-            value: region.id,
-            children: region.children.map(child => {
-              return {
-                title: child.name,
-                value: child.id,
-              };
-            }),
-          };
-        });
-        setRegions(data);
-      } else {
-        $.ret(ret);
-      }
-    });
-  }, []);
+  const { data: regions = [] } = useQuery({
+    url: 'regions',
+    params: { virtual: 0, parentId: '中国', include: 'children' },
+  }, {
+    onSuccess: (ret) => {
+      ret.data = ret.data.map(region => {
+        return {
+          title: region.name,
+          value: region.id,
+          children: region.children.map(child => {
+            return {
+              title: child.name,
+              value: child.id,
+            };
+          }),
+        };
+      });
+    },
+  });
 
   const createRule = (rule = {}) => {
     return {
@@ -97,7 +85,7 @@ const New = () => {
 
       <Form
         formRef={form}
-        afterLoad={({ret}) => {
+        afterLoad={({ ret }) => {
           // 将物流服务的编号作为索引
           const services = {};
 
@@ -106,7 +94,7 @@ const New = () => {
             services[DEFAULT_SERVICE_ID] = {
               id: DEFAULT_SERVICE_ID,
               rules: [
-                createRule({isDefault: true}),
+                createRule({ isDefault: true }),
               ],
             };
           } else {
@@ -142,7 +130,7 @@ const New = () => {
           return values;
         }}
       >
-        {({isFreeShipping, valuationType, services = []}) => {
+        {({ isFreeShipping, valuationType, services = [] }) => {
           const unit = valuationType === 1 ? '件' : ' kg ';
 
           return <>
@@ -161,7 +149,7 @@ const New = () => {
                   </Radio.Group>
                 </FormItem>
 
-                <FormItem label="运费规则" wrapperCol={{span: 18}}>
+                <FormItem label="运费规则" wrapperCol={{ span: 18 }}>
                   <FormText className="text-gray-500 mb-2">请设置地区对应的运费，未设置的地区使用默认运费。</FormText>
 
                   <FormList
@@ -233,7 +221,7 @@ const New = () => {
 
                                   return (
                                     <FormItem name={[index, 'rules', ruleIndex, 'regionIds']} required
-                                              style={{marginBottom: 0}}
+                                              style={{ marginBottom: 0 }}
                                     >
                                       <TreeSelect treeData={treeData} treeCheckable
                                                   showCheckedStrategy={TreeSelect.SHOW_PARENT} placeholder="请选择"

@@ -22,6 +22,7 @@
     "@mxjs/a-input": "^1.6.0",
     "@mxjs/a-section": "^1.2.0",
     "@mxjs/app": "^0.8.3",
+    "@mxjs/query": "^1.0.0",
     "@mxjs/test": "^2.0.4",
     "@testing-library/react": "^14",
     "antd": "~5.19",

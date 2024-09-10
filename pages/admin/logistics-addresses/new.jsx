@@ -6,23 +6,14 @@ import { Page, PageActions } from '@mxjs/a-page';
 import { Form, FormActions, FormItem } from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
 import { Checkbox } from 'antd';
-import $ from 'miaoxing';
 import { FormItemSort } from '@miaoxing/admin';
 import Input from '@mxjs/a-input';
-import { useState } from 'react';
-import useAsyncEffect from 'use-async-effect';
 import { Section } from '@mxjs/a-section';
+import { useQuery } from '@mxjs/query';
 
 const New = () => {
-  const [types, setTypes] = useState([]);
-  useAsyncEffect(async () => {
-    const {ret} = await $.get('consts/logisticsAddressModel-type');
-    if (ret.isErr()) {
-      $.ret(ret);
-      return;
-    }
-    setTypes(Object.values(ret.data.items));
-  }, []);
+  const { data } = useQuery('consts/logisticsAddressModel-type');
+  const items = data?.items || [];
 
   return (
     <Page>
@@ -84,7 +75,7 @@ const New = () => {
 
           <FormItem label="使用场景" name="types">
             <Checkbox.Group>
-              {types.map(type => (
+              {Object.values(items).map(type => (
                 <Checkbox key={type.id} value={type.id}>
                   {type.name}
                 </Checkbox>
