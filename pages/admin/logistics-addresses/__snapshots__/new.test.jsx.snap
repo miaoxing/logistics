@@ -10,16 +10,13 @@ exports[`admin/logistics-addresses form 1`] = `
       },
     ],
     Array [
+      "consts/logisticsAddressModel-type",
+    ],
+    Array [
       Object {
         "loading": true,
         "method": "get",
         "url": "/api/admin/logistics-addresses/defaults",
-      },
-    ],
-    Array [
-      Object {
-        "method": "get",
-        "url": "consts/logisticsAddressModel-type",
       },
     ],
     Array [
@@ -85,16 +82,13 @@ exports[`admin/logistics-addresses form 2`] = `
       },
     ],
     Array [
+      "consts/logisticsAddressModel-type",
+    ],
+    Array [
       Object {
         "loading": true,
         "method": "get",
         "url": "/api/admin/logistics-addresses/defaults",
-      },
-    ],
-    Array [
-      Object {
-        "method": "get",
-        "url": "consts/logisticsAddressModel-type",
       },
     ],
     Array [

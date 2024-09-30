@@ -31,6 +31,16 @@ describe(path, () => {
     const promise3 = createPromise();
 
     $.http = jest.fn()
+      // 读取区域数据
+      .mockImplementationOnce(() => promise2.resolve({
+        ret: Ret.suc({
+          data: [{
+            id: 1,
+            name: '默认地区',
+            children: [],
+          }],
+        }),
+      }))
       // 读取默认数据
       .mockImplementationOnce(() => promise.resolve({
         ret: Ret.suc({
@@ -60,16 +70,6 @@ describe(path, () => {
               },
             ],
           },
-        }),
-      }))
-      // 读取区域数据
-      .mockImplementationOnce(() => promise2.resolve({
-        ret: Ret.suc({
-          data: [{
-            id: 1,
-            name: '默认地区',
-            children: [],
-          }],
         }),
       }))
       // 提交

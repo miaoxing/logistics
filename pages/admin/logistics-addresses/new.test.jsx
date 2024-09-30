@@ -44,6 +44,20 @@ describe(path, () => {
           }],
         }),
       }))
+      // 读取使用场景
+      .mockImplementationOnce(() => promise3.resolve({
+        ret: Ret.suc({
+          data: {
+            items: {
+              1: {
+                id: 1,
+                key: 'return',
+                name: '退货',
+              },
+            },
+          },
+        }),
+      }))
       // 读取默认数据
       .mockImplementationOnce(() => promise2.resolve({
         ret: Ret.suc({
@@ -69,20 +83,6 @@ describe(path, () => {
             address: '199号',
             types: [1],
             sort: 51,
-          },
-        }),
-      }))
-      // 读取使用场景
-      .mockImplementationOnce(() => promise3.resolve({
-        ret: Ret.suc({
-          data: {
-            items: {
-              1: {
-                id: 1,
-                key: 'return',
-                name: '退货',
-              },
-            },
           },
         }),
       }))
