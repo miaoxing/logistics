@@ -42,7 +42,7 @@ const Index = () => {
               title: '使用场景',
               dataIndex: 'types',
               render: (value) => value.length ?
-                value.map(type => <Tag key={type} color="orange">{items?.[type]?.name}</Tag>) : '-',
+                value.map(type => <Tag key={type} color="orange" bordered={false}>{items?.[type]?.name}</Tag>) : '-',
             },
             {
               title: '顺序',
