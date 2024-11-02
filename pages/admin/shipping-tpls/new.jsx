@@ -85,7 +85,7 @@ const New = () => {
 
       <Form
         formRef={form}
-        afterLoad={({ ret }) => {
+        afterLoad={(ret) => {
           // 将物流服务的编号作为索引
           const services = {};
 
