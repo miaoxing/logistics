@@ -10,7 +10,10 @@ exports[`admin/logistics-addresses form 1`] = `
       },
     ],
     Array [
-      "consts/logisticsAddressModel-type",
+      Object {
+        "suspense": true,
+        "url": "consts/logisticsAddressModel-type",
+      },
     ],
     Array [
       Object {
@@ -82,7 +85,10 @@ exports[`admin/logistics-addresses form 2`] = `
       },
     ],
     Array [
-      "consts/logisticsAddressModel-type",
+      Object {
+        "suspense": true,
+        "url": "consts/logisticsAddressModel-type",
+      },
     ],
     Array [
       Object {

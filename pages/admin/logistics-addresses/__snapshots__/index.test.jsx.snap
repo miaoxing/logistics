@@ -4,7 +4,10 @@ exports[`admin/logistics-addresses index 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "consts/logisticsAddressModel-type",
+      Object {
+        "suspense": true,
+        "url": "consts/logisticsAddressModel-type",
+      },
     ],
     Array [
       Object {
