@@ -1,3 +1,18 @@
+## [0.6.9](https://github.com/miaoxing/logistics/compare/v0.6.8...v0.6.9) (2024-11-03)
+
+
+### Bug Fixes
+
+* 更新 `afterLoad` 的参数 ([722dbfc](https://github.com/miaoxing/logistics/commit/722dbfc01948aaa160a32a35d8f8e346f032819f))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/admin:** upgrade from `0.16.1` to `0.16.2`
+
 ## [0.6.8](https://github.com/miaoxing/logistics/compare/v0.6.7...v0.6.8) (2024-11-01)
 
 
@@ -241,7 +256,7 @@
 
 ### Features
 
-* 更新 antd, antd icons 版本 ([bee80ea](https://github.com/miaoxing/logistics/commit/bee80ea9078ee0a2a91595f0deea982bd3a0e7b6))
+* 更新 antd, antd icons 版本 ([7474b31](https://github.com/miaoxing/logistics/commit/7474b310af24cd3372e293d5ca77453b7e96b5db))
 
 
 
