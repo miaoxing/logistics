@@ -1,3 +1,18 @@
+## [0.6.10](https://github.com/miaoxing/logistics/compare/v0.6.9...v0.6.10) (2024-11-30)
+
+
+
+
+
+### Dependencies
+
+* **@mxjs/a-form:** upgrade from `5.0.0` to `5.1.0`
+* **@mxjs/a-page:** upgrade from `4.2.1` to `4.3.0`
+* **@mxjs/a-table:** upgrade from `2.2.1` to `2.3.0`
+* **@miaoxing/admin:** upgrade from `0.16.2` to `0.16.3`
+* **@miaoxing/app:** upgrade from `0.10.6` to `0.10.7`
+* **@miaoxing/region:** upgrade from `0.2.40` to `0.2.41`
+
 ## [0.6.9](https://github.com/miaoxing/logistics/compare/v0.6.8...v0.6.9) (2024-11-03)
 
 
