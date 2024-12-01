@@ -116,7 +116,7 @@ class ShippingTpl extends \Miaoxing\Plugin\BaseService
      * ];
      * </code>
      *
-     * @param Cart|\Miaoxing\Cart\Service\Cart[] $carts
+     * @param Cart|Cart[] $carts
      * @param \Miaoxing\Address\Service\Address $address
      * @return array
      * @phpstan-ignore-next-line
