@@ -1,3 +1,32 @@
+## [0.6.11](https://github.com/miaoxing/logistics/compare/v0.6.10...v0.6.11) (2024-12-30)
+
+
+### Bug Fixes
+
+* 限制 react 版本低于 19，避免测试失败 ([a7009eb](https://github.com/miaoxing/logistics/commit/a7009ebc2a51e3844c60bc7499ae8325fb3f2657))
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/dev:** upgrade from `9.2.0` to `9.3.0`
+* **@mxjs/a-clink:** upgrade from `3.0.7` to `3.0.8`
+* **@mxjs/a-form:** upgrade from `5.1.0` to `5.2.0`
+* **@mxjs/a-page:** upgrade from `4.3.0` to `4.3.1`
+* **@mxjs/a-region-cascader:** upgrade from `1.1.3` to `1.1.4`
+* **@mxjs/a-table:** upgrade from `2.3.0` to `2.4.0`
+* **@mxjs/a-input:** upgrade from `1.6.0` to `1.6.1`
+* **@mxjs/a-section:** upgrade from `1.2.0` to `1.2.1`
+* **@mxjs/app:** upgrade from `0.8.4` to `0.8.5`
+* **@mxjs/query:** upgrade from `1.3.0` to `1.3.1`
+* **@mxjs/test:** upgrade from `2.0.5` to `2.0.6`
+* **miaoxing:** upgrade from `0.4.19` to `0.4.20`
+* **@miaoxing/admin:** upgrade from `0.16.3` to `0.17.0`
+* **@miaoxing/app:** upgrade from `0.10.7` to `0.10.8`
+* **@miaoxing/region:** upgrade from `0.2.41` to `0.2.42`
+
 ## [0.6.10](https://github.com/miaoxing/logistics/compare/v0.6.9...v0.6.10) (2024-11-30)
 
 
