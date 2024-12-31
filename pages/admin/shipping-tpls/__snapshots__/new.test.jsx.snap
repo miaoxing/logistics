@@ -18,7 +18,7 @@ exports[`admin/shipping-tpls form 1`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/shipping-tpls/defaults",
+        "url": "shipping-tpls/defaults",
       },
     ],
   ],
@@ -59,7 +59,7 @@ exports[`admin/shipping-tpls form 2`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/shipping-tpls/defaults",
+        "url": "shipping-tpls/defaults",
       },
     ],
     Array [
@@ -96,7 +96,7 @@ exports[`admin/shipping-tpls form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/api/admin/shipping-tpls",
+        "url": "shipping-tpls",
       },
     ],
   ],

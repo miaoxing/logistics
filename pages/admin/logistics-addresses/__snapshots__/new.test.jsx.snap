@@ -19,7 +19,7 @@ exports[`admin/logistics-addresses form 1`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/logistics-addresses/defaults",
+        "url": "logistics-addresses/defaults",
       },
     ],
     Array [
@@ -94,7 +94,7 @@ exports[`admin/logistics-addresses form 2`] = `
       Object {
         "loading": true,
         "method": "get",
-        "url": "/api/admin/logistics-addresses/defaults",
+        "url": "logistics-addresses/defaults",
       },
     ],
     Array [
@@ -128,7 +128,7 @@ exports[`admin/logistics-addresses form 2`] = `
         },
         "loading": true,
         "method": "POST",
-        "url": "/api/admin/logistics-addresses",
+        "url": "logistics-addresses",
       },
     ],
   ],

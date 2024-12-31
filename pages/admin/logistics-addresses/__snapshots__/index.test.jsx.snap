@@ -12,7 +12,7 @@ exports[`admin/logistics-addresses index 1`] = `
     Array [
       Object {
         "method": "get",
-        "url": "/api/admin/logistics-addresses?page=1&limit=20",
+        "url": "logistics-addresses?page=1&limit=20",
       },
     ],
   ],
