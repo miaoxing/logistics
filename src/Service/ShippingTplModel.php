@@ -2,7 +2,6 @@
 
 namespace Miaoxing\Logistics\Service;
 
-use Miaoxing\Logistics\Metadata\ShippingTplTrait;
 use Miaoxing\Plugin\BaseModel;
 use Miaoxing\Plugin\Model\HasAppIdTrait;
 use Miaoxing\Plugin\Model\ModelTrait;
@@ -13,13 +12,28 @@ use Wei\Model\SoftDeleteTrait;
 
 /**
  * @property ShippingTplRuleModel|ShippingTplRuleModel[] $rules
+ * @property string|null $id
+ * @property string $appId
+ * @property array $serviceIds 支持的物流服务编号
+ * @property string $name 名称
+ * @property int $sendRegionId 发货地址
+ * @property int $sendTime 发货时间。以小时为单位，-1表示无
+ * @property bool $isFreeShipping 是否包邮
+ * @property int $valuationType 计价方式。1:按件;2:按重量
+ * @property int $sort 顺序
+ * @property string|null $createdAt
+ * @property string|null $updatedAt
+ * @property string $createdBy
+ * @property string $updatedBy
+ * @property string|null $deletedAt
+ * @property string $deletedBy
+ * @property ShippingTplRuleModel|ShippingTplRuleModel[] $getRulesByCity 根据城市编号或名称,获取匹配的运费规则
  */
 class ShippingTplModel extends BaseModel
 {
     use HasAppIdTrait;
     use ModelTrait;
     use ReqQueryTrait;
-    use ShippingTplTrait;
     use SnowflakeTrait;
     use SoftDeleteTrait;
 
