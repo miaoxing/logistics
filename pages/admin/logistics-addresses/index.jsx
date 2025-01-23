@@ -2,13 +2,11 @@ import { CTableDeleteLink, Table, TableActions, TableProvider, useTable } from '
 import { CEditLink, CNewBtn } from '@mxjs/a-clink';
 import { Page, PageActions } from '@mxjs/a-page';
 import { Tag } from 'antd';
-import { useQuery } from '@mxjs/query';
+import { useConsts } from '@miaoxing/admin';
 
 const Index = () => {
   const [table] = useTable();
-
-  const { data } = useQuery('consts/logisticsAddressModel-type');
-  const items = data?.items;
+  const { consts: types } = useConsts('logisticsAddressModel', 'type');
 
   return (
     <Page>
@@ -42,7 +40,7 @@ const Index = () => {
               title: '使用场景',
               dataIndex: 'types',
               render: (value) => value.length ?
-                value.map(type => <Tag key={type} color="orange" bordered={false}>{items?.[type]?.name}</Tag>) : '-',
+                value.map(type => <Tag key={type} color="orange" bordered={false}>{types[type]?.name}</Tag>) : '-',
             },
             {
               title: '顺序',

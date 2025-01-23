@@ -6,14 +6,12 @@ import { Page, PageActions } from '@mxjs/a-page';
 import { Form, FormActions, FormItem } from '@mxjs/a-form';
 import RegionCascader from '@mxjs/a-region-cascader';
 import { Checkbox } from 'antd';
-import { FormItemSort } from '@miaoxing/admin';
+import { FormItemSort, useConsts } from '@miaoxing/admin';
 import Input from '@mxjs/a-input';
 import { Section } from '@mxjs/a-section';
-import { useQuery } from '@mxjs/query';
 
 const New = () => {
-  const { data } = useQuery('consts/logisticsAddressModel-type');
-  const items = data?.items || [];
+  const { consts: types } = useConsts('logisticsAddressModel', 'type');
 
   return (
     <Page>
@@ -75,7 +73,7 @@ const New = () => {
 
           <FormItem label="使用场景" name="types">
             <Checkbox.Group>
-              {Object.values(items).map(type => (
+              {Object.values(types).map(type => (
                 <Checkbox key={type.id} value={type.id}>
                   {type.name}
                 </Checkbox>
