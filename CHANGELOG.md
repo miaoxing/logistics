@@ -1,3 +1,15 @@
+## [0.6.14](https://github.com/miaoxing/logistics/compare/v0.6.13...v0.6.14) (2025-05-01)
+
+
+
+
+
+### Dependencies
+
+* **@miaoxing/admin:** upgrade from `0.17.2` to `0.17.3`
+* **@miaoxing/app:** upgrade from `0.10.10` to `0.10.11`
+* **@miaoxing/region:** upgrade from `0.2.44` to `0.2.45`
+
 ## [0.6.13](https://github.com/miaoxing/logistics/compare/v0.6.12...v0.6.13) (2025-02-02)
 
 
